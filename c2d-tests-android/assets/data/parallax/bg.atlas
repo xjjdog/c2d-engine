@@ -1,0 +1,33 @@
+
+bg.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bg
+  rotate: false
+  xy: 2, 2
+  size: 576, 320
+  orig: 576, 320
+  offset: 0, 0
+  index: -1
+dock-tree
+  rotate: false
+  xy: 580, 2
+  size: 108, 230
+  orig: 108, 230
+  offset: 0, 0
+  index: -1
+front
+  rotate: false
+  xy: 2, 324
+  size: 591, 170
+  orig: 591, 170
+  offset: 0, 0
+  index: -1
+cloud
+  rotate: false
+  xy: 2, 496
+  size: 702, 80
+  orig: 702, 80
+  offset: 0, 0
+  index: -1

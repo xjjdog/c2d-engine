@@ -1,0 +1,159 @@
+<world>
+	<fixtures>
+		<polygons friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="PolygonFixture1" mark="">
+			<polygon>
+				<vertex>{42.0,106.999985}</vertex>
+				<vertex>{46.0,149.99998}</vertex>
+				<vertex>{-68.0,112.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-27.0,79.999985}</vertex>
+				<vertex>{42.0,106.999985}</vertex>
+				<vertex>{-68.0,112.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-27.0,79.999985}</vertex>
+				<vertex>{-68.0,112.0}</vertex>
+				<vertex>{-75.0,-16.999994}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-36.0,12.000004}</vertex>
+				<vertex>{-27.0,79.999985}</vertex>
+				<vertex>{-75.0,-16.999994}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{53.999985,-10.000002}</vertex>
+				<vertex>{-36.0,12.000004}</vertex>
+				<vertex>{-75.0,-16.999994}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-75.0,-16.999994}</vertex>
+				<vertex>{61.000015,-60.0}</vertex>
+				<vertex>{53.999985,-10.000002}</vertex>
+			</polygon>
+		</polygons>
+		<polygons friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="PolygonFixture2" mark="">
+			<polygon>
+				<vertex>{-16.0,3.0000114}</vertex>
+				<vertex>{70.000015,16.000006}</vertex>
+				<vertex>{80.0,77.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{81.000015,-66.99999}</vertex>
+				<vertex>{79.000015,-31.99999}</vertex>
+				<vertex>{-27.0,-29.99999}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-14.0,-68.00001}</vertex>
+				<vertex>{81.000015,-66.99999}</vertex>
+				<vertex>{-27.0,-29.99999}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-69.0,-66.99999}</vertex>
+				<vertex>{-14.0,-68.00001}</vertex>
+				<vertex>{-27.0,-29.99999}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-69.0,-66.99999}</vertex>
+				<vertex>{-27.0,-29.99999}</vertex>
+				<vertex>{-16.0,3.0000114}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-72.0,-2.9999905}</vertex>
+				<vertex>{-69.0,-66.99999}</vertex>
+				<vertex>{-16.0,3.0000114}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-70.0,36.00001}</vertex>
+				<vertex>{-72.0,-2.9999905}</vertex>
+				<vertex>{-16.0,3.0000114}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{12.000015,37.999992}</vertex>
+				<vertex>{-70.0,36.00001}</vertex>
+				<vertex>{-16.0,3.0000114}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{12.000015,37.999992}</vertex>
+				<vertex>{-16.0,3.0000114}</vertex>
+				<vertex>{80.0,77.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{11.0,83.999985}</vertex>
+				<vertex>{12.000015,37.999992}</vertex>
+				<vertex>{80.0,77.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-76.0,125.999985}</vertex>
+				<vertex>{-81.0,82.00001}</vertex>
+				<vertex>{11.0,83.999985}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-76.0,125.999985}</vertex>
+				<vertex>{11.0,83.999985}</vertex>
+				<vertex>{80.0,77.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{80.0,77.0}</vertex>
+				<vertex>{88.0,121.00001}</vertex>
+				<vertex>{-76.0,125.999985}</vertex>
+			</polygon>
+		</polygons>
+		<polygons friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="PolygonFixture3" mark="">
+			<polygon>
+				<vertex>{74.0,-36.000015}</vertex>
+				<vertex>{-26.0,-56.999985}</vertex>
+				<vertex>{32.0,-83.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{73.000015,108.0}</vertex>
+				<vertex>{-29.0,82.00001}</vertex>
+				<vertex>{78.0,68.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{114.999985,53.000008}</vertex>
+				<vertex>{73.000015,108.0}</vertex>
+				<vertex>{78.0,68.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{114.999985,53.000008}</vertex>
+				<vertex>{78.0,68.0}</vertex>
+				<vertex>{74.0,-36.000015}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{104.000015,-71.0}</vertex>
+				<vertex>{114.999985,53.000008}</vertex>
+				<vertex>{74.0,-36.000015}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{32.0,-83.0}</vertex>
+				<vertex>{104.000015,-71.0}</vertex>
+				<vertex>{74.0,-36.000015}</vertex>
+			</polygon>
+		</polygons>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="RectangleFixture1" mark="" width="28.0" height="165.0"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="RectangleFixture2" mark="" width="576.0" height="55.0"/>
+	</fixtures>
+	<bodys>
+		<body name="c" type="DynamicBody" position="{200.0,200.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="true" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="75.0" drawableOffsetY="60.0" drawableWidth="136.00002" drawableHeight="209.99998" mark="">
+			<fixture ref="PolygonFixture1"/>
+		</body>
+		<body name="2" type="DynamicBody" position="{348.99997,219.00002}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="true" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="81.0" drawableOffsetY="68.00001" drawableWidth="169.0" drawableHeight="194.0" mark="">
+			<fixture ref="PolygonFixture2"/>
+		</body>
+		<body name="d" type="DynamicBody" position="{481.0,239.00002}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="true" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="29.0" drawableOffsetY="83.0" drawableWidth="143.99998" drawableHeight="191.0" mark="">
+			<fixture ref="PolygonFixture3"/>
+			<fixture ref="RectangleFixture1"/>
+		</body>
+		<body name="Body4" type="StaticBody" position="{358.0,463.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="288.0" drawableOffsetY="27.5" drawableWidth="576.0" drawableHeight="55.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+	</bodys>
+	<joints>
+		<joint collideConnected="false" bodyA="Body4" bodyB="c" name="RopeJoint1" mark="" type="RopeJoint" localAnchorA="{-188.00003,-12.0}" localAnchorB="{-34.359962,112.32864}" maxLength="138.73988"/>
+		<joint collideConnected="false" bodyA="Body4" bodyB="2" name="RopeJoint2" mark="" type="RopeJoint" localAnchorA="{11.999939,-11.0}" localAnchorB="{28.695955,115.89641}" maxLength="117.35619"/>
+		<joint collideConnected="false" bodyA="Body4" bodyB="d" name="RopeJoint3" mark="" type="RopeJoint" localAnchorA="{173.0,-13.0}" localAnchorB="{59.007732,95.00341}" maxLength="116.34581"/>
+		<joint collideConnected="false" bodyA="c" bodyB="2" name="DistanceJoint1" mark="" type="DistanceJoint" length="141.28694" localAnchorA="{-48.00003,54.088882}" localAnchorB="{-56.0,26.088867}" frequencyHz="100.0" dampingRatio="0.0"/>
+		<joint collideConnected="false" bodyA="2" bodyB="d" name="DistanceJoint2" mark="" type="DistanceJoint" length="87.99997" localAnchorA="{49.00003,35.083374}" localAnchorB="{4.9999695,15.083374}" frequencyHz="100.0" dampingRatio="0.0"/>
+	</joints>
+</world>

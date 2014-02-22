@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="60" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tileset-platformer" tilewidth="32" tileheight="32">
+  <image source="tileset-platformer.png" width="192" height="544"/>
+  <tile id="84">
+   <properties>
+    <property name="HasBody" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="test" width="60" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztmm1LG0EQgPeDilRtkSpio7Sp+Sr4UiUVjAmGEiiE1sQXfIn+/1/RXbiBcZzZnb29JGuTgYe7XS67+9zsLbmXoTFmGEFfyX0C2j4cvQCcw6wE9X2wPE5pLKH4LRAT1PfJMops49ByZDnzHNNm6tYs65ZPkf1xofWXfLU5/mKpIXaE4zqWKwTElqdt3/mDkOaj5O9ce6jsfJ+NLsfO9ZuljvhueOeO0IbP1+X/o/Hn3433xYTzA+5uLaS+kGN3fmGu0sCuDRN21vhSv8+WDcumxwOPlzoPGMB3UcFS0c524Uo9gQbjzPmG/GiZyzf2HRG3vwzgu6JgtejjK+PHeWNn8MVjDvmFygPiS91uGVJ8JU/qXFMS66vxk3w181ma4yHnqnHne6+gEQn4LpfE5fw0gv7cl+VPsf2JgPoqfXH7zSn6Uk9czsXXF+Oaz/uR+OZzq6TvseWH5WQCvgeRSL6tBF8uclmv4J64Cl/47wnbNtrP3Xfa6/OkfO8CpPp2K/SNdQXffjH2S0KXcFki/7mBfalfFx1Hy+8V7DsLzH3TqGXgNEnfegZOWt9zgqtrEVzdBYH6au/vteyO0dd3LPbF9bice37hHYzkK+X3f/aldXNf3vea7N8Q6LO00FrRNK/vyZvMb+gaRJ2ob8p6hf/jcr64X/CVzi3ehz4kX9wG9fP5plIn2zL5DfnSLZffnHyl38b44lyn5HfBlH8GLfliYq/fX+bt9avx1V6/H4zuPQP33oG7fnMk9TsLiZjvQar8ZkTznUfomUZZQs9Gx9XvtJj75uH7Dx9qMuQ=
+  </data>
+ </layer>
+ <objectgroup color="#ff0000" name="entities" width="60" height="20">
+  <object name="me.ObjectEntity" gid="59" x="352" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1120" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1152" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1184" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1216" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1248" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1280" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1312" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1344" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1376" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1408" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+  <object name="me.ObjectEntity" gid="59" x="1440" y="320">
+   <properties>
+    <property name="collidable" value="true"/>
+    <property name="type" value="spikeObject"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

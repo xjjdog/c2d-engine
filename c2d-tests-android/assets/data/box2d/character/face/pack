@@ -1,0 +1,75 @@
+
+face1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+character-body
+  rotate: false
+  xy: 2, 2
+  size: 103, 197
+  orig: 103, 197
+  offset: 0, 0
+  index: -1
+character-foot-right
+  rotate: false
+  xy: 2, 201
+  size: 51, 151
+  orig: 51, 151
+  offset: 0, 0
+  index: -1
+character-foot-left
+  rotate: false
+  xy: 55, 201
+  size: 51, 151
+  orig: 51, 151
+  offset: 0, 0
+  index: -1
+character-leg-left
+  rotate: false
+  xy: 2, 354
+  size: 46, 135
+  orig: 46, 135
+  offset: 0, 0
+  index: -1
+character-leg-right
+  rotate: false
+  xy: 50, 354
+  size: 45, 135
+  orig: 45, 135
+  offset: 0, 0
+  index: -1
+character-arm-right
+  rotate: false
+  xy: 97, 354
+  size: 29, 120
+  orig: 29, 120
+  offset: 0, 0
+  index: -1
+character-arm-left
+  rotate: false
+  xy: 2, 491
+  size: 29, 120
+  orig: 29, 120
+  offset: 0, 0
+  index: -1
+character-limb-left
+  rotate: false
+  xy: 33, 491
+  size: 37, 104
+  orig: 37, 104
+  offset: 0, 0
+  index: -1
+character-limb-right
+  rotate: false
+  xy: 72, 491
+  size: 37, 103
+  orig: 37, 103
+  offset: 0, 0
+  index: -1
+character-head
+  rotate: false
+  xy: 2, 613
+  size: 55, 64
+  orig: 55, 64
+  offset: 0, 0
+  index: -1

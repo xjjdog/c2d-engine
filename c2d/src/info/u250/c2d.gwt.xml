@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="info.u250.c2d">
+	<inherits name="aurelienribon.tweenengine"/>
+	<source path="c2d">
+		<exclude name="engine/cmd/JarExportableCmd.java"/>
+		<exclude name="engine/tools/ExportTextureAtlasTool.java"/>
+	</source>
+</module>

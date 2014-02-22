@@ -1,0 +1,59 @@
+I Will add many demos to this test project:)
+test>
+animations>actions(the core libgdx actions and addone actions)
+	--Blink . 
+	--TintTo
+	--TintBy
+	--Skew
+	--Shake
+	--ScaleTo
+	--ScaleBy
+	--RotateTo
+	--RotateBy
+	--MoveTo
+	--MoveBy
+	--Flip
+	--FadeTo
+	--Bezier Path
+	--Clip
+	--MoveByPath
+box2d>(include some libgdx demos)
+	--Breakable object
+	--Bridge
+	--Edge Shapes
+	--Gears
+	--PhysicalEditorSupport
+	--Snesor
+	--Web
+Events>
+	--Accelerometer
+	--DoubuleTap
+	--Gesture
+	--BackKeyCache
+	--MultiTouch
+Lua>
+	--
+TiledMap>
+	--Box2d
+	--Arrays
+	--Checked
+ToolsSupport>
+	--Arctic Animation editor
+	--AuroraGT
+	--HGE
+	--Motion Welder
+	--TGA
+Transitions>
+	--
+Other>
+	--Page
+	
+
+C2d>
+	--Camera need redesigned
+	--Make easy use of TweenEngine
+	--Tiled map advance
+	--Transitions
+	--TextureRender like CCTextureRender
+	0
+	
