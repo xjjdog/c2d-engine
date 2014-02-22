@@ -1,4 +1,4 @@
 c2d-engine
 ==========
 
-http://localhost:8080
+move from https://code.google.com/p/c2d-engine/
