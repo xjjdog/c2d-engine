@@ -1,7 +1,7 @@
 package info.u250.c2d.tests;
 
-import com.badlogic.gdx.tools.imagepacker.TexturePacker2;
-import com.badlogic.gdx.tools.imagepacker.TexturePacker2.Settings;
+import com.badlogic.gdx.tools.texturepacker.TexturePacker;
+import com.badlogic.gdx.tools.texturepacker.TexturePacker.Settings;
 
 public class C2dTestTexturePacker {
 	public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class C2dTestTexturePacker {
 		settings.rotation = false;
 		
 
-		TexturePacker2.process(settings, 
+		TexturePacker.process(settings, 
 				"assets-raw/turkey", 
 				"../c2d-tests-android/assets/data/animationsprite",
 				"turkey");

@@ -1,6 +1,6 @@
 package info.u250.c2d.graphic.surfaces;
 
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
@@ -12,7 +12,7 @@ public class SurfaceData {
 	public String texture = "";
 	/**the drawing method 
 	 * @see {@link GL10#GL_TRIANGLE_FAN}*/
-	public int primitiveType  = GL10.GL_TRIANGLE_FAN;
+	public int primitiveType  = GL20.GL_TRIANGLE_FAN;
 	/**
 	 * if the surface follow the camera's position , currently only support GLES2.x
 	 * TODO : gl1.x support

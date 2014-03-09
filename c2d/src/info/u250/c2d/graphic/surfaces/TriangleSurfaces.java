@@ -3,7 +3,7 @@ package info.u250.c2d.graphic.surfaces;
 import info.u250.c2d.engine.Engine;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.GLCommon;
 import com.badlogic.gdx.graphics.Mesh;
 import com.badlogic.gdx.graphics.Texture;
@@ -66,7 +66,7 @@ public class TriangleSurfaces extends CurveSurfaces {
 	protected TriangleSurfaces(){}
 	public TriangleSurfaces(SurfaceData data) {
 		super(data);
-		if(Gdx.graphics.isGL20Available()) if(null == shader ) shader = createShader();
+		if(null == shader ) shader = createShader();
 	}
 
 	Vector3 tmp = new Vector3(
@@ -76,31 +76,23 @@ public class TriangleSurfaces extends CurveSurfaces {
 	@Override
 	protected void doRender(float delta) {
 		if (null != mesh) {
-			if(Gdx.graphics.isGL20Available()) {
-				GLCommon gl = Gdx.gl20;
-				gl.glActiveTexture(GL10.GL_TEXTURE0 + 0);
-				gl.glEnable(GL10.GL_TEXTURE_2D);
-	
-				gl.glDisable(GL10.GL_BLEND);
-				gl.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
-				texture.bind();
-				shader.begin();
-				if(data.followCamera){
-					shader.setUniformMatrix("u_projectionViewMatrix", Engine.getDefaultCamera().combined);
-				}else{
-					shader.setUniformMatrix("u_projectionViewMatrix", Engine.getDefaultCamera().combined.translate(tmp));
-				}
-				shader.setUniformf("u_color", 1, 1,1, 1);
-				shader.setUniformi("u_texture" + 0, 0);
-				mesh.render(shader,data.primitiveType);
-				shader.end();
-			} else {
-				GL10 gl = Gdx.gl10;
-				gl.glEnable(GL10.GL_TEXTURE_2D);
-				texture.bind();
-				mesh.render(data.primitiveType);
-				gl.glDisable(GL10.GL_TEXTURE_2D);
+			GLCommon gl = Gdx.gl20;
+			gl.glActiveTexture(GL20.GL_TEXTURE0 + 0);
+			gl.glEnable(GL20.GL_TEXTURE_2D);
+
+			gl.glDisable(GL20.GL_BLEND);
+			gl.glBlendFunc(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
+			texture.bind();
+			shader.begin();
+			if(data.followCamera){
+				shader.setUniformMatrix("u_projectionViewMatrix", Engine.getDefaultCamera().combined);
+			}else{
+				shader.setUniformMatrix("u_projectionViewMatrix", Engine.getDefaultCamera().combined.translate(tmp));
 			}
+			shader.setUniformf("u_color", 1, 1,1, 1);
+			shader.setUniformi("u_texture" + 0, 0);
+			mesh.render(shader,data.primitiveType);
+			shader.end();
 		}
 	}
 

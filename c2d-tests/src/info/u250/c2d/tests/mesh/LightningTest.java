@@ -13,7 +13,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.Vector2;
 
@@ -154,7 +154,7 @@ class LightingBoltEffect {
 	public void render(float delta){
 		if(0 == totalTime)return;
 		
-		Gdx.gl.glEnable(GL10.GL_BLEND);
+		Gdx.gl.glEnable(GL20.GL_BLEND);
 		Gdx.gl.glLineWidth(4);
 		c.a = (float) currentTime / (float) totalTime;
 		Engine.getShapeRenderer().setColor(c);

@@ -8,7 +8,7 @@ import info.u250.c2d.graphic.surfaces.SurfaceData;
 import info.u250.c2d.graphic.surfaces.TriangleSurfaces;
 
 import com.badlogic.gdx.InputProcessor;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
@@ -41,7 +41,7 @@ public class SurfaceTest extends Engine {
 		@Override
 		public void onLoadedResourcesCompleted() {
 			final SurfaceData data = new SurfaceData();
-			data.primitiveType = GL10.GL_TRIANGLE_STRIP;
+			data.primitiveType = GL20.GL_TRIANGLE_STRIP;
 			data.texture="Texture";
 			data.points = new Array<Vector2>(){{
 				add(new Vector2(-27.005554f,87.99661f));

@@ -8,12 +8,10 @@ import info.u250.c2d.engine.load.startup.LineLoading;
 import info.u250.c2d.engine.load.startup.StartupLoading;
 import info.u250.c2d.engine.resources.AliasResourceManager;
 import info.u250.c2d.graphic.AdvanceSprite;
-import info.u250.c2d.graphic.parallax.Day2NightAction;
 import info.u250.c2d.graphic.parallax.ParallaxGroup;
 import info.u250.c2d.graphic.parallax.ParallaxGroupSpeedToAction;
 import info.u250.c2d.graphic.parallax.ParallaxLayer;
 
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Group;
@@ -59,9 +57,7 @@ public class ParallaxGroupEventsTest extends Engine{
 					ParallaxGroupSpeedToAction.obtain(1000,300,1),
 					ParallaxGroupSpeedToAction.obtain(50,300,2),
 					Actions.scaleTo(2, 2,0.5f),
-					Actions.scaleTo(1, 1,1.5f),
-					Day2NightAction.obtain(new Color(0.2f,0.2f,0.2f,1), 2),
-					Day2NightAction.obtain(new Color(1,1,1,1), 1)
+					Actions.scaleTo(1, 1,1.5f)
 					)));
 			final SceneStage stage = new SceneStage();
 			final Group group = new Group();

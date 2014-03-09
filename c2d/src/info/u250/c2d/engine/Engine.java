@@ -30,7 +30,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
-import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -255,16 +254,9 @@ public abstract class Engine extends ApplicationAdapter{
 	public final void render() {
 		if(null == startupLoading)return;
 		
-		if(Gdx.graphics.isGL20Available()){
-			Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		}else{
-			Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		}
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		final float delta = Engine.getDeltaTime();
 		this.defaultCamera.update();
-		if(Gdx.graphics.isGL11Available()){
-			this.defaultCamera.apply(Gdx.graphics.getGL11());
-		}
 		this.spriteBatch.setProjectionMatrix(this.defaultCamera.combined);
 		if(startupLoading.isLoaded()){
 			if(running){

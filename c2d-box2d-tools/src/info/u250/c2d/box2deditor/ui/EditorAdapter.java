@@ -13,7 +13,6 @@ public class EditorAdapter {
 	public static void setupCanvas(Canvas canvas){
 		final Engine engine = new EditorGdx();
 		final LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.useGL20 = Engine.useGL20();
 		config.width = (int) 1024;
 		config.height= (int) 600;
 		

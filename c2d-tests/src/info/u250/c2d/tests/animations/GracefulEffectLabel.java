@@ -1,7 +1,6 @@
 package info.u250.c2d.tests.animations;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.delay;
-import static com.badlogic.gdx.scenes.scene2d.actions.Actions.moveBy;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.scaleTo;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.sequence;
 import info.u250.c2d.engine.Engine;
@@ -106,7 +105,7 @@ public class GracefulEffectLabel extends Engine {
 				this.setPosition(Engine.getWidth() / 2 - battleLabel.getPrefWidth() / 2, 200);
 				this.setOrigin(this.getWidth() / 2, this.getHeight()/2);
 				this.setScale(0);
-				this.addAction(sequence(scaleTo(1, 1, 1f, Interpolation.swingOut), delay(1f), moveBy(50, 0, 0.1f), moveBy(-1500, 0, 0.3f)));
+				this.addAction(sequence(scaleTo(1, 1, 1f, Interpolation.swingOut), delay(1f), Actions.moveBy(50, 0, 0.1f), Actions.moveBy(-1500, 0, 0.3f)));
 				this.addActor(battleLabel);
 			}
 		}

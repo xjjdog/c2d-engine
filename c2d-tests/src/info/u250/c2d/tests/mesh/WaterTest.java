@@ -13,7 +13,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL11;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
@@ -235,12 +234,12 @@ class Water {
 		Engine.getSpriteBatch().setShader(null);
 		fbo.end();
 		
-		Engine.getSpriteBatch().setBlendFunction(GL11.GL_SRC_ALPHA,GL11.GL_ONE);
+		Engine.getSpriteBatch().setBlendFunction(GL20.GL_SRC_ALPHA,GL20.GL_ONE);
 		Engine.getSpriteBatch().begin();
 		Engine.getSpriteBatch().draw(fbo.getColorBufferTexture(),0,0,fbo.getColorBufferTexture().getWidth(),fbo.getColorBufferTexture().getHeight(),0,0,1,1);
 		Engine.getSpriteBatch().end();
 		Engine.getSpriteBatch().setColor(Color.WHITE);
-		Engine.getSpriteBatch().setBlendFunction(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+		Engine.getSpriteBatch().setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
 	}
 
 	void updateParticle(Particle particle) {

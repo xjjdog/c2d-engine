@@ -17,14 +17,12 @@ import info.u250.c2d.tests.animations.RainEffect;
 import info.u250.c2d.tests.box2d.Box2dC2dTest;
 import info.u250.c2d.tests.mesh.FingerSwipeTest;
 import info.u250.c2d.tests.mesh.FlagTest;
-import info.u250.c2d.tests.mesh.GradientEllipseTest;
 import info.u250.c2d.tests.mesh.GradientTest;
 import info.u250.c2d.tests.mesh.JumpyLineTest;
 import info.u250.c2d.tests.mesh.LightningTest;
 import info.u250.c2d.tests.mesh.RepeatTextureBackgroundTest;
 import info.u250.c2d.tests.mesh.SimpleMeshBackgroundTest;
 import info.u250.c2d.tests.mesh.SurfaceTest;
-import info.u250.c2d.tests.mesh.TinyWingsStripesTest;
 import info.u250.c2d.tests.mesh.WaterTest;
 import info.u250.c2d.tests.misc.CustomLoadingTest;
 import info.u250.c2d.tests.misc.EventTest;
@@ -229,14 +227,6 @@ public class C2dTests {
 				subs.add(sub);
 			}
 			{
-				Map<String,Object> sub = new HashMap<String,Object>();
-				sub.put("title", "TinyWings like Stripes");
-				sub.put("desc", "draw stripes like tinywings");
-				sub.put("image", "drawable/item");
-				sub.put("cls", TinyWingsStripesTest.class.getName());
-				subs.add(sub);
-			}
-			{
 				Map<String,Object> sub = new HashMap<String, Object>();
 				sub.put("title", "Repeat texture background");
 				sub.put("desc", "A small texture to fill the screen");
@@ -258,14 +248,6 @@ public class C2dTests {
 				sub.put("desc", "Gradient effect use the ImmediateModeRenderer .");
 				sub.put("image", "drawable/item");
 				sub.put("cls", GradientTest.class.getName());
-				subs.add(sub);
-			}
-			{
-				Map<String,Object> sub = new HashMap<String, Object>();
-				sub.put("title", "Ellipse Gradient");
-				sub.put("desc", "Ellipse Gradient effect use the ImmediateModeRenderer .");
-				sub.put("image", "drawable/item");
-				sub.put("cls", GradientEllipseTest.class.getName());
 				subs.add(sub);
 			}
 			{

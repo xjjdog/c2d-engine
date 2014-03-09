@@ -1,7 +1,7 @@
 package info.u250.c2d.box2deditor;
 
-import com.badlogic.gdx.tools.imagepacker.TexturePacker2;
-import com.badlogic.gdx.tools.imagepacker.TexturePacker2.Settings;
+import com.badlogic.gdx.tools.texturepacker.TexturePacker;
+import com.badlogic.gdx.tools.texturepacker.TexturePacker.Settings;
 
 public class Pack {
 	public static void main(String args[]) throws Exception {
@@ -11,7 +11,7 @@ public class Pack {
 		settings.maxWidth = 1024;
 		settings.maxHeight = 1024;
 
-		TexturePacker2
+		TexturePacker
 		.process(settings,
 				"raw",
 				"assets/data/",

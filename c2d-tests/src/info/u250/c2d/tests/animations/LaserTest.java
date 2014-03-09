@@ -7,7 +7,7 @@ import info.u250.c2d.engine.resources.AliasResourceManager;
 
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
@@ -120,7 +120,7 @@ public class LaserTest extends Engine {
 					laser4.degrees = 10*add;
 					Engine.getSpriteBatch().end();
 					
-					Engine.debugInfo("the laser use 6 sprite and GL10.GL_ONE attribute");
+					Engine.debugInfo("the laser use 6 sprite and GL20.GL_ONE attribute");
 				}
 				@Override
 				public InputProcessor getInputProcessor() {
@@ -187,7 +187,7 @@ class Laser {
 		end2.setRotation(degrees);
 		
 		
-		Engine.getSpriteBatch().setBlendFunction(GL10.GL_SRC_ALPHA, GL10.GL_ONE);
+		Engine.getSpriteBatch().setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE);
 		begin1.draw(Engine.getSpriteBatch());
 		begin2.draw(Engine.getSpriteBatch());
 		
@@ -198,7 +198,7 @@ class Laser {
 		
 		end1.draw(Engine.getSpriteBatch());
 		end2.draw(Engine.getSpriteBatch());
-		Engine.getSpriteBatch().setBlendFunction(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
+		Engine.getSpriteBatch().setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
 		
 		
 	}

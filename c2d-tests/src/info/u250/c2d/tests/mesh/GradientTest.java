@@ -6,7 +6,7 @@ import info.u250.c2d.engine.Scene;
 import info.u250.c2d.engine.resources.AliasResourceManager;
 
 import com.badlogic.gdx.InputProcessor;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ImmediateModeRenderer20;
 
 
@@ -38,7 +38,7 @@ public class GradientTest extends Engine {
 			Engine.setMainScene(new Scene() {
 				@Override
 				public void render(float delta) {
-					renderer.begin(Engine.getDefaultCamera().combined, GL10.GL_TRIANGLE_STRIP);
+					renderer.begin(Engine.getDefaultCamera().combined, GL20.GL_TRIANGLE_STRIP);
 					renderer.color(1, 1, 1, 1);
 					renderer.vertex(0, 0, 0);
 					renderer.color(1, 1, 1, 1);

@@ -60,7 +60,6 @@ public class C2dDesktop {
 					config.fullscreen = false;
 					config.width =(int) Engine.getWidth();
 					config.height = (int) Engine.getHeight();
-					config.useGL20 = Engine.useGL20();
 					config.title = testName;
 					config.vSyncEnabled = true;
 

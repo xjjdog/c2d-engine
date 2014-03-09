@@ -10,7 +10,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Buttons;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.InputProcessor;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
 
 public class RectangleHelper extends AbstractBox2dHelper<b2RectangleFixtureDefModel> {
@@ -64,9 +64,9 @@ public class RectangleHelper extends AbstractBox2dHelper<b2RectangleFixtureDefMo
 	}
 	@Override
 	public void render(float delta) {
-		Gdx.gl.glEnable(GL10.GL_BLEND);
+		Gdx.gl.glEnable(GL20.GL_BLEND);
 		Geometry.renderBox(model, worldCenter,0,false);
-		Gdx.gl.glDisable(GL10.GL_BLEND);
+		Gdx.gl.glDisable(GL20.GL_BLEND);
 	}
 
 	@Override

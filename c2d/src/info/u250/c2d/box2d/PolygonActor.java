@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Mesh;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureWrap;
@@ -25,7 +25,43 @@ public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Dispos
 	float offsetX;
 	float offsetY=0;
 	
+	static public ShaderProgram createDefaultShader () {
+		String vertexShader = "attribute vec4 " + ShaderProgram.POSITION_ATTRIBUTE + ";\n" //
+			+ "attribute vec4 " + ShaderProgram.COLOR_ATTRIBUTE + ";\n" //
+			+ "attribute vec2 " + ShaderProgram.TEXCOORD_ATTRIBUTE + "0;\n" //
+			+ "uniform mat4 u_projTrans;\n" //
+			+ "varying vec4 v_color;\n" //
+			+ "varying vec2 v_texCoords;\n" //
+			+ "\n" //
+			+ "void main()\n" //
+			+ "{\n" //
+			+ "   v_color = " + ShaderProgram.COLOR_ATTRIBUTE + ";\n" //
+			+ "   v_texCoords = " + ShaderProgram.TEXCOORD_ATTRIBUTE + "0;\n" //
+			+ "   gl_Position =  u_projTrans * " + ShaderProgram.POSITION_ATTRIBUTE + ";\n" //
+			+ "}\n";
+		String fragmentShader = "#ifdef GL_ES\n" //
+			+ "#define LOWP lowp\n" //
+			+ "precision mediump float;\n" //
+			+ "#else\n" //
+			+ "#define LOWP \n" //
+			+ "#endif\n" //
+			+ "varying LOWP vec4 v_color;\n" //
+			+ "varying vec2 v_texCoords;\n" //
+			+ "uniform sampler2D u_texture;\n" //
+			+ "void main()\n"//
+			+ "{\n" //
+			+ "  gl_FragColor = v_color * texture2D(u_texture, v_texCoords);\n" //
+			+ "}";
+
+		ShaderProgram shader = new ShaderProgram(vertexShader, fragmentShader);
+		if (shader.isCompiled() == false) throw new IllegalArgumentException("Error compiling shader: " + shader.getLog());
+		return shader;
+	}
+	
+	private ShaderProgram shader;
+	
 	public PolygonActor(Texture texture,List<Vector2[]> vertices,float offsetX,float offsetY){
+		shader = createDefaultShader();
 		this.offsetX = offsetX;
 		this.offsetY = offsetY;
 		this.texture = texture;
@@ -73,10 +109,10 @@ public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Dispos
 	@Override
 	public void draw(Batch batch, float parentAlpha) {
 		updateVertices();
-		GL10 gl = Gdx.gl10;
-		gl.glEnable(GL10.GL_TEXTURE_2D);
+		GL20 gl = Gdx.gl20;
+		gl.glEnable(GL20.GL_TEXTURE_2D);
 		texture.bind();
-		mesh.render(GL10.GL_TRIANGLES);
+		mesh.render(this.shader,GL20.GL_TRIANGLES);
 	}
 
 	@Override

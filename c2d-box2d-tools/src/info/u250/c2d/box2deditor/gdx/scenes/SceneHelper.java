@@ -30,7 +30,7 @@ import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.MathUtils;
@@ -240,7 +240,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 	@Override
 	public void render(float delta) {
 		boolean bodySelectMode = input.getProcessors().contains(bodySelectInput, true);
-		Gdx.gl.glEnable(GL10.GL_BLEND);
+		Gdx.gl.glEnable(GL20.GL_BLEND);
 		if(bodySelectMode && null!=data){
 			render.setColor(colorOuter);
 			render.begin(ShapeType.Filled);
@@ -295,7 +295,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 			render.line(startPoint.x, startPoint.y, dragTemp.x, dragTemp.y);
 			render.end();
 		}
-		Gdx.gl.glDisable(GL10.GL_BLEND);
+		Gdx.gl.glDisable(GL20.GL_BLEND);
 		
 		this.act(delta);
 		this.draw();
