@@ -49,7 +49,7 @@ public class DefaultBuilder {
 		if(b2Body.fixtures.size()>0){
 			BodyDef bodyDef = new BodyDef();
 			bodyDef.type = b2Body.type==0?BodyType.StaticBody:b2Body.type==1?BodyType.KinematicBody:BodyType.DynamicBody;
-			bodyDef.position.set(b2Body.position).div(Box2dObject.RADIO);
+			bodyDef.position.set(b2Body.position).scl(1f/Box2dObject.RADIO);
 			bodyDef.angle = b2Body.degrees*MathUtils.degreesToRadians;
 			bodyDef.linearVelocity.set(b2Body.linearVelocity);
 			bodyDef.angularVelocity = b2Body.angularVelocity;
@@ -92,7 +92,7 @@ public class DefaultBuilder {
 								PolygonShape shape = new PolygonShape();
 								Vector2[] vvv = new Vector2[vv.length];
 								for(int i=0;i<vv.length;i++){
-									vvv[i] = new Vector2(vv[i]).div(Box2dObject.RADIO);
+									vvv[i] = new Vector2(vv[i]).scl(1f/Box2dObject.RADIO);
 								}
 								shape.set(vvv);
 								def.shape = shape;
@@ -117,8 +117,8 @@ public class DefaultBuilder {
 			def.bodyA = b2Def.bodyA.body;
 			def.bodyB = b2Def.bodyB.body;
 			def.length = b2Def.length/Box2dObject.RADIO;
-			def.localAnchorA.set(b2Def.localAnchorA).div(Box2dObject.RADIO);
-			def.localAnchorB.set(b2Def.localAnchorB).div(Box2dObject.RADIO);
+			def.localAnchorA.set(b2Def.localAnchorA).scl(1f/Box2dObject.RADIO);
+			def.localAnchorB.set(b2Def.localAnchorB).scl(1f/Box2dObject.RADIO);
 			def.frequencyHz = b2Def.frequencyHz;
 			def.dampingRatio = b2Def.dampingRatio;
 			b2Def.joint = world.createJoint(def);
@@ -129,8 +129,8 @@ public class DefaultBuilder {
 			def.collideConnected = b2Def.collideConnected;
 			def.bodyA = b2Def.bodyA.body;
 			def.bodyB = b2Def.bodyB.body;
-			def.localAnchorA.set(b2Def.localAnchorA).div(Box2dObject.RADIO);
-			def.localAnchorB.set(b2Def.localAnchorB).div(Box2dObject.RADIO);
+			def.localAnchorA.set(b2Def.localAnchorA).scl(1f/Box2dObject.RADIO);
+			def.localAnchorB.set(b2Def.localAnchorB).scl(1f/Box2dObject.RADIO);
 			def.maxForce = b2Def.maxForce;
 			def.maxTorque = b2Def.maxTorque;
 			b2Def.joint = world.createJoint(def);
@@ -141,8 +141,8 @@ public class DefaultBuilder {
 			def.collideConnected = b2Def.collideConnected;
 			def.bodyA = b2Def.bodyA.body;
 			def.bodyB = b2Def.bodyB.body;
-			def.localAnchorA.set(b2Def.localAnchorA).div(Box2dObject.RADIO);
-			def.localAnchorB.set(b2Def.localAnchorB).div(Box2dObject.RADIO);
+			def.localAnchorA.set(b2Def.localAnchorA).scl(1f/Box2dObject.RADIO);
+			def.localAnchorB.set(b2Def.localAnchorB).scl(1f/Box2dObject.RADIO);
 			def.referenceAngle = b2Def.referenceDegrees*MathUtils.degreesToRadians;
 			def.localAxisA.set(b2Def.localAxisA);
 			def.enableLimit = b2Def.enableLimit;
@@ -159,8 +159,8 @@ public class DefaultBuilder {
 			def.collideConnected = b2Def.collideConnected;
 			def.bodyA = b2Def.bodyA.body;
 			def.bodyB = b2Def.bodyB.body;
-			def.localAnchorA.set(b2Def.localAnchorA).div(Box2dObject.RADIO);
-			def.localAnchorB.set(b2Def.localAnchorB).div(Box2dObject.RADIO);
+			def.localAnchorA.set(b2Def.localAnchorA).scl(1f/Box2dObject.RADIO);
+			def.localAnchorB.set(b2Def.localAnchorB).scl(1f/Box2dObject.RADIO);
 			def.referenceAngle = b2Def.referenceDegrees*MathUtils.degreesToRadians;
 			def.lowerAngle = b2Def.lowerDegrees*MathUtils.degreesToRadians;
 			def.upperAngle = b2Def.upperDegrees*MathUtils.degreesToRadians;
@@ -176,8 +176,8 @@ public class DefaultBuilder {
 			def.collideConnected = b2Def.collideConnected;
 			def.bodyA = b2Def.bodyA.body;
 			def.bodyB = b2Def.bodyB.body;
-			def.localAnchorA.set(b2Def.localAnchorA).div(Box2dObject.RADIO);
-			def.localAnchorB.set(b2Def.localAnchorB).div(Box2dObject.RADIO);
+			def.localAnchorA.set(b2Def.localAnchorA).scl(1f/Box2dObject.RADIO);
+			def.localAnchorB.set(b2Def.localAnchorB).scl(1f/Box2dObject.RADIO);
 			def.maxLength = b2Def.maxLength/Box2dObject.RADIO;
 			b2Def.joint = world.createJoint(def);
 			def = null;
@@ -187,8 +187,8 @@ public class DefaultBuilder {
 			def.collideConnected = b2Def.collideConnected;
 			def.bodyA = b2Def.bodyA.body;
 			def.bodyB = b2Def.bodyB.body;
-			def.localAnchorA.set(b2Def.localAnchorA).div(Box2dObject.RADIO);
-			def.localAnchorB.set(b2Def.localAnchorB).div(Box2dObject.RADIO);
+			def.localAnchorA.set(b2Def.localAnchorA).scl(1f/Box2dObject.RADIO);
+			def.localAnchorB.set(b2Def.localAnchorB).scl(1f/Box2dObject.RADIO);
 			def.referenceAngle = b2Def.referenceDegrees*MathUtils.degreesToRadians;
 			b2Def.joint = world.createJoint(def);
 			def = null;
@@ -198,8 +198,8 @@ public class DefaultBuilder {
 			def.collideConnected = b2Def.collideConnected;
 			def.bodyA = b2Def.bodyA.body;
 			def.bodyB = b2Def.bodyB.body;
-			def.localAnchorA.set(b2Def.localAnchorA).div(Box2dObject.RADIO);
-			def.localAnchorB.set(b2Def.localAnchorB).div(Box2dObject.RADIO);
+			def.localAnchorA.set(b2Def.localAnchorA).scl(1f/Box2dObject.RADIO);
+			def.localAnchorB.set(b2Def.localAnchorB).scl(1f/Box2dObject.RADIO);
 			def.localAxisA.set(b2Def.localAxisA);
 			def.enableMotor = b2Def.enableMotor;
 			def.maxMotorTorque = b2Def.maxMotorTorque;
@@ -214,10 +214,10 @@ public class DefaultBuilder {
 			def.collideConnected = b2Def.collideConnected;
 			def.bodyA = b2Def.bodyA.body;
 			def.bodyB = b2Def.bodyB.body;
-			def.localAnchorA.set(b2Def.localAnchorA).div(Box2dObject.RADIO);
-			def.localAnchorB.set(b2Def.localAnchorB).div(Box2dObject.RADIO);
-			def.groundAnchorA.set(b2Def.groundAnchorA).div(Box2dObject.RADIO);
-			def.groundAnchorB.set(b2Def.groundAnchorB).div(Box2dObject.RADIO);
+			def.localAnchorA.set(b2Def.localAnchorA).scl(1f/Box2dObject.RADIO);
+			def.localAnchorB.set(b2Def.localAnchorB).scl(1f/Box2dObject.RADIO);
+			def.groundAnchorA.set(b2Def.groundAnchorA).scl(1f/Box2dObject.RADIO);
+			def.groundAnchorB.set(b2Def.groundAnchorB).scl(1f/Box2dObject.RADIO);
 			def.lengthA = b2Def.lengthA/Box2dObject.RADIO;
 			def.lengthB = b2Def.lengthB/Box2dObject.RADIO;
 			def.ratio = b2Def.ratio;

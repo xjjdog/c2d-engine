@@ -4,7 +4,6 @@ import info.u250.c2d.engine.Engine;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.GLCommon;
 import com.badlogic.gdx.graphics.Mesh;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.VertexAttribute;
@@ -76,7 +75,7 @@ public class TriangleSurfaces extends CurveSurfaces {
 	@Override
 	protected void doRender(float delta) {
 		if (null != mesh) {
-			GLCommon gl = Gdx.gl20;
+			GL20 gl = Gdx.gl20;
 			gl.glActiveTexture(GL20.GL_TEXTURE0 + 0);
 			gl.glEnable(GL20.GL_TEXTURE_2D);
 
