@@ -166,8 +166,8 @@ public class Geometry {
 		try{
 			if(object instanceof WeldJointDefModel){
 				WeldJointDefModel model = WeldJointDefModel.class.cast(object);
-				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
-				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
 				model.referenceDegrees = model.bodyB.degrees - model.bodyA.degrees;
 			}else if(object instanceof RevoluteJointDefModel){
 				RevoluteJointDefModel model = RevoluteJointDefModel.class.cast(object);
@@ -178,8 +178,8 @@ public class Geometry {
 						model.anchor.set(model.bodyB.position);
 					}
 				}
-				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
-				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
 				model.referenceDegrees = model.bodyB.degrees - model.bodyA.degrees;
 			}else if(object instanceof PrismaticJointDefModel){
 				PrismaticJointDefModel model = PrismaticJointDefModel.class.cast(object);
@@ -192,11 +192,11 @@ public class Geometry {
 				}
 				if(model.useABCenterLine){
 					model.localAxisA.set(model.bodyB.position).sub(model.bodyA.position);
-					model.localAxisA.div(model.localAxisA.len());
+					model.localAxisA.scl(1f/model.localAxisA.len());
 				}
 				
-				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
-				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
 				model.referenceDegrees = model.bodyB.degrees - model.bodyA.degrees;
 			}else if(object instanceof FrictionJointDefModel){
 				FrictionJointDefModel model = FrictionJointDefModel.class.cast(object);
@@ -207,8 +207,8 @@ public class Geometry {
 						model.anchor.set(model.bodyB.position);
 					}
 				}
-				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
-				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
 			}else if(object instanceof WheelJointDefModel){
 				WheelJointDefModel model = WheelJointDefModel.class.cast(object);
 				if(model.useBodyACenter){
@@ -221,9 +221,9 @@ public class Geometry {
 				if(model.useABCenterLine){
 					model.localAxisA.set(model.bodyB.position).sub(model.bodyA.position);
 				}
-				model.localAxisA.div(model.localAxisA.len());
-				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
-				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAxisA.scl(1f/model.localAxisA.len());
+				model.localAnchorA.set(model.bodyA.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
+				model.localAnchorB.set(model.bodyB.body.getLocalPoint(model.anchor.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO));
 			}else if(object instanceof PulleyJointDefModel){
 				PulleyJointDefModel model = PulleyJointDefModel.class.cast(object);
 				if(model.setBodyAZero){
@@ -232,8 +232,8 @@ public class Geometry {
 				if(model.setBodyBZero){
 					model.localAnchorB.set(0, 0);
 				}
-				final Vector2 worldA = model.bodyA.body.getWorldPoint(model.localAnchorA.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO);
-				final Vector2 worldB = model.bodyB.body.getWorldPoint(model.localAnchorB.cpy().div(Box2dObject.RADIO)).scl(Box2dObject.RADIO);
+				final Vector2 worldA = model.bodyA.body.getWorldPoint(model.localAnchorA.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO);
+				final Vector2 worldB = model.bodyB.body.getWorldPoint(model.localAnchorB.cpy().scl(1f/Box2dObject.RADIO)).scl(Box2dObject.RADIO);
 				if(model.groundAAlignAnchorA){
 					model.groundAnchorA.x = worldA.x ;
 				}
@@ -252,8 +252,8 @@ public class Geometry {
 				}
 				if(model.autoCalculateLength){
 					model.maxLength = 
-							model.bodyA.body.getWorldPoint(model.localAnchorA.cpy().div(Box2dObject.RADIO)).sub(
-									model.bodyB.body.getWorldPoint(model.localAnchorB.cpy().div(Box2dObject.RADIO))
+							model.bodyA.body.getWorldPoint(model.localAnchorA.cpy().scl(1f/Box2dObject.RADIO)).sub(
+									model.bodyB.body.getWorldPoint(model.localAnchorB.cpy().scl(1f/Box2dObject.RADIO))
 									).scl(Box2dObject.RADIO).len();
 				}
 			}else if(object instanceof DistanceJointDefModel){
@@ -266,8 +266,8 @@ public class Geometry {
 				}
 				if(model.autoCalculateLength){
 					model.length = 
-							model.bodyA.body.getWorldPoint(model.localAnchorA.cpy().div(Box2dObject.RADIO)).sub(
-									model.bodyB.body.getWorldPoint(model.localAnchorB.cpy().div(Box2dObject.RADIO))
+							model.bodyA.body.getWorldPoint(model.localAnchorA.cpy().scl(1f/Box2dObject.RADIO)).sub(
+									model.bodyB.body.getWorldPoint(model.localAnchorB.cpy().scl(1f/Box2dObject.RADIO))
 									).scl(Box2dObject.RADIO).len();
 				}
 			}
@@ -384,7 +384,7 @@ public class Geometry {
 	static Vector2 worldPoint(b2BodyDefModel b2,Vector2 localVector){
 		Vector2 tmp = new Vector2();
 		try{
-			tmp.set(b2.body.getWorldPoint(localVector.cpy().div(Box2dObject.RADIO))).scl(Box2dObject.RADIO);
+			tmp.set(b2.body.getWorldPoint(localVector.cpy().scl(1f/Box2dObject.RADIO))).scl(Box2dObject.RADIO);
 		}catch(Exception ex){
 			//
 		}

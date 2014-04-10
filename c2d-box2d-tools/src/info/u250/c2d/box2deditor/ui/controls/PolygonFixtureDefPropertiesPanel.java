@@ -176,7 +176,7 @@ public class PolygonFixtureDefPropertiesPanel extends FixtureDefPropertiesPanel 
 				// redo the layout
 				if(model.polygon.size()>index+1){
 					Vector2 indexPlus = model.polygon.get(index+1);
-					model.polygon.add(index+1, new Vector2(model.polygon.get(index)).add(indexPlus.cpy().sub(model.polygon.get(index)).div(2)));
+					model.polygon.add(index+1, new Vector2(model.polygon.get(index)).add(indexPlus.cpy().sub(model.polygon.get(index)).scl(.5f)));
 				}else{
 					model.polygon.add(index+1, new Vector2(model.polygon.get(index)).add(20, 20));
 				}

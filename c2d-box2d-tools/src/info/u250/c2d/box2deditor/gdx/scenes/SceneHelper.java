@@ -124,7 +124,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 				secondData = null;
 				//find the first data //
 				if(button == Buttons.LEFT){
-					box2dAABBTestPoint.set(dragTemp).div(Box2dObject.RADIO);
+					box2dAABBTestPoint.set(dragTemp).scl(1f/Box2dObject.RADIO);
 					PhysicalWorld.WORLD.QueryAABB(callback, box2dAABBTestPoint.x - 0.1f, box2dAABBTestPoint.y - 0.1f, box2dAABBTestPoint.x + 0.1f, box2dAABBTestPoint.y + 0.1f);
 				}
 			}
@@ -134,7 +134,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 			secondData = null;
 			dragTemp.set(Engine.screenToWorld(screenX, screenY));
 			//find the first data //
-			box2dAABBTestPoint.set(dragTemp).div(Box2dObject.RADIO);
+			box2dAABBTestPoint.set(dragTemp).scl(1f/Box2dObject.RADIO);
 			PhysicalWorld.WORLD.QueryAABB(callbackSecond, box2dAABBTestPoint.x - 0.1f, box2dAABBTestPoint.y - 0.1f, box2dAABBTestPoint.x + 0.1f, box2dAABBTestPoint.y + 0.1f);
 			return super.touchDragged(screenX, screenY, pointer);
 		};
@@ -144,7 +144,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 				secondData = null;
 				dragTemp.set(Engine.screenToWorld(x, y));
 				//find the first data //
-				box2dAABBTestPoint.set(dragTemp).div(Box2dObject.RADIO);
+				box2dAABBTestPoint.set(dragTemp).scl(1f/Box2dObject.RADIO);
 				PhysicalWorld.WORLD.QueryAABB(callbackSecond, box2dAABBTestPoint.x - 0.1f, box2dAABBTestPoint.y - 0.1f, box2dAABBTestPoint.x + 0.1f, box2dAABBTestPoint.y + 0.1f);
 			}
 			return false;
@@ -181,7 +181,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 				data = null;
 				//find the first data //
 				if(button == Buttons.LEFT){
-					box2dAABBTestPoint.set(dragTemp).div(Box2dObject.RADIO);
+					box2dAABBTestPoint.set(dragTemp).scl(1f/Box2dObject.RADIO);
 					PhysicalWorld.WORLD.QueryAABB(callback, box2dAABBTestPoint.x - 0.1f, box2dAABBTestPoint.y - 0.1f, box2dAABBTestPoint.x + 0.1f, box2dAABBTestPoint.y + 0.1f);
 				}
 			}
@@ -342,8 +342,8 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 					DistanceJointDefModel def = new DistanceJointDefModel();
 					def.bodyA = data;
 					def.bodyB = secondData;
-					def.localAnchorA.set(def.bodyA.body.getLocalPoint(startPoint.cpy().div(Box2dObject.RADIO))).scl(Box2dObject.RADIO);
-					def.localAnchorB.set(def.bodyB.body.getLocalPoint(dragTemp.cpy().div(Box2dObject.RADIO))).scl(Box2dObject.RADIO);
+					def.localAnchorA.set(def.bodyA.body.getLocalPoint(startPoint.cpy().scl(1f/Box2dObject.RADIO))).scl(Box2dObject.RADIO);
+					def.localAnchorB.set(def.bodyB.body.getLocalPoint(dragTemp.cpy().scl(1f/Box2dObject.RADIO))).scl(Box2dObject.RADIO);
 					def.length = startPoint.dst(dragTemp);
 					Geometry.ajustJoint(def);
 					PhysicalWorld.MODEL.addJoint(def);
@@ -357,7 +357,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 					PrismaticJointDefModel def = new PrismaticJointDefModel();
 					def.bodyA = data;
 					def.bodyB = secondData;
-					def.anchor.set(startPoint).add(dragTemp).div(2);
+					def.anchor.set(startPoint).add(dragTemp).scl(1f/2);
 					Geometry.ajustJoint(def);
 					PhysicalWorld.MODEL.addJoint(def);
 					adapter.callUI.addModelToLeft(def);
@@ -370,7 +370,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 					RevoluteJointDefModel def = new RevoluteJointDefModel();
 					def.bodyA = data;
 					def.bodyB = secondData;
-					def.anchor.set(startPoint).add(dragTemp).div(2);
+					def.anchor.set(startPoint).add(dragTemp).scl(1f/2);
 					Geometry.ajustJoint(def);
 					PhysicalWorld.MODEL.addJoint(def);
 					adapter.callUI.addModelToLeft(def);
@@ -383,8 +383,8 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 					RopeJointDefModel def = new RopeJointDefModel();
 					def.bodyA = data;
 					def.bodyB = secondData;
-					def.localAnchorA.set(def.bodyA.body.getLocalPoint(startPoint.cpy().div(Box2dObject.RADIO))).scl(Box2dObject.RADIO);
-					def.localAnchorB.set(def.bodyB.body.getLocalPoint(dragTemp.cpy().div(Box2dObject.RADIO))).scl(Box2dObject.RADIO);
+					def.localAnchorA.set(def.bodyA.body.getLocalPoint(startPoint.cpy().scl(1f/Box2dObject.RADIO))).scl(Box2dObject.RADIO);
+					def.localAnchorB.set(def.bodyB.body.getLocalPoint(dragTemp.cpy().scl(1f/Box2dObject.RADIO))).scl(Box2dObject.RADIO);
 					Geometry.ajustJoint(def);
 					PhysicalWorld.MODEL.addJoint(def);
 					adapter.callUI.addModelToLeft(def);
@@ -397,7 +397,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 					WeldJointDefModel def = new WeldJointDefModel();
 					def.bodyA = data;
 					def.bodyB = secondData;
-					def.anchor.set(startPoint).add(dragTemp).div(2);
+					def.anchor.set(startPoint).add(dragTemp).scl(1f/2);
 					Geometry.ajustJoint(def);
 					PhysicalWorld.MODEL.addJoint(def);
 					adapter.callUI.addModelToLeft(def);
@@ -410,7 +410,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 					WheelJointDefModel def = new WheelJointDefModel();
 					def.bodyA = data;
 					def.bodyB = secondData;
-					def.anchor.set(startPoint).add(dragTemp).div(2);
+					def.anchor.set(startPoint).add(dragTemp).scl(1f/2);
 					Geometry.ajustJoint(def);
 					PhysicalWorld.MODEL.addJoint(def);
 					adapter.callUI.addModelToLeft(def);
@@ -423,7 +423,7 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 					FrictionJointDefModel def = new FrictionJointDefModel();
 					def.bodyA = data;
 					def.bodyB = secondData;
-					def.anchor.set(startPoint).add(dragTemp).div(2);
+					def.anchor.set(startPoint).add(dragTemp).scl(1f/2);
 					Geometry.ajustJoint(def);
 					PhysicalWorld.MODEL.addJoint(def);
 					adapter.callUI.addModelToLeft(def);
@@ -436,8 +436,8 @@ public class SceneHelper extends AbstractBox2dHelper<SceneModelAdapter> {
 					PulleyJointDefModel def = new PulleyJointDefModel();
 					def.bodyA = data;
 					def.bodyB = secondData;
-					def.localAnchorA.set(def.bodyA.body.getLocalPoint(startPoint.cpy().div(Box2dObject.RADIO))).scl(Box2dObject.RADIO);
-					def.localAnchorB.set(def.bodyB.body.getLocalPoint(dragTemp.cpy().div(Box2dObject.RADIO))).scl(Box2dObject.RADIO);
+					def.localAnchorA.set(def.bodyA.body.getLocalPoint(startPoint.cpy().scl(1f/Box2dObject.RADIO))).scl(Box2dObject.RADIO);
+					def.localAnchorB.set(def.bodyB.body.getLocalPoint(dragTemp.cpy().scl(1f/Box2dObject.RADIO))).scl(Box2dObject.RADIO);
 					def.groundAnchorA.set(startPoint.x, 500);
 					def.groundAnchorB.set(dragTemp.x, 500);
 					def.lengthA = startPoint.dst(def.groundAnchorA);
