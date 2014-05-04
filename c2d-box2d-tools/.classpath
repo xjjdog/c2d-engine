@@ -7,5 +7,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="assets"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/gdx-tools"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/gdx-box2d"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
