@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/gdx"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/gdx-box2d"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/gdx-backend-android"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/c2d"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/c2d-tests"/>
