@@ -1,0 +1,152 @@
+<world>
+	<fixtures>
+		<polygons friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="Top_Block" mark="">
+			<polygon>
+				<vertex>{-627.00085,-21.99998}</vertex>
+				<vertex>{-264.0008,-59.000023}</vertex>
+				<vertex>{-97.000786,-18.00002}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-803.0008,43.000015}</vertex>
+				<vertex>{-627.00085,-21.99998}</vertex>
+				<vertex>{-97.000786,-18.00002}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{0.0,50.0}</vertex>
+				<vertex>{-803.0008,43.000015}</vertex>
+				<vertex>{-97.000786,-18.00002}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{0.0,50.0}</vertex>
+				<vertex>{-97.000786,-18.00002}</vertex>
+				<vertex>{-50.0,-50.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{473.99924,47.99999}</vertex>
+				<vertex>{0.0,50.0}</vertex>
+				<vertex>{-50.0,-50.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{518.99927,-91.0}</vertex>
+				<vertex>{661.99927,125.000015}</vertex>
+				<vertex>{473.99924,47.99999}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{50.0,-50.0}</vertex>
+				<vertex>{518.99927,-91.0}</vertex>
+				<vertex>{473.99924,47.99999}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-50.0,-50.0}</vertex>
+				<vertex>{50.0,-50.0}</vertex>
+				<vertex>{473.99924,47.99999}</vertex>
+			</polygon>
+		</polygons>
+		<circle friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="SmallCircle" mark="" radius="10.0"/>
+		<circle friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="MidCircle" mark="" radius="76.65717"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="BigBox" mark="" width="904.00165" height="52.0"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="Center" mark="" width="163.99994" height="46.0"/>
+		<box friction="0.0" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="Box" mark="" width="100.0" height="100.0"/>
+		<polygons friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="PolygonLeft" mark="">
+			<polygon>
+				<vertex>{-18.999954,-84.999954}</vertex>
+				<vertex>{28.000061,-86.999954}</vertex>
+				<vertex>{20.000046,-16.999977}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-54.999954,-90.999985}</vertex>
+				<vertex>{-18.999954,-84.999954}</vertex>
+				<vertex>{20.000046,-16.999977}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-40.999954,25.000004}</vertex>
+				<vertex>{-54.999954,-90.999985}</vertex>
+				<vertex>{20.000046,-16.999977}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-62.999924,82.0}</vertex>
+				<vertex>{-40.999954,25.000004}</vertex>
+				<vertex>{20.000046,-16.999977}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{18.000046,70.0}</vertex>
+				<vertex>{-62.999924,82.0}</vertex>
+				<vertex>{20.000046,-16.999977}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{20.000046,-16.999977}</vertex>
+				<vertex>{70.000046,-10.999977}</vertex>
+				<vertex>{18.000046,70.0}</vertex>
+			</polygon>
+		</polygons>
+		<polygons friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="PolygonRight" mark="">
+			<polygon>
+				<vertex>{0.0,50.0}</vertex>
+				<vertex>{-42.0,10.000023}</vertex>
+				<vertex>{-20.00003,-55.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-20.00003,-55.0}</vertex>
+				<vertex>{45.999985,-7.9999847}</vertex>
+				<vertex>{0.0,50.0}</vertex>
+			</polygon>
+		</polygons>
+	</fixtures>
+	<bodys>
+		<body name="Top_Body" type="StaticBody" position="{612.9999,583.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="803.0008" drawableOffsetY="91.0" drawableWidth="1465.0" drawableHeight="216.00002" mark="">
+			<fixture ref="Top_Block"/>
+		</body>
+		<body name="SoftBodyCenter" type="DynamicBody" position="{76.00006,119.99999}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="76.65717" drawableOffsetY="76.65717" drawableWidth="153.31435" drawableHeight="153.31435" mark="">
+			<fixture ref="MidCircle"/>
+		</body>
+		<body name="BottomBox" type="StaticBody" position="{572.9501,-3.6500092}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="803.0008" drawableOffsetY="91.0" drawableWidth="1465.0" drawableHeight="216.00002" mark="">
+			<fixture ref="Top_Block"/>
+		</body>
+		<body name="SoftBody1" type="DynamicBody" position="{223.00002,263.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="10.0" drawableOffsetY="10.0" drawableWidth="20.0" drawableHeight="20.0" mark="">
+			<fixture ref="SmallCircle"/>
+		</body>
+		<body name="SoftBody2" type="DynamicBody" position="{229.99998,292.0}" degrees="0.91189194" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="10.0" drawableOffsetY="10.0" drawableWidth="20.0" drawableHeight="20.0" mark="">
+			<fixture ref="SmallCircle"/>
+		</body>
+		<body name="SoftBody3" type="DynamicBody" position="{232.99998,321.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="10.0" drawableOffsetY="10.0" drawableWidth="20.0" drawableHeight="20.0" mark="">
+			<fixture ref="SmallCircle"/>
+		</body>
+		<body name="SoftBody4" type="DynamicBody" position="{235.99998,350.0}" degrees="7.8892517" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="10.0" drawableOffsetY="10.0" drawableWidth="20.0" drawableHeight="20.0" mark="">
+			<fixture ref="SmallCircle"/>
+		</body>
+		<body name="Box" type="DynamicBody" position="{630.775,96.349976}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="50.0" drawableOffsetY="50.0" drawableWidth="100.0" drawableHeight="100.0" mark="">
+			<fixture ref="Box"/>
+		</body>
+		<body name="Body13" type="DynamicBody" position="{259.0,452.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="62.999924" drawableOffsetY="90.999985" drawableWidth="132.99997" drawableHeight="172.99998" mark="">
+			<fixture ref="PolygonLeft"/>
+		</body>
+		<body name="Body14" type="DynamicBody" position="{644.00006,223.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="42.0" drawableOffsetY="55.0" drawableWidth="87.999985" drawableHeight="105.0" mark="">
+			<fixture ref="PolygonRight"/>
+		</body>
+		<body name="Body15" type="DynamicBody" position="{575.0,225.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="10.0" drawableOffsetY="10.0" drawableWidth="20.0" drawableHeight="20.0" mark="">
+			<fixture ref="SmallCircle"/>
+		</body>
+		<body name="Body16" type="DynamicBody" position="{713.0,211.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="10.0" drawableOffsetY="10.0" drawableWidth="20.0" drawableHeight="20.0" mark="">
+			<fixture ref="SmallCircle"/>
+		</body>
+		<body name="left" type="DynamicBody" position="{512.0,387.00003}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="81.99997" drawableOffsetY="76.65717" drawableWidth="163.99994" drawableHeight="153.31435" mark="">
+			<fixture ref="MidCircle"/>
+			<fixture ref="Center"/>
+		</body>
+	</bodys>
+	<joints>
+		<joint collideConnected="false" bodyA="Top_Body" bodyB="SoftBodyCenter" name="RevoluteJoint2" mark="" type="RevoluteJoint" localAnchorA="{-536.9998,-463.0}" localAnchorB="{0.0,0.0}" referenceDegrees="0.0" enableLimit="false" enableMotor="true" maxMotorTorque="500.0" enableMotor="true" motorSpeed="500.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Box" bodyB="BottomBox" name="PrismaticJoint1" mark="" type="PrismaticJoint" localAxisA="{1.0,0.0}" localAnchorA="{-183.82498,-75.99997}" localAnchorB="{-126.00003,24.000015}" referenceDegrees="0.0" enableLimit="false" lowerTranslation="0.0" upperTranslation="0.0" enableMotor="false" maxMotorForce="1000.0" motorSpeed="1000.0"/>
+		<joint collideConnected="false" bodyA="SoftBodyCenter" bodyB="Box" name="DistanceJoint14" mark="" type="DistanceJoint" length="563.131" localAnchorA="{0.0,73.0}" localAnchorB="{0.0,0.0}" frequencyHz="0.0" dampingRatio="0.0"/>
+		<joint collideConnected="false" bodyA="Body13" bodyB="SoftBody4" name="RopeJoint2" mark="" type="RopeJoint" localAnchorA="{0.0,0.0}" localAnchorB="{0.0,0.0}" maxLength="104.56099"/>
+		<joint collideConnected="false" bodyA="SoftBody4" bodyB="SoftBody3" name="RopeJoint3" mark="" type="RopeJoint" localAnchorA="{0.0,0.0}" localAnchorB="{0.0,0.0}" maxLength="29.15476"/>
+		<joint collideConnected="false" bodyA="SoftBody3" bodyB="SoftBody2" name="RopeJoint4" mark="" type="RopeJoint" localAnchorA="{0.0,0.0}" localAnchorB="{0.0,0.0}" maxLength="29.15476"/>
+		<joint collideConnected="false" bodyA="SoftBody2" bodyB="SoftBody1" name="RopeJoint5" mark="" type="RopeJoint" localAnchorA="{0.0,0.0}" localAnchorB="{0.0,0.0}" maxLength="29.83286"/>
+		<joint collideConnected="true" bodyA="Top_Body" bodyB="Body13" name="RopeJoint6" mark="" type="RopeJoint" localAnchorA="{-350.99985,0.0}" localAnchorB="{-1.0,56.0}" maxLength="75.10659"/>
+		<joint collideConnected="false" bodyA="Body14" bodyB="Box" name="WeldJoint11" mark="" type="WeldJoint" localAnchorA="{1.999939,-55.0}" localAnchorB="{15.224976,71.650024}" referenceDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body15" bodyB="Body14" name="WeldJoint12" mark="" type="WeldJoint" localAnchorA="{19.0,-1.0}" localAnchorB="{-50.00006,1.0}" referenceDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body14" bodyB="Body16" name="WeldJoint13" mark="" type="WeldJoint" localAnchorA="{48.49994,-6.5}" localAnchorB="{-20.5,5.5}" referenceDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Top_Body" bodyB="left" name="RevoluteJoint3" mark="" type="RevoluteJoint" localAnchorA="{-100.99988,-195.99997}" localAnchorB="{0.0,0.0}" referenceDegrees="0.0" enableLimit="false" enableMotor="false" maxMotorTorque="100.0" enableMotor="false" motorSpeed="100.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="left" bodyB="Body14" name="RopeJoint7" mark="" type="RopeJoint" localAnchorA="{28.000061,-44.911102}" localAnchorB="{-15.000061,30.088882}" maxLength="250.0"/>
+	</joints>
+</world>

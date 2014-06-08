@@ -14,7 +14,15 @@ import info.u250.c2d.tests.animations.AnimationSpriteLoopWithTimesTest;
 import info.u250.c2d.tests.animations.GracefulEffectLabel;
 import info.u250.c2d.tests.animations.LaserTest;
 import info.u250.c2d.tests.animations.RainEffect;
-import info.u250.c2d.tests.box2d.Box2dC2dTest;
+import info.u250.c2d.tests.box2d.Box2dBike;
+import info.u250.c2d.tests.box2d.Box2dBridge;
+import info.u250.c2d.tests.box2d.Box2dC2d;
+import info.u250.c2d.tests.box2d.Box2dComplexWorld1;
+import info.u250.c2d.tests.box2d.Box2dCrank;
+import info.u250.c2d.tests.box2d.Box2dRagdoll;
+import info.u250.c2d.tests.box2d.Box2dSeesaw;
+import info.u250.c2d.tests.box2d.Box2dStackedBoxes;
+import info.u250.c2d.tests.box2d.Box2dVaryingRestitution;
 import info.u250.c2d.tests.mesh.FingerSwipeTest;
 import info.u250.c2d.tests.mesh.FlagTest;
 import info.u250.c2d.tests.mesh.GradientTest;
@@ -205,7 +213,71 @@ public class C2dTests {
 				sub.put("title", "Box2d C2d test");
 				sub.put("desc", "Read datas from XML");
 				sub.put("image", "drawable/item");
-				sub.put("cls", Box2dC2dTest.class.getName());
+				sub.put("cls", Box2dC2d.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Box2d Bike test");
+				sub.put("desc", "Read datas from XML");
+				sub.put("image", "drawable/item");
+				sub.put("cls", Box2dBike.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Box2d Bridge test");
+				sub.put("desc", "Read datas from XML");
+				sub.put("image", "drawable/item");
+				sub.put("cls", Box2dBridge.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Box2d ComplexWorld1 test");
+				sub.put("desc", "Read datas from XML");
+				sub.put("image", "drawable/item");
+				sub.put("cls", Box2dComplexWorld1.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Box2d Crank test");
+				sub.put("desc", "Read datas from XML");
+				sub.put("image", "drawable/item");
+				sub.put("cls", Box2dCrank.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Box2d SeeSaw test");
+				sub.put("desc", "Read datas from XML");
+				sub.put("image", "drawable/item");
+				sub.put("cls", Box2dSeesaw.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Box2d Ragdoll test");
+				sub.put("desc", "Read datas from XML");
+				sub.put("image", "drawable/item");
+				sub.put("cls", Box2dRagdoll.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Box2d StackedBoxes test");
+				sub.put("desc", "Read datas from XML");
+				sub.put("image", "drawable/item");
+				sub.put("cls", Box2dStackedBoxes.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Box2d VaryingRestitution test");
+				sub.put("desc", "Read datas from XML");
+				sub.put("image", "drawable/item");
+				sub.put("cls", Box2dVaryingRestitution.class.getName());
 				subs.add(sub);
 			}
 			map.put("subs", subs);
@@ -255,7 +327,7 @@ public class C2dTests {
 				sub.put("title", "Jumpy line");
 				sub.put("desc", " A line that jump jump jump .");
 				sub.put("image", "drawable/item");
-				sub.put("cls", FingerSwipeTest.class.getName());
+				sub.put("cls", JumpyLineTest.class.getName());
 				subs.add(sub);
 			}
 			{
@@ -263,7 +335,7 @@ public class C2dTests {
 				sub.put("title", "Finger Swipe");
 				sub.put("desc", "Surely most of you are familiar with the Fruit Ninja type of games. https://github.com/mattdesl/lwjgl-basics/wiki/LibGDX-Finger-Swipe");
 				sub.put("image", "drawable/item");
-				sub.put("cls", JumpyLineTest.class.getName());
+				sub.put("cls", FingerSwipeTest.class.getName());
 				subs.add(sub);
 			}
 			{

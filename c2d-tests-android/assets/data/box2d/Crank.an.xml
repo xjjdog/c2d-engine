@@ -1,0 +1,61 @@
+<world>
+	<fixtures>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="RectangleFixture1" mark="" width="100.0" height="100.0"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="2" maskBits="2" groupIndex="0" name="RectangleFixture2" mark="" width="40.0" height="200.0"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="RectangleFixture3" mark="" width="39.99994" height="100.0"/>
+		<polygons friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="PolygonFixture1" mark="">
+			<polygon>
+				<vertex>{-124.0,125.000015}</vertex>
+				<vertex>{-224.0,31.999992}</vertex>
+				<vertex>{-168.0,-62.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{0.0,50.0}</vertex>
+				<vertex>{-124.0,125.000015}</vertex>
+				<vertex>{-168.0,-62.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{432.0,50.0}</vertex>
+				<vertex>{0.0,50.0}</vertex>
+				<vertex>{-168.0,-62.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{50.0,-50.0}</vertex>
+				<vertex>{451.00003,-94.000015}</vertex>
+				<vertex>{432.0,50.0}</vertex>
+			</polygon>
+			<polygon>
+				<vertex>{-168.0,-62.0}</vertex>
+				<vertex>{50.0,-50.0}</vertex>
+				<vertex>{432.0,50.0}</vertex>
+			</polygon>
+		</polygons>
+		<circle friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="CircleFixture1" mark="" radius="5.0"/>
+	</fixtures>
+	<bodys>
+		<body name="Body1" type="DynamicBody" position="{395.0,460.00003}" degrees="0.54974365" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="50.0" drawableOffsetY="50.0" drawableWidth="100.0" drawableHeight="100.0" mark="">
+			<fixture ref="RectangleFixture1"/>
+		</body>
+		<body name="Body2" type="DynamicBody" position="{391.99994,329.00003}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="20.0" drawableOffsetY="100.0" drawableWidth="40.0" drawableHeight="200.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+		<body name="Body3" type="DynamicBody" position="{393.0,193.99998}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="19.99997" drawableOffsetY="50.0" drawableWidth="39.99994" drawableHeight="100.0" mark="">
+			<fixture ref="RectangleFixture3"/>
+		</body>
+		<body name="Body4" type="StaticBody" position="{211.99994,93.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="224.0" drawableOffsetY="94.000015" drawableWidth="675.0" drawableHeight="219.00003" mark="">
+			<fixture ref="PolygonFixture1"/>
+		</body>
+		<body name="Body5" type="DynamicBody" position="{379.0,515.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="5.0" drawableOffsetY="5.0" drawableWidth="10.0" drawableHeight="10.0" mark="">
+			<fixture ref="CircleFixture1"/>
+		</body>
+		<body name="Body6" type="DynamicBody" position="{425.0,516.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="5.0" drawableOffsetY="5.0" drawableWidth="10.0" drawableHeight="10.0" mark="">
+			<fixture ref="CircleFixture1"/>
+		</body>
+	</bodys>
+	<joints>
+		<joint collideConnected="false" bodyA="Body3" bodyB="Body4" name="RevoluteJoint4" mark="" type="RevoluteJoint" localAnchorA="{0.0,-31.999985}" localAnchorB="{181.00006,69.0}" referenceDegrees="0.0" enableLimit="false" enableMotor="true" maxMotorTorque="100.0" enableMotor="true" motorSpeed="100.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body2" bodyB="Body3" name="RevoluteJoint5" mark="" type="RevoluteJoint" localAnchorA="{3.0517578E-5,-90.00003}" localAnchorB="{-1.0000305,45.000015}" referenceDegrees="0.0" enableLimit="false" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body1" bodyB="Body2" name="RevoluteJoint6" mark="" type="RevoluteJoint" localAnchorA="{-4.3116436,-32.460155}" localAnchorB="{-0.99993896,98.49997}" referenceDegrees="-0.54974365" enableLimit="false" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body1" bodyB="Body4" name="PrismaticJoint3" mark="" type="PrismaticJoint" localAxisA="{0.0,1.0}" localAnchorA="{-186.5129,-365.22733}" localAnchorB="{0.0,0.0}" referenceDegrees="-0.54974365" enableLimit="false" lowerTranslation="0.0" upperTranslation="0.0" enableMotor="false" maxMotorForce="0.0" motorSpeed="0.0"/>
+	</joints>
+</world>

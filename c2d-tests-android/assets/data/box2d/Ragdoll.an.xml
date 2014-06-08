@@ -1,0 +1,73 @@
+<world>
+	<fixtures>
+		<circle friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="CircleFixture1" mark="" radius="30.0"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="RectangleFixture1" mark="" width="70.0" height="45.0"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="RectangleFixture2" mark="" width="18.0" height="71.0"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="RectangleFixture3" mark="" width="40.0" height="20.0"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="RectangleFixture4" mark="" width="538.0" height="25.000061"/>
+	</fixtures>
+	<bodys>
+		<body name="Body2" type="DynamicBody" position="{422.60004,328.60004}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="35.0" drawableOffsetY="22.5" drawableWidth="70.0" drawableHeight="45.0" mark="">
+			<fixture ref="RectangleFixture1"/>
+		</body>
+		<body name="Body3" type="DynamicBody" position="{422.59998,293.80002}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="true" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="35.0" drawableOffsetY="22.5" drawableWidth="70.0" drawableHeight="45.0" mark="">
+			<fixture ref="RectangleFixture1"/>
+		</body>
+		<body name="Body4" type="DynamicBody" position="{419.79996,259.80002}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="35.0" drawableOffsetY="22.5" drawableWidth="70.0" drawableHeight="45.0" mark="">
+			<fixture ref="RectangleFixture1"/>
+		</body>
+		<body name="Body5" type="DynamicBody" position="{373.80002,315.6}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="9.0" drawableOffsetY="35.5" drawableWidth="18.0" drawableHeight="71.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+		<body name="Body6" type="DynamicBody" position="{373.4,250.8}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="9.0" drawableOffsetY="35.5" drawableWidth="18.0" drawableHeight="71.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+		<body name="Body7" type="DynamicBody" position="{471.80005,315.59998}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="9.0" drawableOffsetY="35.5" drawableWidth="18.0" drawableHeight="71.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+		<body name="Body8" type="DynamicBody" position="{470.4,253.79996}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="9.0" drawableOffsetY="35.5" drawableWidth="18.0" drawableHeight="71.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+		<body name="Body9" type="DynamicBody" position="{393.40002,210.00005}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="9.0" drawableOffsetY="35.5" drawableWidth="18.0" drawableHeight="71.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+		<body name="Body10" type="DynamicBody" position="{446.2,207.60002}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="9.0" drawableOffsetY="35.5" drawableWidth="18.0" drawableHeight="71.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+		<body name="Body11" type="DynamicBody" position="{393.40005,163.80003}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="9.0" drawableOffsetY="35.5" drawableWidth="18.0" drawableHeight="71.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+		<body name="Body12" type="DynamicBody" position="{447.6,161.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="9.0" drawableOffsetY="35.5" drawableWidth="18.0" drawableHeight="71.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+		<body name="Body13" type="DynamicBody" position="{381.99994,136.79997}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="20.0" drawableOffsetY="10.0" drawableWidth="40.0" drawableHeight="20.0" mark="">
+			<fixture ref="RectangleFixture3"/>
+		</body>
+		<body name="Body14" type="DynamicBody" position="{456.8,134.00002}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="20.0" drawableOffsetY="10.0" drawableWidth="40.0" drawableHeight="20.0" mark="">
+			<fixture ref="RectangleFixture3"/>
+		</body>
+		<body name="Body15" type="StaticBody" position="{430.40012,635.80005}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="269.0" drawableOffsetY="12.5000305" drawableWidth="538.0" drawableHeight="25.000061" mark="">
+			<fixture ref="RectangleFixture4"/>
+		</body>
+		<body name="Body16" type="DynamicBody" position="{420.79993,385.40005}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="30.0" drawableOffsetY="30.0" drawableWidth="60.0" drawableHeight="60.0" mark="">
+			<fixture ref="CircleFixture1"/>
+		</body>
+	</bodys>
+	<joints>
+		<joint collideConnected="false" bodyA="Body2" bodyB="Body3" name="RevoluteJoint1" mark="" type="RevoluteJoint" localAnchorA="{1.3999634,-12.600006}" localAnchorB="{1.4000244,22.200012}" referenceDegrees="0.0" enableLimit="true" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="-10.0" upperDegrees="10.0"/>
+		<joint collideConnected="false" bodyA="Body3" bodyB="Body4" name="RevoluteJoint2" mark="" type="RevoluteJoint" localAnchorA="{2.4000244,-20.299988}" localAnchorB="{5.2000427,13.700012}" referenceDegrees="0.0" enableLimit="true" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="-10.0" upperDegrees="10.0"/>
+		<joint collideConnected="false" bodyA="Body2" bodyB="Body5" name="RevoluteJoint4" mark="" type="RevoluteJoint" localAnchorA="{-41.100037,4.399994}" localAnchorB="{7.6999817,17.400024}" referenceDegrees="0.0" enableLimit="false" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body5" bodyB="Body6" name="RevoluteJoint5" mark="" type="RevoluteJoint" localAnchorA="{4.1999817,-31.599976}" localAnchorB="{4.600006,33.200027}" referenceDegrees="0.0" enableLimit="false" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body7" bodyB="Body2" name="RevoluteJoint6" mark="" type="RevoluteJoint" localAnchorA="{-2.3000488,16.900024}" localAnchorB="{46.899963,3.8999634}" referenceDegrees="0.0" enableLimit="false" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body7" bodyB="Body8" name="RevoluteJoint7" mark="" type="RevoluteJoint" localAnchorA="{-0.8000488,-31.099945}" localAnchorB="{0.6000061,30.700073}" referenceDegrees="0.0" enableLimit="false" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body4" bodyB="Body9" name="RevoluteJoint8" mark="" type="RevoluteJoint" localAnchorA="{-20.799957,-20.300018}" localAnchorB="{5.5999756,29.499954}" referenceDegrees="0.0" enableLimit="true" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="-15.0" upperDegrees="15.0"/>
+		<joint collideConnected="false" bodyA="Body4" bodyB="Body10" name="RevoluteJoint9" mark="" type="RevoluteJoint" localAnchorA="{28.200043,-18.799988}" localAnchorB="{1.7999878,33.40001}" referenceDegrees="0.0" enableLimit="true" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="-15.0" upperDegrees="15.0"/>
+		<joint collideConnected="false" bodyA="Body9" bodyB="Body11" name="RevoluteJoint10" mark="" type="RevoluteJoint" localAnchorA="{5.0999756,-28.000015}" localAnchorB="{5.099945,18.199997}" referenceDegrees="0.0" enableLimit="true" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="-10.0" upperDegrees="10.0"/>
+		<joint collideConnected="false" bodyA="Body10" bodyB="Body12" name="RevoluteJoint11" mark="" type="RevoluteJoint" localAnchorA="{3.2999878,-19.59999}" localAnchorB="{1.8999939,27.00003}" referenceDegrees="0.0" enableLimit="true" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="-10.0" upperDegrees="10.0"/>
+		<joint collideConnected="false" bodyA="Body11" bodyB="Body13" name="WeldJoint1" mark="" type="WeldJoint" localAnchorA="{0.09994507,-31.300003}" localAnchorB="{11.500061,-4.299942}" referenceDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body12" bodyB="Body14" name="WeldJoint2" mark="" type="WeldJoint" localAnchorA="{5.899994,-26.49997}" localAnchorB="{-3.2999878,0.50001526}" referenceDegrees="0.0"/>
+		<joint collideConnected="false" bodyA="Body6" bodyB="Body15" name="RopeJoint3" mark="" type="RopeJoint" localAnchorA="{0.0,0.0}" localAnchorB="{-223.0,2.0}" maxLength="421.09976"/>
+		<joint collideConnected="false" bodyA="Body15" bodyB="Body8" name="RopeJoint4" mark="" type="RopeJoint" localAnchorA="{210.0,-1.0}" localAnchorB="{0.0,0.0}" maxLength="417.20633"/>
+		<joint collideConnected="false" bodyA="Body16" bodyB="Body2" name="RevoluteJoint12" mark="" type="RevoluteJoint" localAnchorA="{0.0,0.0}" localAnchorB="{-1.8001099,56.80002}" referenceDegrees="0.0" enableLimit="false" enableMotor="false" maxMotorTorque="0.0" enableMotor="false" motorSpeed="0.0" lowerDegrees="0.0" upperDegrees="0.0"/>
+	</joints>
+</world>

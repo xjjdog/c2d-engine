@@ -33,7 +33,11 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 
-public class Box2dC2dTest extends Engine {
+public class BaseBox2d extends Engine {
+	String file ;
+	public BaseBox2d(String file){
+		this.file = file;
+	}
 	Random random = new Random();
 	private List<PolygonActor> meshs = new ArrayList<PolygonActor>();
 	World world ;
@@ -67,7 +71,7 @@ public class Box2dC2dTest extends Engine {
 		public void dispose() {}
 		@Override
 		public EngineOptions onSetupEngine() {
-			final EngineOptions opt = new EngineOptions(new String[]{"data/box2d/circle.png","data/box2d/box.png","data/textures/default.png"},800,480);
+			final EngineOptions opt = new EngineOptions(new String[]{"data/box2d/circle.png","data/box2d/box.png","data/textures/default.png"},1280,720);
 			return opt;
 		}
 
@@ -76,7 +80,7 @@ public class Box2dC2dTest extends Engine {
 			try {
 				world = new World(new Vector2(0,-9.8f), false);
 				box2dRender = new Box2DDebugRenderer();
-				b2Scene model = IOXml.parse(Gdx.files.internal("data/box2d/model-c2d.xml"));
+				b2Scene model = IOXml.parse(Gdx.files.internal(file));
 				DefaultBuilder.buildAll(world, model);
 				input = new MouseJointInput();
 				input.setWorld(world);

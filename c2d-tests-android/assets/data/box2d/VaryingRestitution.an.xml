@@ -1,0 +1,35 @@
+<world>
+	<fixtures>
+		<circle friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="CircleFixture1" mark="" radius="20.0"/>
+		<circle friction="0.2" restitution="0.2" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="CircleFixture2" mark="" radius="20.0"/>
+		<circle friction="0.2" restitution="0.4" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="CircleFixture3" mark="" radius="20.0"/>
+		<circle friction="0.2" restitution="0.6" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="CircleFixture4" mark="" radius="20.0"/>
+		<circle friction="0.2" restitution="0.8" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="CircleFixture5" mark="" radius="20.0"/>
+		<circle friction="0.2" restitution="1.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="CircleFixture6" mark="" radius="20.0"/>
+		<box friction="0.2" restitution="0.0" density="1.0" isSensor="false" categoryBits="1" maskBits="-1" groupIndex="0" name="RectangleFixture2" mark="" width="842.0" height="59.0"/>
+	</fixtures>
+	<bodys>
+		<body name="Body1" type="DynamicBody" position="{100.0,400.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="20.0" drawableOffsetY="20.0" drawableWidth="40.0" drawableHeight="40.0" mark="">
+			<fixture ref="CircleFixture1"/>
+		</body>
+		<body name="Body2" type="DynamicBody" position="{200.0,400.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="20.0" drawableOffsetY="20.0" drawableWidth="40.0" drawableHeight="40.0" mark="">
+			<fixture ref="CircleFixture2"/>
+		</body>
+		<body name="Body3" type="DynamicBody" position="{300.0,400.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="20.0" drawableOffsetY="20.0" drawableWidth="40.0" drawableHeight="40.0" mark="">
+			<fixture ref="CircleFixture3"/>
+		</body>
+		<body name="Body4" type="DynamicBody" position="{400.0,400.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="20.0" drawableOffsetY="20.0" drawableWidth="40.0" drawableHeight="40.0" mark="">
+			<fixture ref="CircleFixture4"/>
+		</body>
+		<body name="Body5" type="DynamicBody" position="{500.0,400.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="20.0" drawableOffsetY="20.0" drawableWidth="40.0" drawableHeight="40.0" mark="">
+			<fixture ref="CircleFixture5"/>
+		</body>
+		<body name="Body6" type="DynamicBody" position="{600.0,400.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="20.0" drawableOffsetY="20.0" drawableWidth="40.0" drawableHeight="40.0" mark="">
+			<fixture ref="CircleFixture6"/>
+		</body>
+		<body name="Body7" type="StaticBody" position="{420.0,81.0}" degrees="0.0" linearVelocity="{0.0,0.0}" angularVelocity="0.0" linearDamping="0.0" angularDamping="0.0" allowSleep="true" awake="true" fixedRotation="false" bullet="false" active="true" gravityScale="1.0" drawableOffsetX="421.0" drawableOffsetY="29.5" drawableWidth="842.0" drawableHeight="59.0" mark="">
+			<fixture ref="RectangleFixture2"/>
+		</body>
+	</bodys>
+	<joints/>
+</world>
