@@ -1,30 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="info.u250.c2d.tests.android"
-      android:versionCode="1"
-      android:versionName="1.0"
-      android:installLocation="preferExternal">
-<application android:icon="@drawable/icon" android:label="@string/app_name"
-		android:debuggable="true">
-		<activity android:name=".AndroidTestStarter" android:label="@string/app_name"
-			android:configChanges="keyboard|keyboardHidden|orientation">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
-		</activity>
-		
-		<activity android:name=".SubsActivity" android:label="@string/app_name">
-		</activity>
-		
-		<activity android:name=".C2dTestActivity" 
-				  android:label="C2d Test"
-				  android:configChanges="keyboard|keyboardHidden|orientation"
-				  android:screenOrientation="landscape"/>				  	
-	</application>
-	<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="5"/>
-	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-	<uses-permission android:name="android.permission.VIBRATE"/>
-	<uses-permission android:name="android.permission.WAKE_LOCK"/>	
-</manifest> 
+    package="info.u250.c2d.tests.android"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	<uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="9" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity
+            android:name=".StartActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SubsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".C2dTestActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="C2d Test"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+    </application>
+
+
+</manifest>

@@ -2,4 +2,5 @@
 <resources>
     <string name="hello">Hello World, C2d!</string>
     <string name="app_name">C2d Tests</string>
+    <string name="admob_id">ca-app-pub-0429520335266267/8581485934</string>
 </resources>
