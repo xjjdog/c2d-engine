@@ -37,7 +37,19 @@ import info.u250.c2d.tests.misc.EventTest;
 import info.u250.c2d.tests.misc.IngameLoadingTest;
 import info.u250.c2d.tests.parallax.ParallaxGroupEventsTest;
 import info.u250.c2d.tests.parallax.ParallaxGroupGestureDetectorTest;
+import info.u250.c2d.tests.particle.BalloonParticleTest;
+import info.u250.c2d.tests.particle.CrossParticleTest;
+import info.u250.c2d.tests.particle.DotParticleTest;
+import info.u250.c2d.tests.particle.EffectDotGreenParticleTest;
+import info.u250.c2d.tests.particle.Fire2ParticleTest;
+import info.u250.c2d.tests.particle.FireParticleTest;
+import info.u250.c2d.tests.particle.FloatParticleTest;
 import info.u250.c2d.tests.particle.FollowableParticle;
+import info.u250.c2d.tests.particle.HubbleParticleTest;
+import info.u250.c2d.tests.particle.SalutParticleTest;
+import info.u250.c2d.tests.particle.SmokeParticleTest;
+import info.u250.c2d.tests.particle.SnowParticleTest;
+import info.u250.c2d.tests.particle.ThousandParticleTest;
 import info.u250.c2d.tests.sfx.EngineSimpleSfxTest;
 import info.u250.c2d.tests.transitions.FadeTest;
 import info.u250.c2d.tests.transitions.FadeWhiteTest;
@@ -378,6 +390,102 @@ public class C2dTests {
 				sub.put("desc", "The particle will follow your finger");
 				sub.put("image", "drawable/item");
 				sub.put("cls", FollowableParticle.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Thousand Particle");
+				sub.put("desc", "Thousand Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", ThousandParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Effect Dot Green Particle");
+				sub.put("desc", "Effect Dot Green Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", EffectDotGreenParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Snow Particle");
+				sub.put("desc", "Snow Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", SnowParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Smoke Particle");
+				sub.put("desc", "Smoke Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", SmokeParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Salut Particle");
+				sub.put("desc", "Salut Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", SalutParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Fire Particle");
+				sub.put("desc", "Fire Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", FireParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Fire2 Particle");
+				sub.put("desc", "Fire2 Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", Fire2ParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Dot Particle");
+				sub.put("desc", "Dot Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", DotParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Float Particle");
+				sub.put("desc", "Float Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", FloatParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Hubble Particle");
+				sub.put("desc", "Hubble Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", HubbleParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "balloon Particle");
+				sub.put("desc", "balloon Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", BalloonParticleTest.class.getName());
+				subs.add(sub);
+			}
+			{
+				Map<String,Object> sub = new HashMap<String,Object>();
+				sub.put("title", "Cross Particle");
+				sub.put("desc", "Cross Particle");
+				sub.put("image", "drawable/item");
+				sub.put("cls", CrossParticleTest.class.getName());
 				subs.add(sub);
 			}
 			map.put("subs", subs);
