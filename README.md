@@ -1,6 +1,8 @@
 c2d-engine
 ==========
 
+the new demo apk can be downloaded here https://github.com/lycying/c2d-engine/blob/master/c2d-tests-android.apk?raw=true
+
 move from https://code.google.com/p/c2d-engine/
 
 c2d is a game engine, base on [https://github.com/libgdx/libgdx libgdx].  Aim to easy use of the the libgdx api .I design c2d at my free time so if you have any ideas please give me feedback . 
