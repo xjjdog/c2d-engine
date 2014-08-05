@@ -41,6 +41,9 @@ https://play.google.com/store/apps/details?id=com.joyboat6.iland
 
 
 ### Box2d editor
+
+![screenshort](https://raw.githubusercontent.com/lycying/c2d-engine/master/doc/c2d-box2d-editor-screenshot.png)
+
 Be sure save it to disk first when u make a new scene. 
 
 Normal:
