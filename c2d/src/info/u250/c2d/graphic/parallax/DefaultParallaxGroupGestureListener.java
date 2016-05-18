@@ -47,6 +47,11 @@ public class DefaultParallaxGroupGestureListener implements ParallaxGroupGesture
 	}
 
 	@Override
+	public void pinchStop() {
+		//TODO
+	}
+
+	@Override
 	public void update() {
 
 		if (flinging) {

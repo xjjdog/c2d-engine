@@ -15,7 +15,7 @@ class C2dFps{
 				+"\nNHeap:"+Gdx.app.getNativeHeap()/1024/1024+"M";
 		Engine.getSpriteBatch().begin();
 		//don not follow the main camera . 
-		Engine.getDefaultFont().drawMultiLine(
+		Engine.getDefaultFont().draw(
 				Engine.getSpriteBatch(), text, 
 				Engine.getWidth()-120 + Engine.getDefaultCamera().position.x - Engine.getWidth()/2 ,
 				60f + Engine.getDefaultCamera().position.y - Engine.getHeight()/2);

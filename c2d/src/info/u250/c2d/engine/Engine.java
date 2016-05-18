@@ -180,7 +180,7 @@ public abstract class Engine extends ApplicationAdapter{
 			//set up the default preferences
 			this.preferences = Gdx.app.getPreferences(engineConfig.configFile);
 			if(null!=engineCallback){
-				engineCallback.preLoad(Gdx.graphics.getDesktopDisplayMode(),engineConfig.assets);
+				engineCallback.preLoad(Gdx.graphics.getDisplayMode(),engineConfig.assets);
 			}
 			//loading screen
 			this.setupLoading();
@@ -321,7 +321,7 @@ public abstract class Engine extends ApplicationAdapter{
 	
 	public final static void debugInfo(String str){
 		getSpriteBatch().begin();
-		getDefaultFont().drawMultiLine(getSpriteBatch(), str, 0, getHeight());
+		getDefaultFont().draw(getSpriteBatch(), str, 0, getHeight());
 		getSpriteBatch().end();
 	}
 	public final static float getDeltaTime(){

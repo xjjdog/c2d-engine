@@ -73,7 +73,7 @@ public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Dispos
 		int pointNumer = vertices.size()*3;
 		mesh = new Mesh(false, pointNumer, pointNumer, 
 				new VertexAttribute(Usage.Position, 3, ShaderProgram.POSITION_ATTRIBUTE), 
-				new VertexAttribute(Usage.Color, 4, ShaderProgram.COLOR_ATTRIBUTE),
+				new VertexAttribute(Usage.ColorPacked, 4, ShaderProgram.COLOR_ATTRIBUTE),
 				new VertexAttribute(Usage.TextureCoordinates, 2, ShaderProgram.TEXCOORD_ATTRIBUTE+"0"));
 		
 		short[] indices = new short[pointNumer];

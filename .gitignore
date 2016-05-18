@@ -5,3 +5,9 @@
 *.war
 *.ear
 /c2d-tests-android/bin
+
+.idea*
+
+*.iml
+
+*/target/*
