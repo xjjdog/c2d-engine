@@ -87,7 +87,7 @@ public class RightClickHelper implements Scene {
 		}
 
 		Engine.getSpriteBatch().begin();
-		Engine.getDefaultFont().setScale(Engine.getDefaultCamera().zoom);
+//		Engine.getDefaultFont().setScale(Engine.getDefaultCamera().zoom);
 		Engine.getDefaultFont().setColor(Color.YELLOW);
 		Engine.getDefaultFont().draw(Engine.getSpriteBatch(), "(0,0)", 
 				Engine.getDefaultCamera().position.x - Engine.getDefaultCamera().viewportWidth / 2 * Engine.getDefaultCamera().zoom, 

@@ -13,8 +13,8 @@ public class C2dTestTexturePacker {
 		
 
 		TexturePacker.process(settings, 
-				"assets-raw/turkey", 
-				"../c2d-tests-android/assets/data/animationsprite",
+				"c2d-tests-desktop/assets-raw/turkey",
+				"c2d-tests-android/assets/data/animationsprite",
 				"turkey");
 	}
 }

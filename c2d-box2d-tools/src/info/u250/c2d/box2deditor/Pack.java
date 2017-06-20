@@ -13,8 +13,8 @@ public class Pack {
 
 		TexturePacker
 		.process(settings,
-				"raw",
-				"assets/data/",
+				"c2d-box2d-tools/raw",
+				"c2d-box2d-tools/assets/data/",
 				"cb2");
 	}
 }

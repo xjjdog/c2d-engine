@@ -1,45 +1,9 @@
 
 cb2.png
+size: 512,512
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-circle
-  rotate: false
-  xy: 0, 120
-  size: 256, 256
-  orig: 256, 256
-  offset: 0, 0
-  index: -1
-jointMode
-  rotate: false
-  xy: 0, 102
-  size: 250, 16
-  orig: 250, 16
-  offset: 0, 0
-  index: -1
-bodyMode
-  rotate: false
-  xy: 258, 360
-  size: 240, 16
-  orig: 240, 16
-  offset: 0, 0
-  index: -1
-box
-  rotate: false
-  xy: 0, 36
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: -1
-dialog
-  rotate: false
-  xy: 258, 308
-  size: 50, 50
-  split: 23, 23, 20, 26
-  pad: 12, 12, 9, 15
-  orig: 50, 50
-  offset: 0, 0
-  index: -1
 b2DistanceJointDefModel
   rotate: false
   xy: 0, 18
@@ -101,5 +65,42 @@ b2WheelJointDefModel
   xy: 258, 272
   size: 16, 16
   orig: 16, 16
+  offset: 0, 0
+  index: -1
+bodyMode
+  rotate: false
+  xy: 258, 360
+  size: 240, 16
+  orig: 240, 16
+  offset: 0, 0
+  index: -1
+box
+  rotate: false
+  xy: 0, 36
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+circle
+  rotate: false
+  xy: 0, 120
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+dialog
+  rotate: false
+  xy: 258, 308
+  size: 50, 50
+  split: 23, 23, 20, 26
+  pad: 12, 12, 9, 15
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+jointMode
+  rotate: false
+  xy: 0, 102
+  size: 250, 16
+  orig: 250, 16
   offset: 0, 0
   index: -1
