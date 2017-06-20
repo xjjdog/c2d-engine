@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.jr-jr.c2d</groupId>
@@ -19,6 +20,10 @@
         </repository>
     </repositories>
 
+    <properties>
+        <lwjgl.version>3.1.2</lwjgl.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -27,8 +32,38 @@
         </dependency>
         <dependency>
             <groupId>com.badlogicgames.gdx</groupId>
-            <artifactId>gdx-backend-lwjgl</artifactId>
-            <version>1.9.4-SNAPSHOT</version>
+            <artifactId>gdx-backend-lwjgl3</artifactId>
+            <version>1.9.7-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.badlogicgames.gdx</groupId>
+            <artifactId>gdx-platform</artifactId>
+            <version>1.9.7-SNAPSHOT</version>
+            <scope>test</scope>
+            <classifier>natives-desktop</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.badlogicgames.gdx</groupId>
+            <artifactId>gdx-tools</artifactId>
+            <version>1.9.7-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl</artifactId>
+            <version>${lwjgl.version}</version>
+            <classifier>natives-windows</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl</artifactId>
+            <version>${lwjgl.version}</version>
+            <classifier>natives-osx</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl</artifactId>
+            <version>${lwjgl.version}</version>
+            <classifier>natives-linux</classifier>
         </dependency>
         <dependency>
             <groupId>com.badlogicgames.gdx</groupId>
@@ -50,6 +85,23 @@
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.googlecode.mavennatives</groupId>
+                <artifactId>maven-nativedependencies-plugin</artifactId>
+                <version>0.0.7</version>
+                <configuration>
+                    <nativesTargetDir>target/natives</nativesTargetDir>
+                    <separateDirs>false</separateDirs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>unpacknatives</id>
+                        <goals>
+                            <goal>copy</goal>
                         </goals>
                     </execution>
                 </executions>

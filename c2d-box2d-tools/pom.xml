@@ -27,13 +27,13 @@
         </dependency>
         <dependency>
             <groupId>com.badlogicgames.gdx</groupId>
-            <artifactId>gdx-backend-lwjgl</artifactId>
-            <version>1.9.4-SNAPSHOT</version>
+            <artifactId>gdx-backend-lwjgl3</artifactId>
+            <version>1.9.7-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.badlogicgames.gdx</groupId>
             <artifactId>gdx-tools</artifactId>
-            <version>1.9.4-SNAPSHOT</version>
+            <version>1.9.7-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
