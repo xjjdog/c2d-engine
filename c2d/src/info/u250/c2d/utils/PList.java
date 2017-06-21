@@ -1,13 +1,13 @@
 package info.u250.c2d.utils;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.XmlReader;
 import com.badlogic.gdx.utils.XmlReader.Element;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 /**
  * Plist xml handling (only deserialization)
  * <p>

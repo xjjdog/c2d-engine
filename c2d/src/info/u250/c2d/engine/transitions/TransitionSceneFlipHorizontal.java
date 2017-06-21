@@ -1,19 +1,18 @@
 package info.u250.c2d.engine.transitions;
 
+import aurelienribon.tweenengine.BaseTween;
+import aurelienribon.tweenengine.Tween;
+import aurelienribon.tweenengine.TweenCallback;
+import com.badlogic.gdx.Gdx;
 import info.u250.c2d.accessors.Flip3DCameraAccessor;
 import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.Flip3DCamera;
 import info.u250.c2d.engine.Transition;
-import aurelienribon.tweenengine.BaseTween;
-import aurelienribon.tweenengine.Tween;
-import aurelienribon.tweenengine.TweenCallback;
-
-import com.badlogic.gdx.Gdx;
 /**
  * Transition Scene Flip Horizontal
  * @author lycying@gmail.com
  */
-final class TransitionSceneFlipHorizontal extends Transition{	
+final class TransitionSceneFlipHorizontal extends Transition {
 	public TransitionSceneFlipHorizontal(){
 	}
 	Flip3DCamera flipCamera ;

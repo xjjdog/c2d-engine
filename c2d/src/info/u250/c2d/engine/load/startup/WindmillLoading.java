@@ -8,7 +8,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
  * WindmillLoading
  * @author lycying@gmail.com
  */
-public class WindmillLoading extends StartupLoading{
+public class WindmillLoading extends StartupLoading {
 	
 	@Override
 	public void finishLoadingCleanup() {

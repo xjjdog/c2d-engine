@@ -4,7 +4,7 @@ import com.badlogic.gdx.input.GestureDetector;
 /**
  * @author lycying@gmail.com
  */
-public class SimpleDirectionGestureDetector extends GestureDetector{
+public class SimpleDirectionGestureDetector extends GestureDetector {
 	public  interface DirectionListener{
 		void onLeft();
 		void onRight();

@@ -1,5 +1,6 @@
 package info.u250.c2d.box2deditor.gdx;
 
+import com.badlogic.gdx.math.Vector2;
 import info.u250.c2d.box2d.model.b2BodyDefModel;
 import info.u250.c2d.box2d.model.fixture.b2RectangleFixtureDefModel;
 import info.u250.c2d.box2deditor.Main;
@@ -12,43 +13,42 @@ import info.u250.c2d.engine.EngineDrive;
 
 import java.io.File;
 
-import com.badlogic.gdx.math.Vector2;
-
 public class EditorGdx extends Engine {
-	@Override
-	protected EngineDrive onSetupEngineDrive() {
-		return new EditorEngineDrive();
-	}
-	float tScale = 1;
-	Vector2 m_offset = new Vector2(320.0f , 250 );
-	SceneModelAdapter model = new SceneModelAdapter();
-	b2BodyDefModel m_wheel;
-	b2BodyDefModel m_chassis;
+    @Override
+    protected EngineDrive onSetupEngineDrive() {
+        return new EditorEngineDrive();
+    }
 
-	void make(){
-		SceneModelAdapter model = new SceneModelAdapter();
-		b2RectangleFixtureDefModel def = new b2RectangleFixtureDefModel();
-		def.width = def.height = 20;
-		model.addFixture(def);
-		for(int i=0;i<10;i++){
-			for(int j=0;j<15;j++){
-				b2BodyDefModel body = new b2BodyDefModel();
-				body.fixtures.add(def);
-				model.addBody(body);
-				body.position.set(400+30*i,10+20*j);
-			}
-		}
-		PhysicalWorld.MODEL = model;
-		IO.INSTANCE.save(new File("D:\\test.txt"));
-		IO.INSTANCE.read(new File("D:\\test.txt"));
-		MainScene.INSTANCE.callUI.setupModel();
-		BuildWorld.buildBodys();
-		try{
-			Main.bind(PhysicalWorld.MODEL.bodyDefModels.get(0));
-		}catch(Exception ex){
-			ex.printStackTrace();
-		}
-	}
+    float tScale = 1;
+    Vector2 m_offset = new Vector2(320.0f, 250);
+    SceneModelAdapter model = new SceneModelAdapter();
+    b2BodyDefModel m_wheel;
+    b2BodyDefModel m_chassis;
+
+    void make() {
+        SceneModelAdapter model = new SceneModelAdapter();
+        b2RectangleFixtureDefModel def = new b2RectangleFixtureDefModel();
+        def.width = def.height = 20;
+        model.addFixture(def);
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 15; j++) {
+                b2BodyDefModel body = new b2BodyDefModel();
+                body.fixtures.add(def);
+                model.addBody(body);
+                body.position.set(400 + 30 * i, 10 + 20 * j);
+            }
+        }
+        PhysicalWorld.MODEL = model;
+        IO.INSTANCE.save(new File("D:\\test.txt"));
+        IO.INSTANCE.read(new File("D:\\test.txt"));
+        MainScene.INSTANCE.callUI.setupModel();
+        BuildWorld.buildBodys();
+        try {
+            Main.bind(PhysicalWorld.MODEL.bodyDefModels.get(0));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 //	void test(){
 //		
 //

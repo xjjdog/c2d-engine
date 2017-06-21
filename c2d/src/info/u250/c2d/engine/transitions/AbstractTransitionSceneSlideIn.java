@@ -1,20 +1,19 @@
 package info.u250.c2d.engine.transitions;
 
+import aurelienribon.tweenengine.BaseTween;
+import aurelienribon.tweenengine.Tween;
+import aurelienribon.tweenengine.TweenCallback;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.Vector3;
 import info.u250.c2d.accessors.C2dCameraAccessor;
 import info.u250.c2d.engine.C2dCamera;
 import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.Transition;
-import aurelienribon.tweenengine.BaseTween;
-import aurelienribon.tweenengine.Tween;
-import aurelienribon.tweenengine.TweenCallback;
-
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.math.Vector3;
 /**
  * a base class to supply side in transition .
  * @author lycying@gmail.com
  */
-abstract class AbstractTransitionSceneSlideIn extends Transition{	
+abstract class AbstractTransitionSceneSlideIn extends Transition {
 	
 	/**the target camera to make side in transition . it will be no use after the transition*/
 	C2dCamera targetCamera ;

@@ -1,17 +1,16 @@
 package info.u250.c2d.graphic;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
+import info.u250.c2d.engine.Engine;
 
  /** 
  *  @author lycying@gmail.com
  *  
  */
-public class FadeMask {
+ public class FadeMask {
 	private float transparency = 0.6f;
 	private Color color = null;
 

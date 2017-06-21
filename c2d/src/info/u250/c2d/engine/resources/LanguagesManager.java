@@ -1,12 +1,12 @@
 package info.u250.c2d.engine.resources;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.ObjectMap;
 import com.badlogic.gdx.utils.XmlReader;
 import com.badlogic.gdx.utils.XmlReader.Element;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class LanguagesManager {
 	ObjectMap<String, String> map = new ObjectMap<String, String>();

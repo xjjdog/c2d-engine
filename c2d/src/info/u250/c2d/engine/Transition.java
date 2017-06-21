@@ -10,11 +10,9 @@ import com.badlogic.gdx.InputProcessor;
  * Any user defined transition must extends this class . </p>
  * @author lycying@gmail.com
  */
-public abstract class Transition implements Scene{
+public abstract class Transition implements Scene {
 	/**<p> Really do switch between scene1 and scene2
-	 * @param scene1 the first scene 
-	 * @param scene2 the incoming scene
-	 * @param halfDurationMillis 
+	 * @param halfDurationMillis
 	 */
 	protected abstract void doTransition(int halfDurationMillis);
 	/**if the system is in transition. When its true , new transition is not allowed 

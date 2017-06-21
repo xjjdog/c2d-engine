@@ -1,17 +1,16 @@
 package info.u250.c2d.graphic;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import info.u250.c2d.engine.Engine;
 /**
  * @author lycying@gmail.com
  * 
  * the c2d stage use the engine's camera and the engine's spritebatch, 
  * so it can be move or rotate along with the engine's camera .
  */
-public class C2dStage extends Stage{
+public class C2dStage extends Stage {
 	public C2dStage(){
 		super(new FitViewport(Engine.getWidth(), Engine.getHeight()), Engine.getSpriteBatch());
 		this.getViewport().setCamera(Engine.getDefaultCamera());

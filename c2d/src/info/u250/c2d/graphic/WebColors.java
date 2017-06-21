@@ -26,7 +26,7 @@ import com.badlogic.gdx.graphics.Color;
  * @author Centril<twingoow@gmail.com> / Mazdak Farrokhzad.
  */
 public enum WebColors {
-	// Pink colors.
+    // Pink colors.
     PINK( new Color(1f, 0.752941176470588f, 0.796078431372549f, 1f) ),
     LIGHT_PINK( new Color(1f, 0.713725490196078f, 0.756862745098039f, 1f) ),
     HOT_PINK( new Color(1f, 0.411764705882353f, 0.705882352941176f, 1f) ),

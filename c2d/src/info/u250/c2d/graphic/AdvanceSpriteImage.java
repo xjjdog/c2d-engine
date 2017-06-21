@@ -1,10 +1,9 @@
 package info.u250.c2d.graphic;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import info.u250.c2d.engine.Engine;
 
 public class AdvanceSpriteImage extends Actor {
 	final AdvanceSprite sprite ;

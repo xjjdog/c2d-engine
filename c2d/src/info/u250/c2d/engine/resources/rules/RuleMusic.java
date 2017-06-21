@@ -1,14 +1,13 @@
 package info.u250.c2d.engine.resources.rules;
 
-import info.u250.c2d.engine.Engine;
-import info.u250.c2d.engine.resources.AliasResourceManager.LoadResourceRule;
-
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.files.FileHandle;
+import info.u250.c2d.engine.Engine;
+import info.u250.c2d.engine.resources.AliasResourceManager.LoadResourceRule;
 /**
  * @author lycying@gmail.com
  */
-public class RuleMusic  implements LoadResourceRule{
+public class RuleMusic implements LoadResourceRule {
 	@Override
 	public boolean match(FileHandle file) {
 		boolean result = (

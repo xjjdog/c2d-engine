@@ -1,18 +1,11 @@
 package info.u250.c2d.graphic;
 
-import static com.badlogic.gdx.graphics.g2d.SpriteBatch.U1;
-import static com.badlogic.gdx.graphics.g2d.SpriteBatch.U2;
-import static com.badlogic.gdx.graphics.g2d.SpriteBatch.U3;
-import static com.badlogic.gdx.graphics.g2d.SpriteBatch.U4;
-import static com.badlogic.gdx.graphics.g2d.SpriteBatch.V1;
-import static com.badlogic.gdx.graphics.g2d.SpriteBatch.V2;
-import static com.badlogic.gdx.graphics.g2d.SpriteBatch.V3;
-import static com.badlogic.gdx.graphics.g2d.SpriteBatch.V4;
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Array;
+import info.u250.c2d.engine.Engine;
+
+import static com.badlogic.gdx.graphics.g2d.SpriteBatch.*;
 /**
  * Used to achieve animation. 
  * Including the specified uniform frame and rate animation and animation. 
@@ -20,7 +13,7 @@ import com.badlogic.gdx.utils.Array;
  * The sequences can be NULL if you need , but the first frame can not be NULL
  * @author lycying@gmail.com
  */
-public class AnimationSprite extends AdvanceSprite{
+public class AnimationSprite extends AdvanceSprite {
 	/**
 	 * the animation data
 	 * @author lycying@gmail.com

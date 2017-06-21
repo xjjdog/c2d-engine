@@ -1,9 +1,8 @@
 package info.u250.c2d.engine.resources.looper;
 
+import com.badlogic.gdx.files.FileHandle;
 import info.u250.c2d.engine.resources.AliasResourceManager;
 import info.u250.c2d.engine.resources.AliasResourceManager.LoadResourceRule;
-
-import com.badlogic.gdx.files.FileHandle;
 
 public abstract class LoopLoader {
 	public abstract void loadResource(String dataDir) ;

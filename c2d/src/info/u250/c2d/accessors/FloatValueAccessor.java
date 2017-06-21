@@ -4,7 +4,7 @@ import info.u250.c2d.accessors.FloatValueAccessor.FloatValue;
 import aurelienribon.tweenengine.TweenAccessor;
 
 
-public class FloatValueAccessor  implements TweenAccessor<FloatValue>{
+public class FloatValueAccessor implements TweenAccessor<FloatValue> {
 	public static int VALUE = 1;
 	public static class FloatValue{
 		float value;

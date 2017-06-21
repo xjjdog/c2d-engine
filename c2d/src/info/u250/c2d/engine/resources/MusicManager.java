@@ -1,14 +1,13 @@
 package info.u250.c2d.engine.resources;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.ObjectMap;
+import info.u250.c2d.engine.Engine;
 /**
  * @author lycying@gmail.com
  */
-public class MusicManager implements Disposable{
+public class MusicManager implements Disposable {
 	
 	ObjectMap<String,Music> musics = new ObjectMap<String,Music>();
 	

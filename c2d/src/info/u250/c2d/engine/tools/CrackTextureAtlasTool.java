@@ -1,19 +1,14 @@
 package info.u250.c2d.engine.tools;
 
-import java.awt.Graphics2D;
-import java.awt.GraphicsConfiguration;
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
-import java.awt.Transparency;
-import java.awt.image.BufferedImage;
-import java.io.File;
-
-import javax.imageio.ImageIO;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.TextureAtlasData;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.TextureAtlasData.Region;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 /**
  * <pre>
  public class ExportPackerTool extends ApplicationAdapter{
@@ -36,7 +31,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas.TextureAtlasData.Region;
  * </pre>
  *
  */
-public class CrackTextureAtlasTool{
+public class CrackTextureAtlasTool {
 	//absolute path
 	public static void crack(String srcAtlas,String dstDir) throws Exception{
 		FileHandle fh = Gdx.files.absolute(srcAtlas);

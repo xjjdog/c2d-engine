@@ -4,17 +4,17 @@ import com.badlogic.gdx.tools.texturepacker.TexturePacker;
 import com.badlogic.gdx.tools.texturepacker.TexturePacker.Settings;
 
 public class C2dTestTexturePacker {
-	public static void main(String[] args) {
-		Settings settings = new Settings();
-		settings.maxHeight = 1024;
-		settings.maxHeight = 1024;
-		settings.stripWhitespaceX = settings.stripWhitespaceY = false;
-		settings.rotation = false;
-		
+    public static void main(String[] args) {
+        Settings settings = new Settings();
+        settings.maxHeight = 1024;
+        settings.maxHeight = 1024;
+        settings.stripWhitespaceX = settings.stripWhitespaceY = false;
+        settings.rotation = false;
 
-		TexturePacker.process(settings, 
-				"c2d-tests-desktop/assets-raw/turkey",
-				"c2d-tests-android/assets/data/animationsprite",
-				"turkey");
-	}
+
+        TexturePacker.process(settings,
+                "c2d-tests-desktop/assets-raw/turkey",
+                "c2d-tests-android/assets/data/animationsprite",
+                "turkey");
+    }
 }

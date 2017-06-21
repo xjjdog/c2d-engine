@@ -1,18 +1,17 @@
 package info.u250.c2d.engine.transitions;
 
-import info.u250.c2d.accessors.C2dCameraAccessor;
-import info.u250.c2d.engine.Engine;
-import info.u250.c2d.engine.Transition;
 import aurelienribon.tweenengine.BaseTween;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenCallback;
-
 import com.badlogic.gdx.Gdx;
+import info.u250.c2d.accessors.C2dCameraAccessor;
+import info.u250.c2d.engine.Engine;
+import info.u250.c2d.engine.Transition;
 /**
  * the scene zoom in 
  * @author lycying@gmail.com
  */
-final class TransitionSceneZoomIn extends Transition{	
+final class TransitionSceneZoomIn extends Transition {
 	public TransitionSceneZoomIn(){
 	}
 	

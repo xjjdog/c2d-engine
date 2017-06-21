@@ -27,14 +27,10 @@ public class MouseJointInput extends InputAdapter {
 	}
 
 
-
 	private MouseJoint mouseJoint = null;
 
 	Body hitBody = null;
 
-	
-
-	
 	
 	/** we instantiate this vector and the callback here so we don't irritate the GC **/
 	Vector2 testPoint = new Vector2();

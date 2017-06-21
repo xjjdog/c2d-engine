@@ -1,13 +1,12 @@
 package info.u250.c2d.engine.load.startup;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
+import info.u250.c2d.engine.Engine;
 /**show a line bock groups  to draw the precent of the load process 
  * @author lycying@gmail.com
  */
-public class LineBlocksLoading extends StartupLoading{
+public class LineBlocksLoading extends StartupLoading {
 	
 	final static float OFFSET = 50;
 	final static float HEIGHT = 10.00000f/480.000000000f;

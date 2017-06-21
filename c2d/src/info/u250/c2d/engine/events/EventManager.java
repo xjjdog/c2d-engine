@@ -9,7 +9,7 @@ package info.u250.c2d.engine.events;
  * <li>Fire the event when you want to make the event on use {@link #fire(String, Object)} , the event source can be null if you do not need this on the {@link EventListener}</li></ul></p>
  * @author lycying@gmail.com
  */
-public interface EventManager{
+public interface EventManager {
 	/**
 	 * Registers a new event specifying the id and the object which generated the event
 	 */

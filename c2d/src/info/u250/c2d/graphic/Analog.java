@@ -1,17 +1,16 @@
 package info.u250.c2d.graphic;
 
-import info.u250.c2d.engine.Engine;
-import info.u250.c2d.engine.Scene;
-
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Vector2;
+import info.u250.c2d.engine.Engine;
+import info.u250.c2d.engine.Scene;
 
 /**
  * @author lycying@gmail.com
  */
-public class Analog extends InputAdapter implements Scene{
+public class Analog extends InputAdapter implements Scene {
 
 	protected AdvanceSprite spriteBase ;
 	protected AdvanceSprite spriteStick;

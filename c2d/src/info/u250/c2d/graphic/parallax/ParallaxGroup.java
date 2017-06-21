@@ -17,7 +17,7 @@ import com.badlogic.gdx.scenes.scene2d.Group;
  * </pre>
  *@author lycying@gmail.com
  */
-public class ParallaxGroup extends Group{
+public class ParallaxGroup extends Group {
 	class EveryFrameResult{
 		Vector2 speedTracker = new Vector2();
 	}

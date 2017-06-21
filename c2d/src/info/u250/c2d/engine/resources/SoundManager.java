@@ -1,14 +1,13 @@
 package info.u250.c2d.engine.resources;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.ObjectMap;
+import info.u250.c2d.engine.Engine;
 /**
  * @author lycying@gmail.com
  */
-public class SoundManager implements Disposable{
+public class SoundManager implements Disposable {
 	ObjectMap<String,Sound> sounds = new ObjectMap<String,Sound>();
 	
 	float soundVolume = 1f;

@@ -1,12 +1,11 @@
 package info.u250.c2d.graphic;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import info.u250.c2d.engine.Engine;
 
 public class ParticleEffectActor extends Actor {
 

@@ -1,7 +1,5 @@
 package info.u250.c2d.graphic.surfaces;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Mesh;
@@ -12,6 +10,7 @@ import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Array;
+import info.u250.c2d.engine.Engine;
 
 /**
  * default drawable of the mesh

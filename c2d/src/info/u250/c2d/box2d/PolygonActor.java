@@ -15,7 +15,7 @@ import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
-public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Disposable{
+public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Disposable {
 	Texture texture ;
 	float[] vertices;
 	Mesh mesh;

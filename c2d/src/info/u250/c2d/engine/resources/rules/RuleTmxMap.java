@@ -2,7 +2,6 @@ package info.u250.c2d.engine.resources.rules;
 
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.maps.tiled.TiledMap;
-
 import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.resources.AliasResourceManager.LoadResourceRule;
 

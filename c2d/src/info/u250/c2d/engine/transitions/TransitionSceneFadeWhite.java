@@ -1,15 +1,14 @@
 package info.u250.c2d.engine.transitions;
 
+import aurelienribon.tweenengine.BaseTween;
+import aurelienribon.tweenengine.Tween;
+import aurelienribon.tweenengine.TweenCallback;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import info.u250.c2d.accessors.MeshMaskAccessor;
 import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.Transition;
 import info.u250.c2d.graphic.FadeMask;
-import aurelienribon.tweenengine.BaseTween;
-import aurelienribon.tweenengine.Tween;
-import aurelienribon.tweenengine.TweenCallback;
-
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
 
 /**
  * the scene fade in and fade out . we use the mask to archive this

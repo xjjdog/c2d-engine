@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.Color;
 /**Jus show the percent of the loading progress
  * @author lycying@gmail.com
  */
-public class SimpleLoading extends StartupLoading{
+public class SimpleLoading extends StartupLoading {
 	@Override
 	public void finishLoadingCleanup() {
 	}

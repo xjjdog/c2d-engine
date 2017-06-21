@@ -1,19 +1,18 @@
 package info.u250.c2d.box2d;
 
-import info.u250.c2d.box2d.model.b2BodyDefModel;
-import info.u250.c2d.box2d.model.fixture.b2CircleFixtureDefModel;
-import info.u250.c2d.box2d.model.fixture.b2RectangleFixtureDefModel;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Group;
+import info.u250.c2d.box2d.model.b2BodyDefModel;
+import info.u250.c2d.box2d.model.fixture.b2CircleFixtureDefModel;
+import info.u250.c2d.box2d.model.fixture.b2RectangleFixtureDefModel;
 /**
  * everything follow the Actor's design so position is at (0,0)
  */
-public class Box2dObject extends Group{
+public class Box2dObject extends Group {
 	public static float RADIO = 32.00000000f;
 	/**
 	 * The default restitution of the rigid body

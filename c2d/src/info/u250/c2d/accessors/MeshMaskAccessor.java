@@ -5,7 +5,7 @@ import aurelienribon.tweenengine.TweenAccessor;
 /**The mask accessor aim to make change of the mask transparency .
  * @author lycying@gmail.com
  */
-public class MeshMaskAccessor implements TweenAccessor<FadeMask>{
+public class MeshMaskAccessor implements TweenAccessor<FadeMask> {
 
 	public final static int Transparency = 1;
 	@Override

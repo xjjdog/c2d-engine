@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 /**show a line to draw the precent of the load process 
  * @author lycying@gmail.com
  */
-public class LineLoading extends StartupLoading{
+public class LineLoading extends StartupLoading {
 	
 	@Override
 	public void finishLoadingCleanup() {

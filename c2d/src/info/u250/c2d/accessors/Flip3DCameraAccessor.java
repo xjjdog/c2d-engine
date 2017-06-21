@@ -1,11 +1,11 @@
 package info.u250.c2d.accessors;
 
-import info.u250.c2d.engine.Flip3DCamera;
 import aurelienribon.tweenengine.TweenAccessor;
+import info.u250.c2d.engine.Flip3DCamera;
 
 /** change some attributes of the camera 
  * @author lycying@gmail.com*/
-public class Flip3DCameraAccessor implements TweenAccessor<Flip3DCamera>{
+public class Flip3DCameraAccessor implements TweenAccessor<Flip3DCamera> {
 	public final static int Zoom = 1;
 	public final static int XY = 2;
 	public final static int ROTATION_Z = 3;

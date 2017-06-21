@@ -1,7 +1,5 @@
 package info.u250.c2d.graphic.parallax;
 
-import info.u250.c2d.graphic.parallax.ParallaxGroup;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 

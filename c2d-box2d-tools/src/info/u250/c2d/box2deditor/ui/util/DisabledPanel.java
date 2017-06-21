@@ -1,30 +1,10 @@
 package info.u250.c2d.box2deditor.ui.util;
 
-import java.awt.AWTEvent;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.EventQueue;
-import java.awt.Graphics;
-import java.awt.Toolkit;
-import java.awt.Window;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseMotionAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import javax.swing.InputMap;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
 
 /*
  *  The DisablePanel will simulate the usage of a "Glass Pane" except that the
@@ -52,384 +32,363 @@ import javax.swing.UIManager;
  *     disable() method. That is any component that was disabled prior to using
  *     the disable() method method will remain disabled.
  */
-public class DisabledPanel extends JPanel
-{
-	
-	private static final long serialVersionUID = 1L;
+public class DisabledPanel extends JPanel {
 
-	private static DisabledEventQueue queue = new DisabledEventQueue();
+    private static final long serialVersionUID = 1L;
 
-	private static Map<Container, List<JComponent>> containers = new HashMap<Container, List<JComponent>>();
+    private static DisabledEventQueue queue = new DisabledEventQueue();
 
-	private	JComponent glassPane;
-	
-	private Container contentContainer;
-	public Container getContentContainer(){
-		return this.contentContainer;
-	}
+    private static Map<Container, List<JComponent>> containers = new HashMap<Container, List<JComponent>>();
 
-	/**
-	 *	Create a DisablePanel for the specified Container. The disabled color
-	 *  will be the following color from the UIManager with an alpha value:
-	 *  UIManager.getColor("inactiveCaptionBorder");
-	 *
-	 *  @param container a Container to be added to this DisabledPanel
-	 */
-	public DisabledPanel(Container container)
-	{
-		this(container, null);
-	}
+    private JComponent glassPane;
 
-	/**
-	 *	Create a DisablePanel for the specified Container using the specified
-	 *  disabled color.
-	 *
-	 *  @param disabledColor the background color of the GlassPane
-	 *  @param container a Container to be added to this DisabledPanel
-	 */
-	public DisabledPanel(Container container, Color disabledColor)
-	{
-		contentContainer = container;
-		setLayout( new OverlapLayout() );
-		add( container );
+    private Container contentContainer;
 
-		glassPane = new GlassPane();
-		add( glassPane );
+    public Container getContentContainer() {
+        return this.contentContainer;
+    }
 
-		if (disabledColor != null)
-			glassPane.setBackground( disabledColor );
-	}
+    /**
+     * Create a DisablePanel for the specified Container. The disabled color
+     * will be the following color from the UIManager with an alpha value:
+     * UIManager.getColor("inactiveCaptionBorder");
+     *
+     * @param container a Container to be added to this DisabledPanel
+     */
+    public DisabledPanel(Container container) {
+        this(container, null);
+    }
 
-	/**
-	 *  The background color of the glass pane.
-	 *
-	 *  @return the background color of the glass pane
-	 */
-	public Color getDisabledColor()
-	{
-		return glassPane.getBackground();
-	}
+    /**
+     * Create a DisablePanel for the specified Container using the specified
+     * disabled color.
+     *
+     * @param disabledColor the background color of the GlassPane
+     * @param container     a Container to be added to this DisabledPanel
+     */
+    public DisabledPanel(Container container, Color disabledColor) {
+        contentContainer = container;
+        setLayout(new OverlapLayout());
+        add(container);
 
-	/**
-	 *  Set the background color of the glass pane. This color should
-	 *  contain an alpha value to give the glass pane a transparent effect.
-	 *
-	 *  @param disabledColor the background color of the glass pane
-	 */
-	public void setDisabledColor(Color disabledColor)
-	{
-		glassPane.setBackground( disabledColor );
-	}
+        glassPane = new GlassPane();
+        add(glassPane);
 
-	/**
-	 *  The glass pane of this DisablePanel. It can be customized by adding
-	 *  components to it.
-	 *
-	 *  @return the glass pane
-	 */
-	public JComponent getGlassPane()
-	{
-		return glassPane;
-	}
+        if (disabledColor != null)
+            glassPane.setBackground(disabledColor);
+    }
 
-	/**
-	 *  Use a custom glass pane. You are responsible for adding the
-	 *  appropriate mouse listeners to intercept mouse events.
-	 *
-	 *  @param glassPane a JComponent to be used as a glass pane
-	 */
-	public void setGlassPane(JComponent glassPane)
-	{
-		this.glassPane = glassPane;
-	}
+    /**
+     * The background color of the glass pane.
+     *
+     * @return the background color of the glass pane
+     */
+    public Color getDisabledColor() {
+        return glassPane.getBackground();
+    }
 
-	/**
-	 *	Change the enabled state of the panel.
-	 */
-	@Override
-	public void setEnabled(boolean enabled)
-	{
-		super.setEnabled(enabled);
+    /**
+     * Set the background color of the glass pane. This color should
+     * contain an alpha value to give the glass pane a transparent effect.
+     *
+     * @param disabledColor the background color of the glass pane
+     */
+    public void setDisabledColor(Color disabledColor) {
+        glassPane.setBackground(disabledColor);
+    }
 
-		if (enabled)
-		{
-			glassPane.setVisible(false);
-			setFocusCycleRoot(false);
-			queue.removePanel(this);
-		}
-		else
-		{
-			glassPane.setVisible(true);
-			setFocusCycleRoot(true);  // remove from focus cycle
-			queue.addPanel(this);
-		}
-	}
+    /**
+     * The glass pane of this DisablePanel. It can be customized by adding
+     * components to it.
+     *
+     * @return the glass pane
+     */
+    public JComponent getGlassPane() {
+        return glassPane;
+    }
 
-	/**
-	 *  Because we use layered panels this should be disabled.
-	 */
-	@Override
-	public boolean isOptimizedDrawingEnabled()
-	{
-		return false;
-	}
+    /**
+     * Use a custom glass pane. You are responsible for adding the
+     * appropriate mouse listeners to intercept mouse events.
+     *
+     * @param glassPane a JComponent to be used as a glass pane
+     */
+    public void setGlassPane(JComponent glassPane) {
+        this.glassPane = glassPane;
+    }
 
-	/**
-	 *  Convenience static method to disable all components of a given
-	 *  Container, including nested Containers.
-	 *
-	 *  @param container the Container containing Components to be disabled
-	 */
-	public static void disable(Container container)
-	{
-		List<JComponent> components =
-			SwingUtils.getDescendantsOfType(JComponent.class, container, true);
-		List<JComponent> enabledComponents = new ArrayList<JComponent>();
-		containers.put(container, enabledComponents);
+    /**
+     * Change the enabled state of the panel.
+     */
+    @Override
+    public void setEnabled(boolean enabled) {
+        super.setEnabled(enabled);
 
-		for (JComponent component: components)
-		{
-			if (component.isEnabled())
-			{
-				enabledComponents.add( component );
-				component.setEnabled(false);
-			}
-		}
-	}
+        if (enabled) {
+            glassPane.setVisible(false);
+            setFocusCycleRoot(false);
+            queue.removePanel(this);
+        } else {
+            glassPane.setVisible(true);
+            setFocusCycleRoot(true);  // remove from focus cycle
+            queue.addPanel(this);
+        }
+    }
 
-	/**
-	 *  Convenience static method to enable Components disabled by using
-	 *  the disable() method. Only Components disable by the disable()
-	 *  method will be enabled.
-	 *
-	 *  @param container a Container that has been previously disabled.
-	 */
-	public static void enable(Container container)
-	{
-		List<JComponent> enabledComponents = containers.get( container );
+    /**
+     * Because we use layered panels this should be disabled.
+     */
+    @Override
+    public boolean isOptimizedDrawingEnabled() {
+        return false;
+    }
 
-		if (enabledComponents != null)
-		{
-			for (JComponent component: enabledComponents)
-			{
-				component.setEnabled(true);
-			}
+    /**
+     * Convenience static method to disable all components of a given
+     * Container, including nested Containers.
+     *
+     * @param container the Container containing Components to be disabled
+     */
+    public static void disable(Container container) {
+        List<JComponent> components =
+                SwingUtils.getDescendantsOfType(JComponent.class, container, true);
+        List<JComponent> enabledComponents = new ArrayList<JComponent>();
+        containers.put(container, enabledComponents);
 
-			containers.remove( container );
-		}
-	}
+        for (JComponent component : components) {
+            if (component.isEnabled()) {
+                enabledComponents.add(component);
+                component.setEnabled(false);
+            }
+        }
+    }
 
-	/**
-	 *  A simple "glass pane" that has two functions:
-	 *
-	 *  a) to paint over top of the Container added to the DisablePanel
-	 *  b) to intercept mouse events when visible
-	 */
-	class GlassPane extends JComponent
-	{
-		private static final long serialVersionUID = 1L;
+    /**
+     * Convenience static method to enable Components disabled by using
+     * the disable() method. Only Components disable by the disable()
+     * method will be enabled.
+     *
+     * @param container a Container that has been previously disabled.
+     */
+    public static void enable(Container container) {
+        List<JComponent> enabledComponents = containers.get(container);
 
-		public GlassPane()
-		{
-			setOpaque( false );
-			setVisible( false );
-			Color base = UIManager.getColor("inactiveCaptionBorder");
-			base = (base == null) ? Color.LIGHT_GRAY : base;
-			Color background = new Color(base.getRed(), base.getGreen(), base.getBlue(), 128);
-			setBackground( background );
+        if (enabledComponents != null) {
+            for (JComponent component : enabledComponents) {
+                component.setEnabled(true);
+            }
 
-			//  Disable Mouse events for the panel
+            containers.remove(container);
+        }
+    }
 
-			addMouseListener( new MouseAdapter() {} );
-			addMouseMotionListener( new MouseMotionAdapter() {} );
-		}
+    /**
+     * A simple "glass pane" that has two functions:
+     * <p/>
+     * a) to paint over top of the Container added to the DisablePanel
+     * b) to intercept mouse events when visible
+     */
+    class GlassPane extends JComponent {
+        private static final long serialVersionUID = 1L;
 
-		/*
-		 *  The component is transparent but we want to paint the background
-		 *  to give it the disabled look.
-		 */
-		@Override
-		protected void paintComponent(Graphics g)
-		{
-			g.setColor( getBackground() );
-			g.fillRect(0, 0, getSize().width, getSize().height);
-		}
-	}
+        public GlassPane() {
+            setOpaque(false);
+            setVisible(false);
+            Color base = UIManager.getColor("inactiveCaptionBorder");
+            base = (base == null) ? Color.LIGHT_GRAY : base;
+            Color background = new Color(base.getRed(), base.getGreen(), base.getBlue(), 128);
+            setBackground(background);
 
-	/**
-	 *  A custom EventQueue to intercept Key Bindings that are used by any
-	 *  component on a DisabledPanel. When a DisabledPanel is disabled it is
-	 *  registered with the DisabledEventQueue. This class will check if any
-	 *  components on the DisablePanel use KeyBindings. If not then nothing
-	 *  changes. However, if some do, then the DisableEventQueue installs
-	 *  itself as the current EquentQueue. The dispatchEvent() method is
-	 *  overriden to check each KeyEvent. If the KeyEvent is for a Component
-	 *  on a DisablePanel then the event is ignored, otherwise it is
-	 *  dispatched for normal processing.
-	 */
-	static class DisabledEventQueue extends EventQueue
-		implements WindowListener
-	{
-		private Map<DisabledPanel, Set<KeyStroke>> panels =
-			new HashMap<DisabledPanel, Set<KeyStroke>>();
+            //  Disable Mouse events for the panel
 
-		/**
-		 *  Check if any component on the DisabledPanel is using Key Bindings.
-		 *  If so, then track the bindings and use a custom EventQueue to
-		 *  intercept the KeyStroke before it is passed to the component.
-		 */
-		public void addPanel(DisabledPanel panel)
-		{
-			//  Get all the KeyStrokes used by all the components on the panel
+            addMouseListener(new MouseAdapter() {
+            });
+            addMouseMotionListener(new MouseMotionAdapter() {
+            });
+        }
 
-			Set<KeyStroke> keyStrokes = getKeyStrokes( panel );
+        /*
+         *  The component is transparent but we want to paint the background
+         *  to give it the disabled look.
+         */
+        @Override
+        protected void paintComponent(Graphics g) {
+            g.setColor(getBackground());
+            g.fillRect(0, 0, getSize().width, getSize().height);
+        }
+    }
 
-			if (keyStrokes.size() == 0) return;
+    /**
+     * A custom EventQueue to intercept Key Bindings that are used by any
+     * component on a DisabledPanel. When a DisabledPanel is disabled it is
+     * registered with the DisabledEventQueue. This class will check if any
+     * components on the DisablePanel use KeyBindings. If not then nothing
+     * changes. However, if some do, then the DisableEventQueue installs
+     * itself as the current EquentQueue. The dispatchEvent() method is
+     * overriden to check each KeyEvent. If the KeyEvent is for a Component
+     * on a DisablePanel then the event is ignored, otherwise it is
+     * dispatched for normal processing.
+     */
+    static class DisabledEventQueue extends EventQueue
+            implements WindowListener {
+        private Map<DisabledPanel, Set<KeyStroke>> panels =
+                new HashMap<DisabledPanel, Set<KeyStroke>>();
 
-			panels.put(panel, keyStrokes);
+        /**
+         * Check if any component on the DisabledPanel is using Key Bindings.
+         * If so, then track the bindings and use a custom EventQueue to
+         * intercept the KeyStroke before it is passed to the component.
+         */
+        public void addPanel(DisabledPanel panel) {
+            //  Get all the KeyStrokes used by all the components on the panel
 
-			//  More than one panel can be disabled but we only need to install
-			//  the custom EventQueue when the first panel is disabled.
+            Set<KeyStroke> keyStrokes = getKeyStrokes(panel);
 
-			EventQueue current = Toolkit.getDefaultToolkit().getSystemEventQueue();
+            if (keyStrokes.size() == 0) return;
 
-			if (current != this)
-				current.push(queue);
+            panels.put(panel, keyStrokes);
 
-			//  We need to track when a Window is closed so we can remove
-			//  the references for all the DisabledPanels on that window.
+            //  More than one panel can be disabled but we only need to install
+            //  the custom EventQueue when the first panel is disabled.
 
-			Window window = SwingUtilities.windowForComponent( panel );
-			window.removeWindowListener( this );
-			window.addWindowListener( this );
-		}
+            EventQueue current = Toolkit.getDefaultToolkit().getSystemEventQueue();
 
-		/**
-		 *  Check each component to see if its using Key Bindings
-		 */
-		private Set<KeyStroke> getKeyStrokes(DisabledPanel panel)
-		{
-			Set<KeyStroke> keyStrokes = new HashSet<KeyStroke>();
+            if (current != this)
+                current.push(queue);
 
-			//  Only JComponents use Key Bindings
+            //  We need to track when a Window is closed so we can remove
+            //  the references for all the DisabledPanels on that window.
 
-			Container container = ((Container)panel.getComponent(1));
-			List<JComponent> components =
-				SwingUtils.getDescendantsOfType(JComponent.class, container);
+            Window window = SwingUtilities.windowForComponent(panel);
+            window.removeWindowListener(this);
+            window.addWindowListener(this);
+        }
 
-			//  We only care about the WHEN_IN_FOCUSED_WINDOW bindings
+        /**
+         * Check each component to see if its using Key Bindings
+         */
+        private Set<KeyStroke> getKeyStrokes(DisabledPanel panel) {
+            Set<KeyStroke> keyStrokes = new HashSet<KeyStroke>();
 
-			for (JComponent component: components)
-			{
-				InputMap im = component.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
+            //  Only JComponents use Key Bindings
 
-				if (im != null && im.allKeys() != null)
-				{
-					for (KeyStroke keyStroke: im.allKeys())
-						keyStrokes.add( keyStroke );
-				}
-			}
+            Container container = ((Container) panel.getComponent(1));
+            List<JComponent> components =
+                    SwingUtils.getDescendantsOfType(JComponent.class, container);
 
-			return keyStrokes;
-		}
+            //  We only care about the WHEN_IN_FOCUSED_WINDOW bindings
 
-		/**
-		 *	The panel is no longer disabled so we no longer need to intercept
-		 *  its KeyStrokes. Restore the default EventQueue when all panels
-		 *  using Key Bindings have been enabled.
-		 */
-		public void removePanel(DisabledPanel panel)
-		{
-			if (panels.remove(panel) != null
-			&&  panels.size() == 0)
-				pop();
-		}
+            for (JComponent component : components) {
+                InputMap im = component.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
 
-		/**
-		 *  Intercept KeyEvents bound to a component on a DisabledPanel.
-		 */
-		@Override
-		protected void dispatchEvent(AWTEvent event)
-		{
-			//  Potentially intercept KeyEvents
+                if (im != null && im.allKeys() != null) {
+                    for (KeyStroke keyStroke : im.allKeys())
+                        keyStrokes.add(keyStroke);
+                }
+            }
 
-			if (event.getID() == KeyEvent.KEY_TYPED
-			||  event.getID() == KeyEvent.KEY_PRESSED
-			||  event.getID() == KeyEvent.KEY_RELEASED)
-			{
-				KeyEvent keyEvent = (KeyEvent)event;
-				KeyStroke keyStroke = KeyStroke.getKeyStrokeForEvent(keyEvent);
+            return keyStrokes;
+        }
 
-				//  When using Key Bindings, the source of the KeyEvent will be
-				//  the Window. Check each panel belonging to the source Window.
+        /**
+         * The panel is no longer disabled so we no longer need to intercept
+         * its KeyStrokes. Restore the default EventQueue when all panels
+         * using Key Bindings have been enabled.
+         */
+        public void removePanel(DisabledPanel panel) {
+            if (panels.remove(panel) != null
+                    && panels.size() == 0)
+                pop();
+        }
 
-				for (DisabledPanel panel: panels.keySet())
-				{
-					Window panelWindow = SwingUtilities.windowForComponent(panel);
+        /**
+         * Intercept KeyEvents bound to a component on a DisabledPanel.
+         */
+        @Override
+        protected void dispatchEvent(AWTEvent event) {
+            //  Potentially intercept KeyEvents
 
-					//  A binding was found so just return without dispatching it.
+            if (event.getID() == KeyEvent.KEY_TYPED
+                    || event.getID() == KeyEvent.KEY_PRESSED
+                    || event.getID() == KeyEvent.KEY_RELEASED) {
+                KeyEvent keyEvent = (KeyEvent) event;
+                KeyStroke keyStroke = KeyStroke.getKeyStrokeForEvent(keyEvent);
 
-					if (panelWindow == keyEvent.getComponent()
-					&&  searchForKeyBinding(panel, keyStroke))
-						return;
-				}
-			}
+                //  When using Key Bindings, the source of the KeyEvent will be
+                //  the Window. Check each panel belonging to the source Window.
 
-			//  Dispatch normally
+                for (DisabledPanel panel : panels.keySet()) {
+                    Window panelWindow = SwingUtilities.windowForComponent(panel);
 
-			super.dispatchEvent(event);
-		}
+                    //  A binding was found so just return without dispatching it.
 
-		/**
-		 *  Check if the KeyStroke is for a Component on the DisablePanel
-		 */
-		private boolean searchForKeyBinding(DisabledPanel panel, KeyStroke keyStroke)
-		{
-			Set<KeyStroke> keyStrokes = panels.get(panel);
+                    if (panelWindow == keyEvent.getComponent()
+                            && searchForKeyBinding(panel, keyStroke))
+                        return;
+                }
+            }
 
-			return keyStrokes.contains( keyStroke );
-		}
+            //  Dispatch normally
 
-		//  Implement WindowListener interface
+            super.dispatchEvent(event);
+        }
 
-		/**
-		 *  When a Window containing a DisablePanel that has been disabled is
-		 *  closed, remove the DisablePanel from the DisabledEventQueue. This
-		 *  may result in the DisabledEventQueue deregistering itself as the
-		 *  current EventQueue.
-		 */
-		public void windowClosed(WindowEvent e)
-		{
-			List<DisabledPanel> panelsToRemove = new ArrayList<DisabledPanel>();
-			Window window = e.getWindow();
+        /**
+         * Check if the KeyStroke is for a Component on the DisablePanel
+         */
+        private boolean searchForKeyBinding(DisabledPanel panel, KeyStroke keyStroke) {
+            Set<KeyStroke> keyStrokes = panels.get(panel);
 
-			//  Create a List of DisabledPanels to remove
+            return keyStrokes.contains(keyStroke);
+        }
 
-			for (DisabledPanel panel: panels.keySet())
-			{
-   				Window panelWindow = SwingUtilities.windowForComponent(panel);
+        //  Implement WindowListener interface
 
-				if (panelWindow == window)
-				{
-					panelsToRemove.add( panel );
-				}
-			}
+        /**
+         * When a Window containing a DisablePanel that has been disabled is
+         * closed, remove the DisablePanel from the DisabledEventQueue. This
+         * may result in the DisabledEventQueue deregistering itself as the
+         * current EventQueue.
+         */
+        public void windowClosed(WindowEvent e) {
+            List<DisabledPanel> panelsToRemove = new ArrayList<DisabledPanel>();
+            Window window = e.getWindow();
 
-			//  Remove panels here to prevent ConcurrentModificationException
+            //  Create a List of DisabledPanels to remove
 
-			for (DisabledPanel panel: panelsToRemove)
-			{
-				removePanel( panel );
-			}
+            for (DisabledPanel panel : panels.keySet()) {
+                Window panelWindow = SwingUtilities.windowForComponent(panel);
 
-			window.removeWindowListener( this );
-		}
+                if (panelWindow == window) {
+                    panelsToRemove.add(panel);
+                }
+            }
 
-		public void windowActivated(WindowEvent e) {}
-		public void windowClosing(WindowEvent e) {}
-		public void windowDeactivated(WindowEvent e) {}
-		public void windowDeiconified(WindowEvent e) {}
-		public void windowIconified(WindowEvent e) {}
-		public void windowOpened(WindowEvent e) {}
-	}
+            //  Remove panels here to prevent ConcurrentModificationException
+
+            for (DisabledPanel panel : panelsToRemove) {
+                removePanel(panel);
+            }
+
+            window.removeWindowListener(this);
+        }
+
+        public void windowActivated(WindowEvent e) {
+        }
+
+        public void windowClosing(WindowEvent e) {
+        }
+
+        public void windowDeactivated(WindowEvent e) {
+        }
+
+        public void windowDeiconified(WindowEvent e) {
+        }
+
+        public void windowIconified(WindowEvent e) {
+        }
+
+        public void windowOpened(WindowEvent e) {
+        }
+    }
 }

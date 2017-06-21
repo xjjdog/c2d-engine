@@ -9,7 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.Group;
  * This is the layer of the  parallax-background
  * @author lycying@gmail.com
  */
-public class ParallaxLayer extends Group{
+public class ParallaxLayer extends Group {
 	public Vector2 parallaxRatio = new Vector2();	
 	public Vector2 padding = new Vector2();
 	public Vector2 startPosition = new Vector2();

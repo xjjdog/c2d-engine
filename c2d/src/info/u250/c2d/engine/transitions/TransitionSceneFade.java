@@ -1,20 +1,19 @@
 package info.u250.c2d.engine.transitions;
 
+import aurelienribon.tweenengine.BaseTween;
+import aurelienribon.tweenengine.Tween;
+import aurelienribon.tweenengine.TweenCallback;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import info.u250.c2d.accessors.MeshMaskAccessor;
 import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.Transition;
 import info.u250.c2d.graphic.FadeMask;
-import aurelienribon.tweenengine.BaseTween;
-import aurelienribon.tweenengine.Tween;
-import aurelienribon.tweenengine.TweenCallback;
-
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
 /**
  * the scene fade in and fade out . we use the mask to archive this
  * @author lycying@gmail.com
  */
-final class TransitionSceneFade extends Transition{	
+final class TransitionSceneFade extends Transition {
 	public TransitionSceneFade(){
 		this.mask = new FadeMask(Color.BLACK);
 	}

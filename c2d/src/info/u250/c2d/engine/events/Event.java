@@ -5,7 +5,7 @@ package info.u250.c2d.engine.events;
  * The event object include an id and a source . Which  can be any type .
  * @author lycying@gmail.com
  */
-public class Event{
+public class Event {
 	protected String id;
 	protected Object source;
 	

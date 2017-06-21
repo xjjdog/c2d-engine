@@ -8,19 +8,19 @@ import info.u250.c2d.engine.resources.AliasResourceManager;
  */
 public interface EngineDrive extends com.badlogic.gdx.utils.Disposable{
 	/** setup the engine's config , its the config panel here */
-	public abstract EngineOptions onSetupEngine();
+	EngineOptions onSetupEngine();
 	/** the game init should be here , you may init the game scene and sence group */ 
-	public abstract void onLoadedResourcesCompleted();
+	void onLoadedResourcesCompleted();
 	/** if you load other resources besides the resources loaded at startup . the dispose method  can be fill up by suppling a destory method */
-	public abstract void dispose();
+	void dispose();
 	/** the rescources's full path is a long key , we make its alias to identify it . such as use RES instead of "data/res/res/res/res/haha.png"*/
-	public abstract void onResourcesRegister(AliasResourceManager<String> reg);
+	void onResourcesRegister(AliasResourceManager<String> reg);
 	
 	
 	/**the game config
 	 * @author lycying@gmail.com
 	 */
-	public final static class EngineOptions {
+	final class EngineOptions {
 		public boolean catchBackKey = false;
 		
 		/**load all the resources atomically

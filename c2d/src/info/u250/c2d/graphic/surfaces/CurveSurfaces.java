@@ -1,16 +1,15 @@
 package info.u250.c2d.graphic.surfaces;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.graphics.Mesh;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureWrap;
+import info.u250.c2d.engine.Engine;
 /**
  * Cure surfaces is a mesh group use the draw method FAN or STRIP of opengles .
  * which defined some base points and draw them ordered ,
  * @author lycying@gmail.com
  */
-public abstract class CurveSurfaces implements com.badlogic.gdx.utils.Disposable{
+public abstract class CurveSurfaces implements com.badlogic.gdx.utils.Disposable {
 	/**
 	 * The render interface rounding the method {@link CurveSurfaces#render(float)}, used to give more controls 
 	 * @author lycying@gmail.com

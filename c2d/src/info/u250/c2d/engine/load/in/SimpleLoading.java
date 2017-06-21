@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.Color;
 /**Jus show the percent of the loading progress
  * @author lycying@gmail.com
  */
-public class SimpleLoading extends InGameLoading{
+public class SimpleLoading extends InGameLoading {
 	FadeMask mask;
 	public SimpleLoading(){
 		mask = new FadeMask(Color.WHITE);

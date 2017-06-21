@@ -4,6 +4,6 @@ import info.u250.c2d.engine.load.Loading;
 /**
  *  @author lycying@gmail.com
  */
-public abstract class StartupLoading extends Loading{
-	
+public abstract class StartupLoading extends Loading {
+
 }

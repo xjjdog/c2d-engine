@@ -1,13 +1,12 @@
 package info.u250.c2d.engine.transitions;
 
-import info.u250.c2d.engine.Engine;
-
 import com.badlogic.gdx.math.Vector3;
+import info.u250.c2d.engine.Engine;
 /**
  * the scene slide in from right 
  * @author lycying@gmail.com
  */
-final class TransitionSceneSlideInRight extends AbstractTransitionSceneSlideIn{
+final class TransitionSceneSlideInRight extends AbstractTransitionSceneSlideIn {
 	@Override
 	Vector3 targetPositionOffset() {
 		return Engine.getDefaultCamera().position.cpy().add(-Engine.getWidth(), 0, 0);
