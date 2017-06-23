@@ -5,9 +5,6 @@ import info.u250.c2d.tests.C2dTests;
 import java.util.List;
 import java.util.Map;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,10 +30,6 @@ public class SubsActivity extends ListActivity {
         setListAdapter(adapter);
         
         setTitle(C2dTests.tests.get(id).get("title").toString());
-        // Look up the AdView as a resource and load a request.
-        AdView adView = (AdView)this.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
 	}
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {

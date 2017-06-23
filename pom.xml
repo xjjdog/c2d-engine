@@ -29,10 +29,7 @@
     <module>c2d-tests</module>
     <module>c2d-tests-desktop</module>
     <module>c2d-box2d-tools</module>
-    <module>c2d-tests-gwt</module>
-    <!--
     <module>c2d-tests-android</module>
-    -->
   </modules>
 
   <build>

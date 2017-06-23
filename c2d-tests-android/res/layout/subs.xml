@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
+    <!--
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -11,6 +12,7 @@
         android:layout_height="wrap_content"
         ads:adSize="BANNER"
         ads:adUnitId="@string/admob_id" />
+        -->
 
     <ListView
         android:id="@id/android:list"
