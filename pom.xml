@@ -8,7 +8,7 @@
 
   <name>C2d Parent</name>
   <description>Android/Desktop/iOS/HTML5 game development framework.</description>
-  <url>http://jr-jr.com</url>
+  <url>http://sayhiai.com</url>
   <licenses>
     <license>
       <name>Apache Licence 2.0</name>
@@ -21,7 +21,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <android.version>4.4</android.version>
-    <gdx.version>1.9.7-SNAPSHOT</gdx.version>
+    <gdx.version>1.9.9-SNAPSHOT</gdx.version>
   </properties>
 
   <modules>
