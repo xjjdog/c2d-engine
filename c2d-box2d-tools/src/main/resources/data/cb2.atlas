@@ -1,0 +1,106 @@
+
+cb2.png
+size: 512,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+b2DistanceJointDefModel
+  rotate: false
+  xy: 324, 204
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+b2FrictionJointDefModel
+  rotate: false
+  xy: 258, 86
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+b2GearJointDefModel
+  rotate: false
+  xy: 324, 186
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+b2PrismaticJointDefModel
+  rotate: false
+  xy: 342, 204
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+b2PulleyJointDefModel
+  rotate: false
+  xy: 258, 68
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+b2RevoluteJointDefModel
+  rotate: false
+  xy: 276, 86
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+b2RopeJointDefModel
+  rotate: false
+  xy: 324, 168
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+b2WeldJointDefModel
+  rotate: false
+  xy: 342, 186
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+b2WheelJointDefModel
+  rotate: false
+  xy: 360, 204
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+bodyMode
+  rotate: false
+  xy: 258, 222
+  size: 240, 16
+  orig: 240, 16
+  offset: 0, 0
+  index: -1
+box
+  rotate: false
+  xy: 258, 156
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+circle
+  rotate: false
+  xy: 0, 0
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+dialog
+  rotate: false
+  xy: 258, 104
+  size: 50, 50
+  split: 23, 23, 20, 26
+  pad: 12, 12, 9, 15
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+jointMode
+  rotate: false
+  xy: 258, 240
+  size: 250, 16
+  orig: 250, 16
+  offset: 0, 0
+  index: -1

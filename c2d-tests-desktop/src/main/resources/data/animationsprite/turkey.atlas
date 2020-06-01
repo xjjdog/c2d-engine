@@ -1,0 +1,62 @@
+
+turkey.png
+size: 1024,128
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fly1
+  rotate: false
+  xy: 2, 2
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
+fly2
+  rotate: false
+  xy: 114, 2
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
+fly3
+  rotate: false
+  xy: 226, 2
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
+fly4
+  rotate: false
+  xy: 338, 2
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
+fly5
+  rotate: false
+  xy: 450, 2
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
+fly6
+  rotate: false
+  xy: 562, 2
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
+fly7
+  rotate: false
+  xy: 674, 2
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
+fly8
+  rotate: false
+  xy: 786, 2
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
