@@ -1,15 +1,27 @@
 c2d-engine
 ==========
 
-the new demo apk can be downloaded here https://github.com/lycying/c2d-engine/blob/master/c2d-tests-android.apk?raw=true
+the new demo apk can be downloaded [here](https://github.com/lycying/c2d-engine/blob/master/c2d-tests-android.apk?raw=true) 
+
 __________
 
-move from https://code.google.com/p/c2d-engine/
 
-c2d is a game engine, base on [https://github.com/libgdx/libgdx libgdx].  Aim to easy use of the the libgdx api .I design c2d at my free time so if you have any ideas please give me feedback . 
+
+c2d is a game engine, base on [libgdx](https://github.com/libgdx/libgdx ) .  Aim to easy use of the the libgdx api .I design c2d at my free time so if you have any ideas please give me feedback . 
+
+Maven:
+
+```xml
+<dependency>
+      <groupId>com.github.xjjdog</groupId>
+      <artifactId>c2d-core</artifactId>
+      <version>2.0.0</version>
+</dependency>
+```
+
 #### Some of the characteristics
 C2d built a readable and expandable API . 
- 
+
 * Resources and loading
  - Alias Resource Manager any resources my be had one or more alias so you can easy change the resource but not the codes.
  - Custom resources load , you can change the subfix and protected your resources easily.
@@ -29,13 +41,11 @@ C2d built a readable and expandable API .
 ### Demo
 Some games use c2d-engine.
 
-Fool Dig
-https://play.google.com/store/apps/details?id=info.u250.digs
+[Fool Dig](https://play.google.com/store/apps/details?id=info.u250.digs) 
 
 ![screenshort](https://lh3.ggpht.com/nLj_-YjGajv0_h4jhS_8hn05klB0QCjqjzfmoa95TABV-kgvFeR5Gaf1M5iyimAj1uE=h310)
 
-My Dragon
-https://play.google.com/store/apps/details?id=com.joyboat6.iland
+[My Dragon](https://play.google.com/store/apps/details?id=com.joyboat6.iland)
 
 ![screenshort](https://lh3.ggpht.com/nVyf0i77YCnphOslQnTW4B865W_Ez0E2GEsYUAq76S2tHlnd3YeVpFmGL29AtUnL6A=h310)
 

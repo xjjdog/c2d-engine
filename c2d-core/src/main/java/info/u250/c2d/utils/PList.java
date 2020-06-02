@@ -8,6 +8,7 @@ import com.badlogic.gdx.utils.XmlReader.Element;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * Plist xml handling (only deserialization)
  * <p>
@@ -39,44 +40,45 @@ import java.util.Map;
  * byte[] -> data
  * List -> libgdx's array
  * Map -> dict
- * </pre> 
+ * </pre>
  *
  * @author lycying@gmail.com
  */
 public class PList {
-	@SuppressWarnings("unchecked")
-	public static Map<String, Object> parse(FileHandle file) throws IOException{
-		return (Map<String, Object>)parse(new XmlReader().parse(file).getChild(0));
-	}
-	private static Object parse(Element ele){
-		final String rootType = ele.getName();
-		if(rootType.equals("dict")){
-			Map<String, Object> map = new HashMap<String,Object>();
-			for(int i=0;i< ele.getChildCount()/2;i++){
-				Element elementKey = ele.getChild(i*2);
-				Element elementValue = ele.getChild(i*2+1);
-				map.put(elementKey.getText(), parse(elementValue));
-			}
-			return map;
-		}else if(rootType.equals("array")){
-			Array<Object> list = new Array<Object>();
-			for(int i=0;i<ele.getChildCount();i++){
-				Element e = ele.getChild(i);
-				list.add(parse(e));
-			}
-			return list;
-		}else if(rootType.equals("real")){
-			return Float.parseFloat(ele.getText());
-		}else if(rootType.equals("integer")){
-			return Integer.parseInt(ele.getText());
-		}else if(rootType.equals("boolean")){
-			return Boolean.parseBoolean(ele.getText());
-		}
+    @SuppressWarnings("unchecked")
+    public static Map<String, Object> parse(FileHandle file) throws IOException {
+        return (Map<String, Object>) parse(new XmlReader().parse(file).getChild(0));
+    }
+
+    private static Object parse(Element ele) {
+        final String rootType = ele.getName();
+        if (rootType.equals("dict")) {
+            Map<String, Object> map = new HashMap<String, Object>();
+            for (int i = 0; i < ele.getChildCount() / 2; i++) {
+                Element elementKey = ele.getChild(i * 2);
+                Element elementValue = ele.getChild(i * 2 + 1);
+                map.put(elementKey.getText(), parse(elementValue));
+            }
+            return map;
+        } else if (rootType.equals("array")) {
+            Array<Object> list = new Array<Object>();
+            for (int i = 0; i < ele.getChildCount(); i++) {
+                Element e = ele.getChild(i);
+                list.add(parse(e));
+            }
+            return list;
+        } else if (rootType.equals("real")) {
+            return Float.parseFloat(ele.getText());
+        } else if (rootType.equals("integer")) {
+            return Integer.parseInt(ele.getText());
+        } else if (rootType.equals("boolean")) {
+            return Boolean.parseBoolean(ele.getText());
+        }
 //		else if(rootType.equals("data")){
-		//do not know how to achive this right now , you may help me ~
+        //do not know how to achive this right now , you may help me ~
 //		}
-		else{
-			return ele.getText();
-		}	
-	}
+        else {
+            return ele.getText();
+        }
+    }
 }

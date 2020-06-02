@@ -1,26 +1,18 @@
 package info.u250.c2d.box2d;
 
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.XmlReader;
+import com.badlogic.gdx.utils.XmlReader.Element;
 import info.u250.c2d.box2d.model.b2BodyDefModel;
 import info.u250.c2d.box2d.model.b2FixtureDefModel;
 import info.u250.c2d.box2d.model.b2Scene;
 import info.u250.c2d.box2d.model.fixture.b2CircleFixtureDefModel;
 import info.u250.c2d.box2d.model.fixture.b2PolygonFixtureDefModel;
 import info.u250.c2d.box2d.model.fixture.b2RectangleFixtureDefModel;
-import info.u250.c2d.box2d.model.joint.b2DistanceJointDefModel;
-import info.u250.c2d.box2d.model.joint.b2FrictionJointDefModel;
-import info.u250.c2d.box2d.model.joint.b2PrismaticJointDefModel;
-import info.u250.c2d.box2d.model.joint.b2PulleyJointDefModel;
-import info.u250.c2d.box2d.model.joint.b2RevoluteJointDefModel;
-import info.u250.c2d.box2d.model.joint.b2RopeJointDefModel;
-import info.u250.c2d.box2d.model.joint.b2WeldJointDefModel;
-import info.u250.c2d.box2d.model.joint.b2WheelJointDefModel;
+import info.u250.c2d.box2d.model.joint.*;
 
 import java.io.IOException;
-
-import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.utils.XmlReader;
-import com.badlogic.gdx.utils.XmlReader.Element;
 
 /**
  * @author lycying@gmail.com

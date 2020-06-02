@@ -106,9 +106,7 @@ public class DefaultBuilder {
             b2FrictionJointDefModel b2Def = (b2FrictionJointDefModel) (b2Joint);
             FrictionJointDef def = new FrictionJointDef();
             def.collideConnected = b2Def.collideConnected;
-            def.bodyA = b2Def.bodyA.body;
-            def.bodyB = b2Def.bodyB.body;
-            def.localAnchorA.set(b2Def.localAnchorA).scl(1f / Box2dObject.RADIO);
+            def.bodyA = b2Def.bodyA.body; def.bodyB = b2Def.bodyB.body; def.localAnchorA.set(b2Def.localAnchorA).scl(1f / Box2dObject.RADIO);
             def.localAnchorB.set(b2Def.localAnchorB).scl(1f / Box2dObject.RADIO);
             def.maxForce = b2Def.maxForce;
             def.maxTorque = b2Def.maxTorque;

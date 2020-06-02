@@ -54,7 +54,6 @@ public abstract class Engine extends ApplicationAdapter {
         this.engineConfig = engineDrive.onSetupEngine();
     }
 
-    @SuppressWarnings("unchecked")
     public static final <T extends Engine> T get() {
         return (T) instance;
     }
@@ -178,8 +177,12 @@ public abstract class Engine extends ApplicationAdapter {
 
     public final static void setMainScene(Scene mainScene, TransitionType type, int halfDurationMillis) {
         Engine.doResume();
-        if (instance.transitionScene.isTransiting()) return;
-        if (instance.mainScene == mainScene) return;
+        if (instance.transitionScene.isTransiting()) {
+            return;
+        }
+        if (instance.mainScene == mainScene) {
+            return;
+        }
         instance.transitionScene = TransitionFactory.getTransitionScene(type);
         Gdx.input.setInputProcessor(null);
         instance.transitionScene.transition(instance.mainScene, mainScene, halfDurationMillis);
@@ -202,8 +205,12 @@ public abstract class Engine extends ApplicationAdapter {
         try {
             this.shapeRenderer = new ShapeRenderer();
             //set up the FPS
-            if (engineConfig.debug) this.fps = new C2dFps();
-            if (engineConfig.catchBackKey) Gdx.input.setCatchBackKey(true);
+            if (engineConfig.debug) {
+                this.fps = new C2dFps();
+            }
+            if (engineConfig.catchBackKey) {
+                Gdx.input.setCatchBackKey(true);
+            }
             //set up the TweenEngine
             this.setupTweenEngine();
             //set up the camera
@@ -284,8 +291,9 @@ public abstract class Engine extends ApplicationAdapter {
 
     @Override
     public final void resume() {
-        if (engineConfig.autoResume)
+        if (engineConfig.autoResume) {
             doResume();
+        }
         eventManager.fire(CoreEvents.SystemResume, this);
         super.resume();
     }
@@ -307,7 +315,9 @@ public abstract class Engine extends ApplicationAdapter {
 
     @Override
     public final void render() {
-        if (null == startupLoading) return;
+        if (null == startupLoading) {
+            return;
+        }
 
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         final float delta = Engine.getDeltaTime();
@@ -333,7 +343,9 @@ public abstract class Engine extends ApplicationAdapter {
                 ingameLoading.render(delta);
             }
 
-            if (engineConfig.debug) fps.render(delta);
+            if (engineConfig.debug) {
+                fps.render(delta);
+            }
         } else {
             startupLoading.render(delta);
         }
@@ -343,7 +355,9 @@ public abstract class Engine extends ApplicationAdapter {
      * In game load.
      */
     public final static void load(String[] assets, LoadingComplete loadingComplete) {
-        if (null == assets || 0 == assets.length) return;
+        if (null == assets || 0 == assets.length) {
+            return;
+        }
 
         instance.ingameLoading.setLoadingComplete(loadingComplete);
         instance.ingameLoading.setLoaded(false);

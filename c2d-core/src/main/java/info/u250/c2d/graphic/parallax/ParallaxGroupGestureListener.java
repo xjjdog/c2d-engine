@@ -3,7 +3,10 @@ package info.u250.c2d.graphic.parallax;
 import com.badlogic.gdx.input.GestureDetector;
 import com.badlogic.gdx.input.GestureDetector.GestureListener;
 
-/** the background gesture listener use the core {@link GestureDetector} , a {@link ParallaxGroupGestureListener#update()} is added */
+/**
+ * the background gesture listener use the core {@link GestureDetector} , a {@link ParallaxGroupGestureListener#update()} is added
+ * @author lycying
+ */
 public interface ParallaxGroupGestureListener extends GestureListener {
-	void update();
+    void update();
 }

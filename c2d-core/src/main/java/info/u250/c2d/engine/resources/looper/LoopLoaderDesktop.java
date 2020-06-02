@@ -5,6 +5,9 @@ import com.badlogic.gdx.Gdx;
 import java.io.File;
 import java.net.URL;
 
+/**
+ * @author lycying
+ */
 public class LoopLoaderDesktop extends LoopLoader {
 
     @Override

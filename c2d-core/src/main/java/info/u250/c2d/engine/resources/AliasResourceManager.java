@@ -65,7 +65,6 @@ public class AliasResourceManager<K> {
     /**
      * a simple method to get the real resources
      */
-    @SuppressWarnings("unchecked")
     public <T> T get(K id) {
         return (T) resources.get(id);
     }
@@ -159,8 +158,8 @@ public class AliasResourceManager<K> {
 
     /**
      * @author lycying@gmail.com
-     *         this is a rule to load resources , if the file's suffix or contains dictionary match the load rule , then load it .
-     *         such as the texture has the suffix ".png"
+     * this is a rule to load resources , if the file's suffix or contains dictionary match the load rule , then load it .
+     * such as the texture has the suffix ".png"
      */
     public interface LoadResourceRule {
         boolean match(FileHandle file);

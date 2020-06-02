@@ -7,58 +7,65 @@ import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import info.u250.c2d.engine.Engine;
 
+/**
+ * @author lycying
+ */
 public class ParticleEffectActor extends Actor {
 
-	private ParticleEffect emitter;
-	private boolean pauseWithEngine = false;
-	
-	public ParticleEffectActor(ParticleEffect pemitter,String... name) {
-		this.emitter = new ParticleEffect();
-		for(String s :name){
-			this.emitter.getEmitters().add(new ParticleEmitter(pemitter.findEmitter(s)));
-		}
-	}
+    private ParticleEffect emitter;
+    private boolean pauseWithEngine = false;
 
-	@Override
-	public void setColor(Color color) {
-		for(ParticleEmitter e:this.emitter.getEmitters()){
-			if(e.getTint().getColors().length != 3)return;
-			float[] colors = new float[e.getTint().getColors().length];
-			for(int i=0;i<colors.length;i+=3){
-				colors[i] = color.r;
-				colors[i+1] = color.g;
-				colors[i+2] = color.b;
-			}
-			e.getTint().setColors(colors);
-		}
-		super.setColor(color);
-	}
-	public ParticleEffect getEmitter() {
-		return emitter;
-	}
+    public ParticleEffectActor(ParticleEffect pemitter, String... name) {
+        this.emitter = new ParticleEffect();
+        for (String s : name) {
+            this.emitter.getEmitters().add(new ParticleEmitter(pemitter.findEmitter(s)));
+        }
+    }
 
-	public void setEmitter(ParticleEffect emitter) {
-		this.emitter = emitter;
-	}
+    @Override
+    public void setColor(Color color) {
+        for (ParticleEmitter e : this.emitter.getEmitters()) {
+            if (e.getTint().getColors().length != 3) {
+                return;
+            }
+            float[] colors = new float[e.getTint().getColors().length];
+            for (int i = 0; i < colors.length; i += 3) {
+                colors[i] = color.r;
+                colors[i + 1] = color.g;
+                colors[i + 2] = color.b;
+            }
+            e.getTint().setColors(colors);
+        }
+        super.setColor(color);
+    }
 
-	@Override
-	public void draw(Batch batch, float parentAlpha) {
-		if(this.isVisible()){
-			if (parentAlpha == 1) {
-				if(Engine.isPause() && pauseWithEngine){}else{
-					this.emitter.setPosition(this.getX(), this.getY());
-					this.emitter.draw(batch, Engine.getDeltaTime());
-				}
-			}
-		}
-	}
+    public ParticleEffect getEmitter() {
+        return emitter;
+    }
 
-	public boolean isPauseWithEngine() {
-		return pauseWithEngine;
-	}
+    public void setEmitter(ParticleEffect emitter) {
+        this.emitter = emitter;
+    }
 
-	public void setPauseWithEngine(boolean pauseWithEngine) {
-		this.pauseWithEngine = pauseWithEngine;
-	}
-	
+    @Override
+    public void draw(Batch batch, float parentAlpha) {
+        if (this.isVisible()) {
+            if (parentAlpha == 1) {
+                if (Engine.isPause() && pauseWithEngine) {
+                } else {
+                    this.emitter.setPosition(this.getX(), this.getY());
+                    this.emitter.draw(batch, Engine.getDeltaTime());
+                }
+            }
+        }
+    }
+
+    public boolean isPauseWithEngine() {
+        return pauseWithEngine;
+    }
+
+    public void setPauseWithEngine(boolean pauseWithEngine) {
+        this.pauseWithEngine = pauseWithEngine;
+    }
+
 }
