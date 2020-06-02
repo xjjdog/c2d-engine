@@ -43,7 +43,7 @@ import info.u250.c2d.graphic.surfaces.TriangleSurfaces;
  * The main game engine . it supply many usefully static method to access the managers of the game.
  * you game should begin here , and simply extends this.
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public abstract class Engine extends ApplicationAdapter {
     private static Engine instance = null;

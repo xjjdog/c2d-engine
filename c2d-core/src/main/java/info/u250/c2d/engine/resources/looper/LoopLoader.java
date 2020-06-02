@@ -5,7 +5,7 @@ import info.u250.c2d.engine.resources.AliasResourceManager;
 import info.u250.c2d.engine.resources.AliasResourceManager.LoadResourceRule;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public abstract class LoopLoader {
     public abstract void loadResource(String dataDir);

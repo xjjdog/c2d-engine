@@ -6,7 +6,7 @@ import java.io.File;
 import java.net.URL;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class LoopLoaderDesktop extends LoopLoader {
 

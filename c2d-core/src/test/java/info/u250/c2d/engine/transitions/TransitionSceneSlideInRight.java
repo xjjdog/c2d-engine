@@ -4,7 +4,7 @@ import com.badlogic.gdx.math.Vector3;
 import info.u250.c2d.engine.Engine;
 /**
  * the scene slide in from right 
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 final class TransitionSceneSlideInRight extends AbstractTransitionSceneSlideIn {
 	@Override

@@ -9,7 +9,7 @@ import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.Transition;
 /**
  * the scene zoom in 
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 final class TransitionSceneZoomIn extends Transition {
 	public TransitionSceneZoomIn(){

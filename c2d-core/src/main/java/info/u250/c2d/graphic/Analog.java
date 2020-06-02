@@ -8,7 +8,7 @@ import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.Scene;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class Analog extends InputAdapter implements Scene {
 

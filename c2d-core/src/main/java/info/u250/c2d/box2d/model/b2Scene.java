@@ -56,7 +56,7 @@ import java.util.List;
  *    }
  * </pre>
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class b2Scene implements java.io.Serializable {
     private static final long serialVersionUID = 1L;

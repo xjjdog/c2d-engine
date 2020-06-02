@@ -5,7 +5,7 @@ import com.badlogic.gdx.Gdx;
 /**
  * The FPS label was shown on top of all the scenes . Which show the performance of your game
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 class C2dFps {
 

@@ -12,7 +12,7 @@ import info.u250.c2d.engine.Transition;
 /**
  * Transition Scene Flip Horizontal
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 final class TransitionSceneFlipVertical extends Transition {
     public TransitionSceneFlipVertical() {

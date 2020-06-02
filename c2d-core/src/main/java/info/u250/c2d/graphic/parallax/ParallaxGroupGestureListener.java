@@ -5,7 +5,7 @@ import com.badlogic.gdx.input.GestureDetector.GestureListener;
 
 /**
  * the background gesture listener use the core {@link GestureDetector} , a {@link ParallaxGroupGestureListener#update()} is added
- * @author lycying
+ * @author xjjdog
  */
 public interface ParallaxGroupGestureListener extends GestureListener {
     void update();

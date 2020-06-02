@@ -10,7 +10,7 @@ import com.badlogic.gdx.InputProcessor;
  * It simple set the scene2 to mainScene when scene1 is NULL. Also, to ensure the user's input go what it should be , we unfoucs all the stage .<br/>
  * Any user defined transition must extends this class . </p>
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public abstract class Transition implements Scene {
     /**

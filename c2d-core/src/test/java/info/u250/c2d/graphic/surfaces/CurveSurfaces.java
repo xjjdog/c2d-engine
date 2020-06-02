@@ -7,12 +7,12 @@ import info.u250.c2d.engine.Engine;
 /**
  * Cure surfaces is a mesh group use the draw method FAN or STRIP of opengles .
  * which defined some base points and draw them ordered ,
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public abstract class CurveSurfaces implements com.badlogic.gdx.utils.Disposable {
 	/**
 	 * The render interface rounding the method {@link CurveSurfaces#render(float)}, used to give more controls 
-	 * @author lycying@gmail.com
+	 * @author xjjdog
 	 */
 	public interface CurveSurfacesRender{
 		/** before render */

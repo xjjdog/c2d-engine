@@ -14,7 +14,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class JarExportableCmd {
     /**

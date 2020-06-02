@@ -5,7 +5,7 @@ import info.u250.c2d.engine.Engine;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 /**show a line to draw the precent of the load process 
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class LineLoading extends StartupLoading {
 	

@@ -3,6 +3,9 @@ package info.u250.c2d.engine;
 import com.badlogic.gdx.InputProcessor;
 import info.u250.c2d.graphic.C2dStage;
 
+/**
+ * @author xjjdog
+ */
 public class SceneStage extends C2dStage implements Scene {
 
     @Override

@@ -3,7 +3,7 @@ package info.u250.c2d.engine;
 import com.badlogic.gdx.graphics.PerspectiveCamera;
 import com.badlogic.gdx.math.Vector3;
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class Flip3DCamera extends PerspectiveCamera {
 	private float angleX = 0;

@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 /**
  * WindmillLoading
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class WindmillLoading extends StartupLoading {
 	

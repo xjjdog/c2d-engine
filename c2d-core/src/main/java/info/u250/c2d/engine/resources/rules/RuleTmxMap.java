@@ -6,7 +6,7 @@ import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.resources.AliasResourceManager.LoadResourceRule;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class RuleTmxMap implements LoadResourceRule {
 

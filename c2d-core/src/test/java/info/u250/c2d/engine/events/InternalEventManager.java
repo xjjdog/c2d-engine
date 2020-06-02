@@ -4,7 +4,7 @@ package info.u250.c2d.engine.events;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Pool;
 /**the event pool . to reuse all of the events 
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 class InternalEventManager {
 	private final Pool<Event> eventPool = new Pool<Event>(50) {

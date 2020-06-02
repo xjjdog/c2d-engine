@@ -5,7 +5,7 @@ import info.u250.c2d.engine.Engine;
 
 /**
  * the scene move in from right
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 final class TransitionSceneMoveInRight extends AbstractTransitionSceneMoveIn {
 	@Override

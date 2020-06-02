@@ -8,7 +8,7 @@ import java.util.List;
 
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class b2PolygonFixtureDefModel extends b2FixtureDefModel {
     private static final long serialVersionUID = 1L;

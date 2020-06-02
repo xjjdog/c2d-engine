@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.resources.AliasResourceManager.LoadResourceRule;
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class RuleFont implements LoadResourceRule {
 	@Override

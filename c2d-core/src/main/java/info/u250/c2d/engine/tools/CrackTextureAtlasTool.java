@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 /**
- * @author lycying
+ * @author xjjdog
  * <pre>
  * public class ExportPackerTool extends ApplicationAdapter{
  * @Override

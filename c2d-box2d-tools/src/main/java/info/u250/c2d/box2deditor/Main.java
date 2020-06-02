@@ -175,7 +175,7 @@ public class Main {
             }
         });
         frmCdboxdSceneEditor.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/info/u250/c2d/box2deditor/ui/res/logo.png")));
-        frmCdboxdSceneEditor.setTitle("C2d / Box2d Scene Editor - lycying@gmail.com");
+        frmCdboxdSceneEditor.setTitle("C2d / Box2d Scene Editor - xjjdog");
         frmCdboxdSceneEditor.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frmCdboxdSceneEditor.setPreferredSize(new Dimension(600, 500));
         frmCdboxdSceneEditor.setExtendedState(Frame.MAXIMIZED_BOTH);
@@ -251,7 +251,7 @@ public class Main {
         bottomInfoPanel = new BottomInfoPanel();
         canvasPanel.add(bottomInfoPanel, BorderLayout.SOUTH);
 
-        JLabel lblNewLabel = new JLabel("By<lycying@gmail.com>");
+        JLabel lblNewLabel = new JLabel("By<xjjdog>");
         lblNewLabel.setVerticalAlignment(SwingConstants.BOTTOM);
         mainContentSplitPane.setRightComponent(lblNewLabel);
 

@@ -5,7 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.actions.TemporalAction;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class ParallaxGroupSpeedToAction extends TemporalAction {
     public static ParallaxGroupSpeedToAction obtain(float endX, float endY, float duration, Interpolation interpolation) {

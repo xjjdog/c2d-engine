@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class AliasResourceManager<K> {
     public AliasResourceManager() {
@@ -157,7 +157,7 @@ public class AliasResourceManager<K> {
     }
 
     /**
-     * @author lycying@gmail.com
+     * @author xjjdog
      * this is a rule to load resources , if the file's suffix or contains dictionary match the load rule , then load it .
      * such as the texture has the suffix ".png"
      */

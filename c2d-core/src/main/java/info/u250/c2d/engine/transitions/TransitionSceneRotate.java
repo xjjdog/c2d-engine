@@ -9,7 +9,7 @@ import info.u250.c2d.engine.Transition;
 /**
  * the scene rotate
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 final class TransitionSceneRotate extends Transition {
     public TransitionSceneRotate() {

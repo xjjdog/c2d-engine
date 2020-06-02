@@ -6,7 +6,7 @@ import info.u250.c2d.engine.Engine;
 /**
  * Jus show the percent of the loading progress
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class SimpleLoading extends StartupLoading {
     @Override

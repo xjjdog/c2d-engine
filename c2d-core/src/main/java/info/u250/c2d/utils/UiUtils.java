@@ -4,7 +4,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import info.u250.c2d.engine.Engine;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class UiUtils {
     /**

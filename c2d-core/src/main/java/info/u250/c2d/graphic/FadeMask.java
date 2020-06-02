@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import info.u250.c2d.engine.Engine;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class FadeMask {
     private float transparency = 0.6f;

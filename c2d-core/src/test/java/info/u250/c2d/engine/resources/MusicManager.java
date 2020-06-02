@@ -5,7 +5,7 @@ import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.ObjectMap;
 import info.u250.c2d.engine.Engine;
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class MusicManager implements Disposable {
 	

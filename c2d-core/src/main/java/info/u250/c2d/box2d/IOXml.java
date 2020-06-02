@@ -15,7 +15,7 @@ import info.u250.c2d.box2d.model.joint.*;
 import java.io.IOException;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class IOXml {
     public static b2Scene parse(FileHandle file) throws IOException {

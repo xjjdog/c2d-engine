@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class LoopLoaderWebGL extends LoopLoader {
 

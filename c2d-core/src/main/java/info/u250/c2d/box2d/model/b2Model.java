@@ -2,7 +2,7 @@ package info.u250.c2d.box2d.model;
 
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public abstract class b2Model implements java.io.Serializable {
 

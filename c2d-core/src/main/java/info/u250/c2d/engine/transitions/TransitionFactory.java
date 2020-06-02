@@ -4,7 +4,7 @@ import info.u250.c2d.engine.CoreProvider.TransitionType;
 import info.u250.c2d.engine.Transition;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class TransitionFactory {
     static Transition RotateWithZoomIn, FlipHorizontal, FlipVertical, ZoomIn, Rotate, ZoomOut, Fade,

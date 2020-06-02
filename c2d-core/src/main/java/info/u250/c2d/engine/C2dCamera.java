@@ -3,7 +3,7 @@ package info.u250.c2d.engine;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class C2dCamera extends OrthographicCamera {
     private float rotate;

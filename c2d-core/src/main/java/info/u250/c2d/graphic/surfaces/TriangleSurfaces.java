@@ -17,7 +17,7 @@ import info.u250.c2d.engine.Engine;
  * ChangeLog :
  * 2012/02/29  support opengl2.0,use the shader language
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class TriangleSurfaces extends CurveSurfaces {
     static ShaderProgram shader = null;

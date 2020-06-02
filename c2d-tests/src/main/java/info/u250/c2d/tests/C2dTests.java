@@ -15,7 +15,6 @@ import info.u250.c2d.tests.transitions.*;
 
 import java.util.*;
 
-@SuppressWarnings("rawtypes")
 public class C2dTests {
 
     public static final List<Map<String, Object>> tests = new ArrayList<Map<String, Object>>();

@@ -7,7 +7,7 @@ import info.u250.c2d.engine.Engine;
 /**
  * WindmillLoading
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class WindmillLoading extends StartupLoading {
 

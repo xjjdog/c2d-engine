@@ -11,7 +11,7 @@ import com.badlogic.gdx.physics.box2d.joints.MouseJointDef;
 import info.u250.c2d.engine.Engine;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class MouseJointInput extends InputAdapter {
 

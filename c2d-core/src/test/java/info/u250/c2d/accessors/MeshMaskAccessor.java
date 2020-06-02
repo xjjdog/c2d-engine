@@ -3,7 +3,7 @@ package info.u250.c2d.accessors;
 import info.u250.c2d.graphic.FadeMask;
 import aurelienribon.tweenengine.TweenAccessor;
 /**The mask accessor aim to make change of the mask transparency .
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class MeshMaskAccessor implements TweenAccessor<FadeMask> {
 

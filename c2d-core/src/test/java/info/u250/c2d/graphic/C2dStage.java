@@ -5,7 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import info.u250.c2d.engine.Engine;
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  * 
  * the c2d stage use the engine's camera and the engine's spritebatch, 
  * so it can be move or rotate along with the engine's camera .

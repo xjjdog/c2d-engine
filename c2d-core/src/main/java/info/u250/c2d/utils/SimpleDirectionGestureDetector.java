@@ -3,7 +3,7 @@ package info.u250.c2d.utils;
 import com.badlogic.gdx.input.GestureDetector;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class SimpleDirectionGestureDetector extends GestureDetector {
     public interface DirectionListener {

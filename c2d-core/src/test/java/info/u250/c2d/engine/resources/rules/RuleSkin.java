@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.resources.AliasResourceManager.LoadResourceRule;
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class RuleSkin implements LoadResourceRule {
 	@Override

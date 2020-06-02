@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import info.u250.c2d.engine.Engine;
 /**
  * this is a simple background for test or publish use the shaperrender
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class SimpleMeshBackground {
 	Color color1, color2;

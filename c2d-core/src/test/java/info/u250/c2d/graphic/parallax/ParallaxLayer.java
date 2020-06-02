@@ -7,7 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.Group;
 
 /**
  * This is the layer of the  parallax-background
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class ParallaxLayer extends Group {
 	public Vector2 parallaxRatio = new Vector2();	

@@ -9,7 +9,7 @@ import info.u250.c2d.engine.Transition;
 /**
  * the scene zoom out
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 final class TransitionSceneZoomOut extends Transition {
     public TransitionSceneZoomOut() {

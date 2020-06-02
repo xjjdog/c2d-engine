@@ -10,7 +10,7 @@ import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.Transition;
 /**
  * the scene zoom in with rotate
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 final class TransitionSceneRotateWithZoomIn extends Transition {
 	

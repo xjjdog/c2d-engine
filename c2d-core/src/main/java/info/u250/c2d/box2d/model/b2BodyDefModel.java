@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class b2BodyDefModel extends b2Model {
     private static final long serialVersionUID = 1L;

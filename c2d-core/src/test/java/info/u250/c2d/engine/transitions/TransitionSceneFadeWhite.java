@@ -13,7 +13,7 @@ import info.u250.c2d.graphic.FadeMask;
 /**
  * the scene fade in and fade out . we use the mask to archive this
  * 
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 final class TransitionSceneFadeWhite extends Transition {
 	public TransitionSceneFadeWhite() {

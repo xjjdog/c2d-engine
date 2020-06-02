@@ -7,13 +7,13 @@ package info.u250.c2d.engine;
  * but not all attributes is needed so you can choose what you want to control the logic
  * of the game .
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public interface CoreProvider {
     /**
      * The core events of the engine
      *
-     * @author lycying@gmail.com
+     * @author xjjdog
      */
     final class CoreEvents {
         /**
@@ -29,7 +29,7 @@ public interface CoreProvider {
     /**
      * the core transition type of two scene
      *
-     * @author lycying@gmail.com
+     * @author xjjdog
      */
     enum TransitionType {
         /**

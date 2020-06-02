@@ -11,7 +11,7 @@ import info.u250.c2d.graphic.surfaces.TriangleSurfaces;
  * This is a repeat background use the {@link TriangleSurfaces}
  * You should supply a alias name of the texture .
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class RepeatTextureBackground implements com.badlogic.gdx.utils.Disposable {
     private TriangleSurfaces surface;

@@ -11,13 +11,13 @@ import info.u250.c2d.engine.resources.AliasResourceManager;
  * Its no use to known how it be , all you must do is how to draw it . The simple example is {@link info.u250.c2d.engine.load.startup.SimpleLoading} <br/>
  * To make new loading screen . extends this class . and set the attribute {@link info.u250.c2d.engine.EngineDrive.EngineOptions} to the full class name
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public abstract class Loading implements com.badlogic.gdx.utils.Disposable {
     /**
      * when the resources loaded , the onReady will be called
      *
-     * @author lycying@gmail.com
+     * @author xjjdog
      */
     public interface LoadingComplete {
         public void onReady(AliasResourceManager<String> reg);

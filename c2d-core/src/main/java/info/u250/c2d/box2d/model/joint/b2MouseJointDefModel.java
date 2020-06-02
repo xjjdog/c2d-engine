@@ -4,7 +4,7 @@ import com.badlogic.gdx.math.Vector2;
 import info.u250.c2d.box2d.model.b2JointDefModel;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class b2MouseJointDefModel extends b2JointDefModel {
     private static final long serialVersionUID = 1L;

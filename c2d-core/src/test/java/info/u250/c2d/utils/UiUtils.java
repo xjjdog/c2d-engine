@@ -4,7 +4,7 @@ import info.u250.c2d.engine.Engine;
 
 import com.badlogic.gdx.scenes.scene2d.Actor;
 /**
- * @author lycying@gmail.com*/
+ * @author xjjdog*/
 public class UiUtils {
 	/**aligin the Actor to the center of the screen */
 	public static void centerActor(final Actor actor){

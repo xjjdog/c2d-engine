@@ -23,7 +23,7 @@ import com.badlogic.gdx.utils.XmlReader;
 import com.badlogic.gdx.utils.XmlReader.Element;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class IOXml {
     public static b2Scene parse(FileHandle file) throws IOException {

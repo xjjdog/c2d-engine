@@ -7,7 +7,7 @@ import java.util.Set;
 import com.badlogic.gdx.utils.Array;
 
 /**use a event map to handle all events .When you fire the event , this will iterator all values of the map and find the true type to fire ~
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class EventManagerImpl implements EventManager {
 

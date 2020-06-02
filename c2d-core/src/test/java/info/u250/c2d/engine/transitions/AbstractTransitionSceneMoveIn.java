@@ -11,7 +11,7 @@ import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.Transition;
 /**
  * a base class to supply side in transition .
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 abstract class AbstractTransitionSceneMoveIn extends Transition {
 	

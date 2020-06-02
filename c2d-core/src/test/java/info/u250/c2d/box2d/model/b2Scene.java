@@ -55,7 +55,7 @@ import java.util.List;
 	}
  * </pre>
  * 
- * @author lycying@gmail.com
+ * @author xjjdog
  *
  */
 public class b2Scene implements java.io.Serializable{

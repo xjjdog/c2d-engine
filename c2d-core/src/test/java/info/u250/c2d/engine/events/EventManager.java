@@ -7,7 +7,7 @@ package info.u250.c2d.engine.events;
  * If you want to register a new Event, it takes two steps:
  * <ul><li>Register it use {@link #register(String, EventListener)} , where the logic is in {@link EventListener#onEvent(Event)}</li>
  * <li>Fire the event when you want to make the event on use {@link #fire(String, Object)} , the event source can be null if you do not need this on the {@link EventListener}</li></ul></p>
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public interface EventManager {
 	/**

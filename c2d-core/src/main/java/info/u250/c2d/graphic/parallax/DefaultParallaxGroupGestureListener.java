@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class DefaultParallaxGroupGestureListener implements ParallaxGroupGestureListener {
     float velX, velY;

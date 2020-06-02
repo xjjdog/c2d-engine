@@ -6,7 +6,7 @@ import info.u250.c2d.engine.Engine;
 /**
  * the scene slide in from left
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 final class TransitionSceneSlideInLeft extends AbstractTransitionSceneSlideIn {
     @Override

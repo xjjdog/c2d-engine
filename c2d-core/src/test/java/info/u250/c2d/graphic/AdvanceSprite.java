@@ -13,7 +13,7 @@ import info.u250.c2d.engine.Engine;
  * <ul>
  *  <li>shadow </li>
  *  </ul>
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class AdvanceSprite extends Sprite {
 	private boolean visible = true;

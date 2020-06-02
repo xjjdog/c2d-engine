@@ -8,7 +8,7 @@ import com.badlogic.gdx.InputProcessor;
  * The game logic can be put in {@link #update(float)} and draw the game in {@link #render(float)} so when you pause the game, the logic is no effect to the game.
  * another important method is {@link #getInputProcessor()} , which supply a user defined input process .
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public interface Scene {
     /**

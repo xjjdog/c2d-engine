@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 
 /**
  * @author Aurelien Ribon | http://www.aurelienribon.com
- * @author lycying@gmail.com
+ * @author xjjdog
  * add rgb color change
  */
 public class SpriteAccessor implements TweenAccessor<Sprite> {

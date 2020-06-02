@@ -13,13 +13,13 @@ import static com.badlogic.gdx.graphics.g2d.SpriteBatch.*;
  * To use this animation, you have to provide a time series-time and animation sequences.
  * The sequences can be NULL if you need , but the first frame can not be NULL
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class AnimationSprite extends AdvanceSprite {
     /**
      * the animation data
      *
-     * @author lycying@gmail.com
+     * @author xjjdog
      */
     public final static class AnimationSpriteData {
         /**

@@ -1,7 +1,7 @@
 package info.u250.c2d.graphic;
 
 /**
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public interface AdControl {
     void show();

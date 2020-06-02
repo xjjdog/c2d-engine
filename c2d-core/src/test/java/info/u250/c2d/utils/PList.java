@@ -41,7 +41,7 @@ import java.util.Map;
  * Map -> dict
  * </pre> 
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class PList {
 	@SuppressWarnings("unchecked")

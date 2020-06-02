@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import info.u250.c2d.engine.Engine;
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class AdvanceSpriteImage extends Actor {
     final AdvanceSprite sprite;

@@ -5,7 +5,7 @@ import info.u250.c2d.accessors.FloatValueAccessor.FloatValue;
 
 
 /**
- * @author lycying
+ * @author xjjdog
  */
 public class FloatValueAccessor implements TweenAccessor<FloatValue> {
     public static int VALUE = 1;

@@ -7,7 +7,7 @@ import info.u250.c2d.graphic.FadeMask;
 /**
  * Jus show the percent of the loading progress
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class SimpleLoading extends InGameLoading {
     FadeMask mask;

@@ -6,7 +6,7 @@ import info.u250.c2d.engine.C2dCamera;
 /**
  * change some attributes of the camera
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public class C2dCameraAccessor implements TweenAccessor<C2dCamera> {
 

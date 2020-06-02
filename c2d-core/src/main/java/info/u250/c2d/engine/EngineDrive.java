@@ -5,7 +5,7 @@ import info.u250.c2d.engine.resources.AliasResourceManager;
 /**
  * A game must has a {@link EngineDrive} to supply a game logic . You game should begin here.
  *
- * @author lycying@gmail.com
+ * @author xjjdog
  */
 public interface EngineDrive extends com.badlogic.gdx.utils.Disposable {
     /**
@@ -27,7 +27,7 @@ public interface EngineDrive extends com.badlogic.gdx.utils.Disposable {
     /**
      * the game config
      *
-     * @author lycying@gmail.com
+     * @author xjjdog
      */
     final class EngineOptions {
         public boolean catchBackKey = false;

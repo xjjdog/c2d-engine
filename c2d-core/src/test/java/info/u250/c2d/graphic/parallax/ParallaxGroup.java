@@ -15,7 +15,7 @@ import com.badlogic.gdx.scenes.scene2d.Group;
 			rbg.addActor(new ParallaxLayer(rbg,new Image(new AdvanceSprite(bgAtlas.findRegion("cloud") )), new Vector2(0.5f,0),new Vector2(0,1000), new Vector2(0,70)));
 			rbg.addActor(new ParallaxLayer(rbg,new Image(new AdvanceSprite(bgAtlas.findRegion("front") )), new Vector2(1f,0),new Vector2(0,1000), new Vector2()));
  * </pre>
- *@author lycying@gmail.com
+ *@author xjjdog
  */
 public class ParallaxGroup extends Group {
 	class EveryFrameResult{
