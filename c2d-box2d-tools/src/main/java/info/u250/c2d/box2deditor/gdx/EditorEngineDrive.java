@@ -1,9 +1,12 @@
 package info.u250.c2d.box2deditor.gdx;
 
+import info.u250.c2d.box2deditor.Main;
 import info.u250.c2d.box2deditor.gdx.scenes.MainScene;
 import info.u250.c2d.engine.Engine;
 import info.u250.c2d.engine.EngineDrive;
 import info.u250.c2d.engine.resources.AliasResourceManager;
+
+import java.awt.*;
 
 public class EditorEngineDrive implements EngineDrive {
     MainScene main = null;
@@ -33,6 +36,8 @@ public class EditorEngineDrive implements EngineDrive {
     public void onLoadedResourcesCompleted() {
         main = new MainScene();
         Engine.setMainScene(main);
+
+        EventQueue.invokeLater(()-> Main.INSTANCE.frmCdboxdSceneEditor.setExtendedState(Frame.MAXIMIZED_BOTH));
     }
 
     @Override

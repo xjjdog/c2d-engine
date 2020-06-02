@@ -99,8 +99,8 @@ public class Main {
         propertiesPanels.put(pulleyJointDefPropertiesPanel.getType(), new DisabledPanel(pulleyJointDefPropertiesPanel));
     }
 
-    private static Main INSTANCE = null;
-    private JFrame frmCdboxdSceneEditor;
+    public static Main INSTANCE = null;
+    public JFrame frmCdboxdSceneEditor;
     private JSplitPane mainContentSplitPane;
     private JPanel mainPanel;
     private JPanel canvasPanel;
@@ -133,7 +133,7 @@ public class Main {
                 Main.INSTANCE.canvasPanel.add(canvas);
                 new Thread(()->{
                     try {
-                        Thread.sleep(1000*2);
+                        Thread.sleep(2000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -180,7 +180,7 @@ public class Main {
         frmCdboxdSceneEditor.setTitle("C2d / Box2d Scene Editor - xjjdog");
         frmCdboxdSceneEditor.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frmCdboxdSceneEditor.setPreferredSize(new Dimension(600, 500));
-        frmCdboxdSceneEditor.setExtendedState(Frame.MAXIMIZED_BOTH);
+        frmCdboxdSceneEditor.setSize(800,600);
 
         JPanel objectListPanelOutter = new JPanel();
         disabledObjectListPanel = new DisabledPanel(objectListPanelOutter);
