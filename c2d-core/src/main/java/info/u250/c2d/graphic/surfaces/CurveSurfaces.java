@@ -21,12 +21,12 @@ public abstract class CurveSurfaces implements com.badlogic.gdx.utils.Disposable
         /**
          * before render
          */
-        public void preRender(float delta);
+        void preRender(float delta);
 
         /**
          * after render
          */
-        public void postRender(float delta);
+        void postRender(float delta);
     }
 
     private CurveSurfacesRender bRender;

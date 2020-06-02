@@ -12,7 +12,6 @@ import info.u250.c2d.engine.Engine;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -126,19 +125,22 @@ public class Main {
         }
         JPopupMenu.setDefaultLightWeightPopupEnabled(false);
         ToolTipManager.sharedInstance().setLightWeightPopupEnabled(false);
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    Main window = new Main();
-                    window.frmCdboxdSceneEditor.setVisible(true);
-                    Canvas canvas = new Canvas();
+        EventQueue.invokeLater(() -> {
+            try {
+                Main window = new Main();
+                window.frmCdboxdSceneEditor.setVisible(true);
+                Canvas canvas = new Canvas();
+                Main.INSTANCE.canvasPanel.add(canvas);
+                new Thread(()->{
+                    try {
+                        Thread.sleep(1000*2);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     EditorAdapter.setupCanvas(canvas);
-                    Main.INSTANCE.canvasPanel.add(canvas);
-
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                }).start();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
 
@@ -202,22 +204,18 @@ public class Main {
         mainPanel.add(toolBar, BorderLayout.NORTH);
 
         btnStart = new JButton("Start");
-        btnStart.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                btnStop.setEnabled(true);
-                mnExamples.setEnabled(false);
-                mnFile.setEnabled(false);
-                disabledObjectListPanel.setEnabled(false);
-                mainContentSplitPane.getRightComponent().setEnabled(false);
-                MainScene.INSTANCE.simulation();
-            }
+        btnStart.addActionListener(e -> {
+            btnStop.setEnabled(true);
+            mnExamples.setEnabled(false);
+            mnFile.setEnabled(false);
+            disabledObjectListPanel.setEnabled(false);
+            mainContentSplitPane.getRightComponent().setEnabled(false);
+            MainScene.INSTANCE.simulation();
         });
 
         JButton btnZoom = new JButton("");
-        btnZoom.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                Engine.getDefaultCamera().zoom = 1;
-            }
+        btnZoom.addActionListener(e -> {
+            Engine.getDefaultCamera().zoom = 1;
         });
         btnZoom.setIcon(new ImageIcon(Main.class.getResource("/info/u250/c2d/box2deditor/ui/res/zoom.png")));
         toolBar.add(btnZoom);
@@ -225,15 +223,13 @@ public class Main {
         toolBar.add(btnStart);
 
         btnStop = new JButton("Stop");
-        btnStop.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                btnStop.setEnabled(false);
-                disabledObjectListPanel.setEnabled(true);
-                mnExamples.setEnabled(true);
-                mnFile.setEnabled(true);
-                mainContentSplitPane.getRightComponent().setEnabled(true);
-                MainScene.INSTANCE.stopSimulation();
-            }
+        btnStop.addActionListener(e -> {
+            btnStop.setEnabled(false);
+            disabledObjectListPanel.setEnabled(true);
+            mnExamples.setEnabled(true);
+            mnFile.setEnabled(true);
+            mainContentSplitPane.getRightComponent().setEnabled(true);
+            MainScene.INSTANCE.stopSimulation();
         });
         btnStop.setEnabled(false);
         btnStop.setIcon(new ImageIcon(Main.class.getResource("/info/u250/c2d/box2deditor/ui/res/stop.png")));
@@ -263,67 +259,55 @@ public class Main {
         menuBar.add(mnFile);
 
         JMenuItem mntmNew = new JMenuItem("New");
-        mntmNew.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                int n = JOptionPane.showConfirmDialog(frmCdboxdSceneEditor,
-                        "Make A new Scene? You current work will be lost! Make sure you have saved it",
-                        "New",
-                        JOptionPane.YES_NO_OPTION);
-                if (0 == n) {
-                    IO.INSTANCE.reset();
-                    setModelToUI();
-                }
+        mntmNew.addActionListener(e -> {
+            int n = JOptionPane.showConfirmDialog(frmCdboxdSceneEditor,
+                    "Make A new Scene? You current work will be lost! Make sure you have saved it",
+                    "New",
+                    JOptionPane.YES_NO_OPTION);
+            if (0 == n) {
+                IO.INSTANCE.reset();
+                setModelToUI();
             }
         });
         mnFile.add(mntmNew);
 
         JMenuItem mntmOpen = new JMenuItem("Open File...");
-        mntmOpen.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser jf = new JFileChooser();
-                int result = jf.showOpenDialog(frmCdboxdSceneEditor);
-                if (result == JFileChooser.APPROVE_OPTION) {
-                    File file = jf.getSelectedFile();
-                    IO.INSTANCE.read(file);
-                    setModelToUI();
-                }
+        mntmOpen.addActionListener(e -> {
+            JFileChooser jf = new JFileChooser();
+            int result = jf.showOpenDialog(frmCdboxdSceneEditor);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File file = jf.getSelectedFile();
+                IO.INSTANCE.read(file);
+                setModelToUI();
             }
         });
         mnFile.add(mntmOpen);
 
         JMenuItem mntmSaveAs = new JMenuItem("Save As...");
-        mntmSaveAs.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser jf = new JFileChooser();
-                int result = jf.showSaveDialog(frmCdboxdSceneEditor);
-                if (result == JFileChooser.APPROVE_OPTION) {
-                    File file = jf.getSelectedFile();
-                    IO.INSTANCE.save(file);
-                }
+        mntmSaveAs.addActionListener(e -> {
+            JFileChooser jf = new JFileChooser();
+            int result = jf.showSaveDialog(frmCdboxdSceneEditor);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File file = jf.getSelectedFile();
+                IO.INSTANCE.save(file);
             }
         });
         mnFile.add(mntmSaveAs);
 
         JMenuItem mntmClose = new JMenuItem("Exit");
-        mntmClose.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                windowsClosing();
-            }
-        });
+        mntmClose.addActionListener(e -> windowsClosing());
         mnFile.add(mntmClose);
 
         JMenu mnExport = new JMenu("Export");
         menuBar.add(mnExport);
 
         JMenuItem mntmExportToXml = new JMenuItem("Export to XML...");
-        mntmExportToXml.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser jf = new JFileChooser();
-                int result = jf.showSaveDialog(frmCdboxdSceneEditor);
-                if (result == JFileChooser.APPROVE_OPTION) {
-                    File file = jf.getSelectedFile();
-                    IO.INSTANCE.exportXML(file);
-                }
+        mntmExportToXml.addActionListener(e -> {
+            JFileChooser jf = new JFileChooser();
+            int result = jf.showSaveDialog(frmCdboxdSceneEditor);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File file = jf.getSelectedFile();
+                IO.INSTANCE.exportXML(file);
             }
         });
         mnExport.add(mntmExportToXml);
@@ -353,11 +337,9 @@ public class Main {
 
     }
 
-    final ActionListener exampleActionListener = new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            IO.INSTANCE.read(Main.class.getResourceAsStream("/examples/" + (((JMenuItem) e.getSource()).getText()).replaceAll(" ", "") + ".an"));
-            setModelToUI();
-        }
+    final ActionListener exampleActionListener = e -> {
+        IO.INSTANCE.read(Main.class.getResourceAsStream("/examples/" + (((JMenuItem) e.getSource()).getText()).replaceAll(" ", "") + ".an"));
+        setModelToUI();
     };
     private JButton btnStop;
     private JButton btnStart;

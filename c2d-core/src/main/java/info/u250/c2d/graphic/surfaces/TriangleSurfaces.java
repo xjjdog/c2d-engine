@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Mesh;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.VertexAttribute;
-import com.badlogic.gdx.graphics.VertexAttributes.Usage;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
@@ -106,8 +105,8 @@ public class TriangleSurfaces extends CurveSurfaces {
     @Override
     protected void doBuild() {
         mesh = new Mesh(true, data.points.size, data.points.size,
-                new VertexAttribute(Usage.Position, 3, ShaderProgram.POSITION_ATTRIBUTE),
-                new VertexAttribute(Usage.TextureCoordinates, 2, ShaderProgram.TEXCOORD_ATTRIBUTE + "0"));
+                VertexAttribute.Position(),
+                VertexAttribute.TexCoords(0));
         mesh.setVertices(verticesForUnscaledTexture(texture, data.points));
         short[] indices = new short[data.points.size];
         for (int i = 0; i < data.points.size; i++) {

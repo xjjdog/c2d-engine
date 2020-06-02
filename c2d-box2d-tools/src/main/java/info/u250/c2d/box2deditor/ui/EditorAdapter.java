@@ -12,8 +12,8 @@ public class EditorAdapter {
     public static void setupCanvas(Canvas canvas) {
         final Engine engine = new EditorGdx();
         final LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-        config.width = (int) 1024;
-        config.height = (int) 600;
+        config.width = 1024;
+        config.height = 600;
 
         new LwjglApplication(engine, config, canvas);
         JarExportableCmd.process();

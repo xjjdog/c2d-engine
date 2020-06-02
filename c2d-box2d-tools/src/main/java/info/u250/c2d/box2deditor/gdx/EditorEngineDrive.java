@@ -11,7 +11,10 @@ public class EditorEngineDrive implements EngineDrive {
     @Override
     public EngineOptions onSetupEngine() {
         EngineOptions opt = new EngineOptions(new String[]{
-                "data/",
+                "data/cb2.atlas",
+                "data/T1.png",
+                "data/T2.png",
+                "data/T3.png",
         }, 800, 480);
         opt.resizeSync = true;
         opt.debug = false;

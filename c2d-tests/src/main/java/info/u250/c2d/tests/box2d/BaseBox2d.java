@@ -121,7 +121,9 @@ public class BaseBox2d extends Engine {
             r1 = random.nextInt(256);
             g1 = random.nextInt(256);
             b1 = random.nextInt(256);
-            if (r1 + g1 + b1 > threshold) break;
+            if (r1 + g1 + b1 > threshold) {
+                break;
+            }
         }
         Color c = new Color(r1 / 255f, g1 / 255f, b1 / 255f, 1);
         return c;

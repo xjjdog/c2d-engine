@@ -39,8 +39,8 @@ public class EditorGdx extends Engine {
             }
         }
         PhysicalWorld.MODEL = model;
-        IO.INSTANCE.save(new File("D:\\test.txt"));
-        IO.INSTANCE.read(new File("D:\\test.txt"));
+        IO.INSTANCE.save(new File("/tmp/test.txt"));
+        IO.INSTANCE.read(new File("/tmp/test.txt"));
         MainScene.INSTANCE.callUI.setupModel();
         BuildWorld.buildBodys();
         try {

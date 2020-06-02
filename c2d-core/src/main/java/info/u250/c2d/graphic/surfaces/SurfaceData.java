@@ -9,15 +9,13 @@ public class SurfaceData {
     /**
      * the points of the mesh
      */
-    public Array<Vector2> points = new Array<Vector2>();
+    public Array<Vector2> points = new Array<>();
     /**
      * the texture which used to fill the mesh
      */
     public String texture = "";
     /**
      * the drawing method
-     *
-     * @see {@link GL10#GL_TRIANGLE_FAN}
      */
     public int primitiveType = GL20.GL_TRIANGLE_FAN;
     /**

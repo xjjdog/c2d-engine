@@ -11,8 +11,6 @@ import info.u250.c2d.engine.Engine;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -43,23 +41,20 @@ public class C2dDesktop {
             final Preferences prefs = new LwjglPreferences(new FileHandle(new LwjglFiles().getExternalStoragePath() + ".prefs/c2d-tests"));
             list.setSelectedValue(prefs.getString("last", null), true);
 
-            button.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    String testName = (String) list.getSelectedValue();
-                    Engine test = C2dTests.newTest(testName);
-                    LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-                    config.fullscreen = false;
-                    config.width = (int) Engine.getWidth();
-                    config.height = (int) Engine.getHeight();
-                    config.title = testName;
-                    config.vSyncEnabled = true;
+            button.addActionListener(e -> {
+                String testName = (String) list.getSelectedValue();
+                Engine test = C2dTests.newTest(testName);
+                LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+                config.fullscreen = false;
+                config.forceExit = true;
+                config.width = (int) Engine.getWidth();
+                config.height = (int) Engine.getHeight();
+                config.title = testName;
+                config.vSyncEnabled = true;
 
-                    prefs.putString("last", testName);
-                    prefs.flush();
-
-                    new LwjglApplication(test, config);
-                }
+                prefs.putString("last", testName);
+                prefs.flush();
+                new LwjglApplication(test, config);
             });
 
             add(pane, BorderLayout.CENTER);

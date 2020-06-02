@@ -3,7 +3,6 @@ package info.u250.c2d.box2d;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.*;
 import com.badlogic.gdx.graphics.Texture.TextureWrap;
-import com.badlogic.gdx.graphics.VertexAttributes.Usage;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.Vector2;
@@ -11,18 +10,19 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 
 import java.util.List;
 
+/**
+ * @author lycying
+ */
 public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Disposable {
     Texture texture;
     float[] vertices;
     Mesh mesh;
     List<Vector2[]> verticesBak;
-    float u = 0;
-    float v = 0;
-    float offsetX;
-    float offsetY = 0;
+    float u, v, offsetX, offsetY;
+    private ShaderProgram shader;
 
     static public ShaderProgram createDefaultShader() {
-        String vertexShader = "attribute vec4 " + ShaderProgram.POSITION_ATTRIBUTE + ";\n" //
+        String vertexShader = "attribute vec4 " + ShaderProgram.POSITION_ATTRIBUTE + ";\n"
                 + "attribute vec4 " + ShaderProgram.COLOR_ATTRIBUTE + ";\n" //
                 + "attribute vec2 " + ShaderProgram.TEXCOORD_ATTRIBUTE + "0;\n" //
                 + "uniform mat4 u_projTrans;\n" //
@@ -33,9 +33,9 @@ public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Dispos
                 + "{\n" //
                 + "   v_color = " + ShaderProgram.COLOR_ATTRIBUTE + ";\n" //
                 + "   v_texCoords = " + ShaderProgram.TEXCOORD_ATTRIBUTE + "0;\n" //
-                + "   gl_Position =  u_projTrans * " + ShaderProgram.POSITION_ATTRIBUTE + ";\n" //
+                + "   gl_Position =  u_projTrans * " + ShaderProgram.POSITION_ATTRIBUTE + ";\n"
                 + "}\n";
-        String fragmentShader = "#ifdef GL_ES\n" //
+        String fragmentShader = "#ifdef GL_ES\n"
                 + "#define LOWP lowp\n" //
                 + "precision mediump float;\n" //
                 + "#else\n" //
@@ -56,8 +56,13 @@ public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Dispos
         return shader;
     }
 
-    private ShaderProgram shader;
 
+    /**
+     * @param texture
+     * @param vertices every vertices has 3 point
+     * @param offsetX
+     * @param offsetY
+     */
     public PolygonActor(Texture texture, List<Vector2[]> vertices, float offsetX, float offsetY) {
         shader = createDefaultShader();
         this.offsetX = offsetX;
@@ -69,10 +74,10 @@ public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Dispos
         v = ((float) 1 / texture.getHeight());
 
         int pointNumer = vertices.size() * 3;
-        mesh = new Mesh(false, pointNumer, pointNumer,
-                new VertexAttribute(Usage.Position, 3, ShaderProgram.POSITION_ATTRIBUTE),
-                new VertexAttribute(Usage.ColorPacked, 4, ShaderProgram.COLOR_ATTRIBUTE),
-                new VertexAttribute(Usage.TextureCoordinates, 2, ShaderProgram.TEXCOORD_ATTRIBUTE + "0"));
+        mesh = new Mesh(false, pointNumer * 2, pointNumer,
+                VertexAttribute.Position(),
+                VertexAttribute.ColorUnpacked(),
+                VertexAttribute.TexCoords(0));
 
         short[] indices = new short[pointNumer];
         for (int i = 0; i < pointNumer; i++) {
@@ -89,8 +94,8 @@ public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Dispos
     void updateVertices() {
         Color c = getColor();
         int index = 0;
-        for (Vector2[] vv : verticesBak) {
-            for (Vector2 p : vv) {
+        for (Vector2[] triangle : verticesBak) {
+            for (Vector2 p : triangle) {
                 vertices[index++] = p.x + offsetX;
                 vertices[index++] = p.y + offsetY;
                 vertices[index++] = 0;
@@ -108,10 +113,9 @@ public class PolygonActor extends Actor implements com.badlogic.gdx.utils.Dispos
     @Override
     public void draw(Batch batch, float parentAlpha) {
         updateVertices();
-        GL20 gl = Gdx.gl20;
-        gl.glEnable(GL20.GL_TEXTURE_2D);
+        Gdx.gl20.glEnable(GL20.GL_TEXTURE_2D);
         texture.bind();
-        mesh.render(this.shader, GL20.GL_TRIANGLES);
+        mesh.render(shader, GL20.GL_TRIANGLES);
     }
 
     @Override
